@@ -1,5 +1,4 @@
-import { MailDataRequired } from "@sendgrid/helpers/classes/mail";
-import sgMail from "@sendgrid/mail";
+import { setApiKey, send, MailDataRequired } from "@sendgrid/mail";
 
 import type { NextApiRequest, NextApiResponse } from "next";
 
@@ -7,7 +6,7 @@ import { contactMailUser, formMailUser } from "constants/contact";
 
 const handler = (req: NextApiRequest, res: NextApiResponse<any>) => {
   if (req.method === "POST") {
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    setApiKey(process.env.SENDGRID_API_KEY);
 
     const toUser: MailDataRequired = {
       to: req.body.email,
@@ -50,8 +49,8 @@ const handler = (req: NextApiRequest, res: NextApiResponse<any>) => {
 
     (async () => {
       try {
-        await sgMail.send(toUser);
-        await sgMail.send(toContact);
+        await send(toUser);
+        await send(toContact);
 
         res.status(200).json({ isSendSuccess: true });
       } catch (err: any) {
