@@ -1,11 +1,11 @@
-type Props = {
-  html: string;
-};
-
-const About = ({ html }: Props) => {
+const About = () => {
   return (
     <div className="p-4">
-      <article dangerouslySetInnerHTML={{ __html: html }} />
+      <article>
+        <h2>Profile</h2>
+        <p>佐々木哉瑠です。</p>
+        <p></p>
+      </article>
     </div>
   );
 };

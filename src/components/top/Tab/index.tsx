@@ -7,27 +7,11 @@ import Menu from "./Menu";
 
 import Blog from "components/common/Blog";
 import Loading from "components/common/Loading";
-import Pagination from "components/common/Pagination";
 import Works from "components/common/Works";
-import { PostNode } from "types/wpTop";
 
 export type TabStatus = "/" | "/works" | "/blog";
 
-type Props = {
-  aboutContent: string;
-  blogPosts: PostNode[];
-  blogCount: number;
-  worksPosts: PostNode[];
-  worksCount: number;
-};
-
-const Tab = ({
-  aboutContent,
-  blogPosts,
-  blogCount,
-  worksPosts,
-  worksCount,
-}: Props) => {
+const Tab = () => {
   const router = useRouter();
   const [tabStatus, setTabStatus] = useState<TabStatus | undefined>(undefined);
 
@@ -50,17 +34,15 @@ const Tab = ({
       </nav>
 
       {!tabStatus && <Loading />}
-      {tabStatus === "/" && <About html={aboutContent} />}
+      {tabStatus === "/" && <About />}
       {tabStatus === "/works" && (
         <>
-          <Works worksPosts={worksPosts} />
-          <Pagination count={worksCount} category="works" pageNum={1} />
+          <Works />
         </>
       )}
       {tabStatus === "/blog" && (
         <>
-          <Blog blogPosts={blogPosts} />
-          <Pagination count={blogCount} category="blog" pageNum={1} />
+          <Blog />
         </>
       )}
     </div>
