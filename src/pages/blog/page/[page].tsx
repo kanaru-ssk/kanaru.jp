@@ -5,12 +5,6 @@ import type { NextPage, GetStaticProps } from "next";
 import Blog from "components/common/Blog";
 import Breadcrumbs from "components/common/Breadcrumbs";
 import Pagination from "components/common/Pagination";
-import { getPostsCount, getAllPosts } from "constants/graphqlQuery";
-import { blogPerPage } from "constants/pagination";
-import { client } from "libs/wordpress";
-import { WpAllPostsRes } from "types/wpAllPosts";
-import { WpPostsCountRes } from "types/wpPostsCount";
-import { PostNode } from "types/wpTop";
 
 type Props = {
   blogPosts: PostNode[];
@@ -62,45 +56,10 @@ const BlogPage: NextPage<Props> = ({
 
 export default BlogPage;
 
-export const getStaticPaths = async () => {
-  const response = await client.query<WpPostsCountRes>({
-    query: getPostsCount,
-  });
-
-  const blogCount = response.data.categories.nodes.find(
-    (value) => value.name === "blog"
-  )?.count;
-
-  let paths: string[] = [];
-  if (typeof blogCount === "number") {
-    for (let i = 0; i < blogCount / blogPerPage - 1; i++) {
-      paths.push("/blog/page/" + (i + 2).toString());
-    }
-  }
-
-  return { paths, fallback: false };
-};
+export const getStaticPaths = async () => {};
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const response = await client.query<WpAllPostsRes>({
-    query: getAllPosts("blog"),
-  });
-
-  const pageNum =
-    params && typeof params.id === "string" ? Number(params.id) : 0;
-
-  const blogPosts = response.data.posts.nodes.slice(
-    (pageNum - 1) * blogPerPage,
-    pageNum * blogPerPage
-  );
-
-  const blogCount = response.data.posts.nodes.length;
-
   return {
-    props: {
-      blogPosts,
-      pageNum,
-      blogCount,
-    },
+    props: {},
   };
 };
