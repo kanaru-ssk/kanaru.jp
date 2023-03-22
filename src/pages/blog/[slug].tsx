@@ -3,10 +3,6 @@ import Head from "next/head";
 import type { NextPage, GetStaticProps } from "next";
 
 import Breadcrumbs from "components/common/Breadcrumbs";
-import { getPostPathsQuery, getPostQuery } from "constants/graphqlQuery";
-import { client } from "libs/wordpress";
-import { WpPostRes, Post } from "types/wpPost";
-import { WpPostPathsRes } from "types/wpPostPaths";
 
 type Props = {
   post: Post;
@@ -51,26 +47,10 @@ const BlogArticle: NextPage<Props> = ({ post }: Props) => {
 
 export default BlogArticle;
 
-export const getStaticPaths = async () => {
-  const response = await client.query<WpPostPathsRes>({
-    query: getPostPathsQuery("blog"),
-  });
-
-  const paths = response.data.posts.nodes.map((post) => "/blog/" + post.slug);
-
-  return { paths, fallback: false };
-};
+export const getStaticPaths = async () => {};
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const response = await client.query<WpPostRes>({
-    query: getPostQuery(params!.id),
-  });
-
-  const post = response.data.postBy;
-
   return {
-    props: {
-      post,
-    },
+    props: {},
   };
 };

@@ -8,8 +8,7 @@ import type { NextPage, GetStaticProps } from "next";
 import Contact from "components/top/Contact";
 import Profile from "components/top/Profile";
 import Tab from "components/top/Tab";
-import { topQuery } from "constants/graphqlQuery";
-import { client } from "libs/wordpress";
+
 import { WpTopRes, PostNode, About, GeneralSettings } from "types/wpTop";
 
 type Props = {
@@ -30,10 +29,9 @@ const Home: NextPage<Props> = ({
   worksPosts,
   worksCount,
 }: Props) => {
-  const title = general.title ? "Kanaru | " + general.title : "Kanaru";
-  const description = general.description
-    ? general.description
-    : "仙台で活動するwebエンジニア佐々木哉瑠(かなる)のHPです。承っているお仕事、これまでの経歴や開発したプロダクトのご紹介をします。";
+  const title = "Kanaru | webエンジニア佐々木哉瑠(かなる)の公式ホームページ";
+  const description =
+    "仙台で活動するwebエンジニア佐々木哉瑠(かなる)のHPです。承っているお仕事、これまでの経歴や開発したプロダクトのご紹介をします。";
 
   const logoStructuredData = {
     "@context": "https://schema.org",
@@ -81,21 +79,8 @@ const Home: NextPage<Props> = ({
           <Contact />
         ) : (
           <>
-            <Profile
-              bio={about.profile.bio}
-              profileImg={about.profile.profileImg.sourceUrl}
-              name={about.profile.name}
-              nameRoman={about.profile.nameRoman}
-              job={about.profile.job}
-            />
-
-            <Tab
-              aboutContent={about.content}
-              worksPosts={worksPosts}
-              worksCount={worksCount}
-              blogPosts={blogPosts}
-              blogCount={blogCount}
-            />
+            <Profile />
+            <Tab />
           </>
         )}
       </main>
@@ -106,35 +91,5 @@ const Home: NextPage<Props> = ({
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const response = await client.query<WpTopRes>({
-    query: topQuery,
-  });
-
-  const general = response.data.generalSettings;
-
-  const about: About = response.data.about;
-
-  const blogPosts: PostNode[] = response.data.blog.nodes;
-  const worksPosts: PostNode[] = response.data.works.nodes;
-
-  const blogCategory = response.data.categories.nodes.find(
-    (value) => value.name === "blog"
-  );
-  const blogCount = blogCategory?.count ? blogCategory.count : 0;
-
-  const worksCategory = response.data.categories.nodes.find(
-    (value) => value.name === "works"
-  );
-  const worksCount = worksCategory?.count ? worksCategory.count : 0;
-
-  return {
-    props: {
-      about,
-      general,
-      blogPosts,
-      blogCount,
-      worksPosts,
-      worksCount,
-    },
-  };
+  return { props: {} };
 };
