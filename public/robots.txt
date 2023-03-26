@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://kanaru.jp
-
-# Sitemaps
-Sitemap: https://kanaru.jp/sitemap.xml

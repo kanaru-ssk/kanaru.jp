@@ -1,24 +1,6 @@
-import { ApolloProvider } from "@apollo/client/react";
+import '@/styles/globals.css'
+import type { AppProps } from 'next/app'
 
-import type { AppProps } from "next/app";
-import "styles/globals.css";
-
-import Footer from "components/common/Footer";
-import Header from "components/common/Header";
-import { client } from "libs/wordpress";
-
-const MyApp = ({ Component, pageProps }: AppProps) => {
-  return (
-    <>
-      <Header />
-
-      <ApolloProvider client={client}>
-        <Component {...pageProps} />
-      </ApolloProvider>
-
-      <Footer />
-    </>
-  );
-};
-
-export default MyApp;
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />
+}
