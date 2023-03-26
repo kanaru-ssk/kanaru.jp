@@ -33,9 +33,4 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-
-src/styles/dist.css
-
-public/sitemap*.xml
-
-__screenshots__
+next-env.d.ts
