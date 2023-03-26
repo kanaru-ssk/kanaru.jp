@@ -6,7 +6,7 @@ const PCNav = () => {
       <NavItem text="about" href="/#about" />
       <NavItem text="project" href="/#project" />
       <NavItem text="contact" href="/#contact" />
-      <NavItem text="resume" href="/#resume" />
+      <NavItem text="resume" href="/resume.pdf" />
     </nav>
   );
 };

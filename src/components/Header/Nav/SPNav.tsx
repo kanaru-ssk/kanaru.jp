@@ -19,7 +19,7 @@ const SPNav = () => {
           <NavItem text="about" href="/#about" onClick={hide} />
           <NavItem text="project" href="/#project" onClick={hide} />
           <NavItem text="contact" href="/#contact" onClick={hide} />
-          <NavItem text="resume" href="/#resume" onClick={hide} />
+          <NavItem text="resume" href="/resume.pdf" onClick={hide} />
         </nav>
       </SlideIn>
     </>

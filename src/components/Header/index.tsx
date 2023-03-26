@@ -3,7 +3,7 @@ import Nav from "./Nav";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-10 flex h-12 items-center justify-between bg-white px-2 sm:h-20 sm:px-8">
+    <header className="fixed top-0 z-10 flex h-12 w-full items-center justify-between bg-white px-2 sm:h-20 sm:px-8">
       <Image
         src="/icon.svg"
         alt="icon"
