@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="flex w-full flex-col items-center gap-4 bg-black py-8 text-white">
       <Link href="/" title="top">
-        <Image src="/logo.svg" alt="logo" width={100} height={52} />
+        <Image src="/logo.svg" alt="logo" width={104} height={48} />
       </Link>
       <p className="text-center text-xs">&copy; 2022 Kanaru</p>
     </footer>
