@@ -1,5 +1,5 @@
 import HmeTemplate from "@/components/templates/Home";
 
-const Home = HmeTemplate;
+const Home = () => <HmeTemplate />;
 
 export default Home;

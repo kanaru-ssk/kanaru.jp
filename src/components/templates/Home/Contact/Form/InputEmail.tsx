@@ -1,4 +1,5 @@
 import { ChangeEventHandler } from "react";
+import Input from "@/components/atoms/Input";
 
 type Props = {
   value: string;
@@ -7,10 +8,9 @@ type Props = {
 
 const InputEmail = ({ value, onChange }: Props) => {
   return (
-    <input
+    <Input
       value={value}
       onChange={onChange}
-      className="border-dark-gray focus:outline-blue w-full rounded border p-3"
       type="email"
       placeholder="example@example.com"
       required

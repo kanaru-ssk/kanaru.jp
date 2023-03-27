@@ -1,4 +1,5 @@
 import { useState } from "react";
+import MenuIcon from "@/components/atoms/MenuIcon";
 import NavItem from "./NavItem";
 import SlideIn from "./SlideIn";
 
@@ -8,11 +9,7 @@ const SPNav = () => {
   return (
     <>
       <button onClick={() => setOpen(true)}>
-        <svg width="48" height="48" fill="black">
-          <rect x="14" y="23" width="20" height="2" />
-          <rect x="14" y="17" width="20" height="2" />
-          <rect x="14" y="29" width="20" height="2" />
-        </svg>
+        <MenuIcon />
       </button>
       <SlideIn isShown={open} onHide={hide}>
         <nav className="flex flex-col gap-4 p-8">

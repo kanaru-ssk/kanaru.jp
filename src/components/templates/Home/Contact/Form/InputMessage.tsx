@@ -1,4 +1,5 @@
 import { ChangeEventHandler } from "react";
+import Textarea from "@/components/atoms/Textarea";
 
 type Props = {
   value: string;
@@ -7,13 +8,12 @@ type Props = {
 
 const InputMessage = ({ value, onChange }: Props) => {
   return (
-    <textarea
+    <Textarea
       value={value}
       onChange={onChange}
-      className="border-dark-gray focus:outline-blue h-48 w-full rounded border p-3"
       placeholder="Hello"
       required
-    ></textarea>
+    ></Textarea>
   );
 };
 

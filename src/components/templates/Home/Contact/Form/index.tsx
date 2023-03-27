@@ -4,14 +4,9 @@ import InputMessage from "./InputMessage";
 import InputName from "./InputName";
 import SubmitButton from "./SubmitButton";
 
-type ViewStatus = "Form" | "Success" | "Error";
 type InputStatus = "Entering" | "Ready" | "Sending";
 
-type Props = {
-  setViewStatus: React.Dispatch<React.SetStateAction<ViewStatus>>;
-};
-
-const Form = ({ setViewStatus }: Props) => {
+const Form = () => {
   const [inputStatus, setInputStatus] = useState<InputStatus>("Entering");
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -45,9 +40,7 @@ const Form = ({ setViewStatus }: Props) => {
     const result = await res.json();
 
     if (result?.isSuccess) {
-      setViewStatus("Success");
     } else {
-      setViewStatus("Error");
       setInputStatus("Entering");
       setEmail("");
       setMessage("");
@@ -56,25 +49,30 @@ const Form = ({ setViewStatus }: Props) => {
 
   return (
     <form onSubmit={onSubmitHandler}>
-      <div className="py-2">
-        <h3 className="py-2">name</h3>
-        <InputName value={name} onChange={(e) => setName(e.target.value)} />
-      </div>
-      <div className="py-2">
-        <h3 className="py-2">email</h3>
-        <InputEmail value={email} onChange={(e) => setEmail(e.target.value)} />
-      </div>
-      <div className="py-2">
-        <h3 className="py-2">message</h3>
-        <InputMessage
-          value={message}
-          onChange={(e) => {
-            setMessage(e.target.value);
-          }}
-        />
-      </div>
-      <div className="py-4 text-center">
-        <SubmitButton inputStatus={inputStatus} />
+      <div className="mx-auto max-w-xl space-y-8">
+        <div className="flex items-center">
+          <h3 className="w-28 font-bold">name</h3>
+          <InputName value={name} onChange={(e) => setName(e.target.value)} />
+        </div>
+        <div className="flex items-center">
+          <h3 className="w-28 font-bold">email</h3>
+          <InputEmail
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div className="flex">
+          <h3 className="w-28 pt-2 font-bold">message</h3>
+          <InputMessage
+            value={message}
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+          />
+        </div>
+        <div className="text-center">
+          <SubmitButton inputStatus={inputStatus} />
+        </div>
       </div>
     </form>
   );

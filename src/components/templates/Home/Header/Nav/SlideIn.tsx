@@ -1,4 +1,5 @@
 import { ReactNode, useRef, useEffect } from "react";
+import CloseIcon from "@/components/atoms/CloseIcon";
 
 type Props = {
   children: ReactNode;
@@ -32,9 +33,7 @@ const SlideIn = ({ children, isShown, onHide }: Props) => {
     >
       <header className="border-gray flex h-12 flex-row-reverse items-center border-b pr-2">
         <button onClick={onHide}>
-          <svg width="48" height="48" fill="black">
-            <path d="M24 22.5454L17.4546 16L16 17.4545L22.5455 24L16 30.5455L17.4545 32L24 25.4545L30.5455 32L32 30.5454L25.4545 24L32 17.4546L30.5454 16L24 22.5454Z" />
-          </svg>
+          <CloseIcon />
         </button>
       </header>
       {children}
