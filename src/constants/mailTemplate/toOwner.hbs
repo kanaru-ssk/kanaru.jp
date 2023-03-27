@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>New Contact Form Submission</title>
+  </head>
+  <body>
+    <main>
+      <p>Dear Kanaru,</p>
+      <p>
+        You have received a new contact form submission from your website. Here
+        are the details:
+      </p>
+      <div>name : {{customer_name}}</div>
+      <div>email : {{customer_email}}</div>
+      <div>message : {{customer_message}}</div>
+      <p>The message sent to customer is below.</p>
+      <hr />
+      <div>{{{to_customer_html}}}</div>
+      <hr />
+      <p>
+        Please follow up with the sender at your earliest convenience. Thank you
+        for your attention to this matter.
+      </p>
+      <p>Best regards,<br />Kanaru Sasaki</p>
+    </main>
+  </body>
+</html>
