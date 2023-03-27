@@ -1,11 +1,10 @@
 import Heading2 from "@/components/atoms/Heading2";
-import Section from "@/components/atoms/Section";
 
 const About = () => {
   return (
-    <Section>
+    <section id="about">
       <Heading2>about</Heading2>
-    </Section>
+    </section>
   );
 };
 
