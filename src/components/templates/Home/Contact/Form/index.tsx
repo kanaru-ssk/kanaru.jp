@@ -2,15 +2,21 @@ import { useState, useEffect } from "react";
 import InputEmail from "./InputEmail";
 import InputMessage from "./InputMessage";
 import InputName from "./InputName";
+import StatusMessage from "./StatusMessage";
 import SubmitButton from "./SubmitButton";
 
 type InputStatus = "Entering" | "Ready" | "Sending";
+export type FormStatus = {
+  isSuccess: boolean;
+  message: string;
+};
 
 const Form = () => {
   const [inputStatus, setInputStatus] = useState<InputStatus>("Entering");
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [status, setStatus] = useState<FormStatus>();
 
   useEffect(() => {
     const emailFormat =
@@ -31,38 +37,43 @@ const Form = () => {
         email,
         message,
       }),
-      headers: {
-        "Content-Type": "application/json",
-      },
       method: "POST",
     });
 
     const result = await res.json();
-
     if (result?.isSuccess) {
+      setStatus({
+        isSuccess: true,
+        message:
+          "Thank you for contacting me! Your message has been sent successfully. I will respond to you as soon as possible.",
+      });
     } else {
-      setInputStatus("Entering");
-      setEmail("");
-      setMessage("");
+      setStatus({
+        isSuccess: false,
+        message: result?.error?.message ?? "unknown error",
+      });
     }
+    setName("");
+    setEmail("");
+    setMessage("");
   };
 
   return (
     <form onSubmit={onSubmitHandler}>
-      <div className="mx-auto max-w-xl space-y-8">
-        <div className="flex items-center">
-          <h3 className="w-28 font-bold">name</h3>
+      <div className="space-y-4 sm:space-y-8">
+        <div className="flex flex-col items-start sm:flex-row sm:items-center">
+          <h3 className="w-28 py-2 font-medium">name</h3>
           <InputName value={name} onChange={(e) => setName(e.target.value)} />
         </div>
-        <div className="flex items-center">
-          <h3 className="w-28 font-bold">email</h3>
+        <div className="flex flex-col items-start sm:flex-row sm:items-center">
+          <h3 className="w-28 py-2 font-medium">email</h3>
           <InputEmail
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div className="flex">
-          <h3 className="w-28 pt-2 font-bold">message</h3>
+        <div className="flex flex-col sm:flex-row">
+          <h3 className="w-28 py-2 font-medium">message</h3>
           <InputMessage
             value={message}
             onChange={(e) => {
@@ -70,6 +81,7 @@ const Form = () => {
             }}
           />
         </div>
+        <StatusMessage status={status} />
         <div className="text-center">
           <SubmitButton inputStatus={inputStatus} />
         </div>

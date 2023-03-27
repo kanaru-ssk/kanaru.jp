@@ -17,6 +17,9 @@ type Response =
     };
 
 const handler = async (req: NextApiRequest, res: NextApiResponse<Response>) => {
+  const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
+  const FORM_EMAIL = process.env.FORM_EMAIL;
+  const OWNER_EMAIL = process.env.OWNER_EMAIL;
   if (req.method !== "POST") {
     const errorCode = 400;
     return res.status(errorCode).json({
@@ -28,11 +31,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Response>) => {
       },
     });
   }
-  if (
-    !process.env.SENDGRID_API_KEY ||
-    !process.env.FORM_EMAIL ||
-    !process.env.OWNER_EMAIL
-  ) {
+  if (!SENDGRID_API_KEY || !FORM_EMAIL || !OWNER_EMAIL) {
     const errorCode = 500;
     return res.status(errorCode).json({
       isSuccess: false,
@@ -44,10 +43,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Response>) => {
     });
   }
 
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
-  const FORM_EMAIL = process.env.FORM_EMAIL;
-  const OWNER_EMAIL = process.env.OWNER_EMAIL;
+  sgMail.setApiKey(SENDGRID_API_KEY);
 
   // create mail to customer
   const mailTemplateDirectory = path.join(
