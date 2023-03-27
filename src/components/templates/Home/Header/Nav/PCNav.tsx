@@ -1,12 +1,13 @@
 import NavItem from "./NavItem";
+import ResumeLink from "./ResumeLink";
 
 const PCNav = () => {
   return (
-    <nav className="flex gap-4">
+    <nav className="flex">
       <NavItem text="about" href="/#about" />
-      <NavItem text="project" href="/#project" />
+      <NavItem text="projects" href="/#projects" />
       <NavItem text="contact" href="/#contact" />
-      <NavItem text="resume" href="/resume.pdf" />
+      <ResumeLink />
     </nav>
   );
 };

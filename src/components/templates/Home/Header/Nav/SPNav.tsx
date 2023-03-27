@@ -1,6 +1,7 @@
 import { useState } from "react";
 import MenuIcon from "@/components/atoms/MenuIcon";
 import NavItem from "./NavItem";
+import ResumeLink from "./ResumeLink";
 import SlideIn from "./SlideIn";
 
 const SPNav = () => {
@@ -14,9 +15,9 @@ const SPNav = () => {
       <SlideIn isShown={open} onHide={hide}>
         <nav className="flex flex-col gap-4 p-8">
           <NavItem text="about" href="/#about" onClick={hide} />
-          <NavItem text="project" href="/#project" onClick={hide} />
+          <NavItem text="projects" href="/#projects" onClick={hide} />
           <NavItem text="contact" href="/#contact" onClick={hide} />
-          <NavItem text="resume" href="/resume.pdf" onClick={hide} />
+          <ResumeLink />
         </nav>
       </SlideIn>
     </>
