@@ -1,5 +1,6 @@
 import About from "./About";
 import Contact from "./Contact";
+import Footer from "./Footer";
 import Head from "./Head";
 import Header from "./Header";
 import HeroImage from "./HeroImage";
@@ -10,10 +11,13 @@ const Home = () => {
     <>
       <Head />
       <Header />
-      <HeroImage />
-      <About />
-      <Projects />
-      <Contact />
+      <div className="mx-auto max-w-xl space-y-16 px-4 pb-32">
+        <HeroImage />
+        <About />
+        <Projects />
+        <Contact />
+      </div>
+      <Footer />
     </>
   );
 };
