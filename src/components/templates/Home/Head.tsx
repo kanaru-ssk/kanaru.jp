@@ -13,10 +13,10 @@ const Head = () => {
         property="og:description"
         content="Kanaru Sasaki is a software engineer who specializes in building exceptional digital experiences."
       />
-      <meta property="og:url" content={process.env.NEXT_PUBLIC_DOMAIN} />
+      <meta property="og:url" content={process.env.NEXT_PUBLIC_URL} />
       <meta
         property="og:image"
-        content={`${process.env.NEXT_PUBLIC_DOMAIN}/ogp.webp`}
+        content={`${process.env.NEXT_PUBLIC_URL}/ogp.webp`}
       />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
