@@ -6,7 +6,7 @@ const ResumeLink = () => {
     <Link
       href="/resume.pdf"
       scroll={false}
-      className="flex w-fit items-center gap-4 border border-black py-2 px-6 font-serif font-medium sm:text-xl"
+      className="flex w-fit items-center gap-4 border border-black py-2 px-6 font-medium sm:text-xl"
     >
       resume
       <LinkIcon />
