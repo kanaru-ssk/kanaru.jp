@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ["var(--font-minion)", ...fontFamily.serif],
+        serif: ["var(--font-cormorant-garamond)", ...fontFamily.serif],
       },
     },
   },
