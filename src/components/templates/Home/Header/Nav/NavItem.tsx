@@ -12,7 +12,7 @@ const NavItem = ({ text, href, onClick }: Props) => {
       href={href}
       onClick={onClick}
       scroll={false}
-      className="py-2 px-6 font-serif text-xl font-medium"
+      className="pl-6 font-serif text-lg font-medium sm:pl-0 sm:text-xl md:text-2xl"
     >
       {text}
     </Link>

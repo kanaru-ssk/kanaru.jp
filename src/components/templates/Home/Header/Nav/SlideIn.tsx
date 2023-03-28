@@ -31,7 +31,7 @@ const SlideIn = ({ children, isShown, onHide }: Props) => {
         !isShown && "translate-x-full"
       } absolute top-0 right-0 z-20 h-screen w-[60%] bg-white drop-shadow-2xl duration-300`}
     >
-      <header className="border-gray flex h-12 flex-row-reverse items-center border-b pr-2">
+      <header className="flex h-12 flex-row-reverse items-center border-b border-gray-200 pr-2">
         <button onClick={onHide}>
           <CloseIcon />
         </button>

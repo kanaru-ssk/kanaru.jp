@@ -1,7 +1,7 @@
 const ScrollIcon = () => {
   return (
-    <svg width="10" height="72" fill="#000">
-      <path d="M2 54L10 52L0 72V0H2V54Z" />
+    <svg width="8" height="64" fill="#000">
+      <path d="M5 48L8 47L4 64L0 47L3 48V1.72853e-06L5 0V48Z" />
     </svg>
   );
 };

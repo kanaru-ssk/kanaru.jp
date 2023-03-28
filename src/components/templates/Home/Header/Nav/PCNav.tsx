@@ -3,7 +3,7 @@ import ResumeLink from "./ResumeLink";
 
 const PCNav = () => {
   return (
-    <nav className="flex">
+    <nav className="flex gap-8 md:gap-16">
       <NavItem text="about" href="/#about" />
       <NavItem text="projects" href="/#projects" />
       <NavItem text="contact" href="/#contact" />
