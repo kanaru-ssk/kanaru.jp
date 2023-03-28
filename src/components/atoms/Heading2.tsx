@@ -5,7 +5,11 @@ type Props = {
 };
 
 const Heading2 = ({ children }: Props) => {
-  return <h2 className="text-2xl font-semibold">{children}</h2>;
+  return (
+    <h2 className="text-2xl font-medium sm:text-center sm:text-4xl">
+      {children}
+    </h2>
+  );
 };
 
 export default Heading2;
