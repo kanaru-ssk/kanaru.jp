@@ -62,18 +62,18 @@ const Form = () => {
     <form onSubmit={onSubmitHandler}>
       <div className="space-y-4 sm:space-y-8">
         <div className="flex flex-col items-start sm:flex-row sm:items-center">
-          <h3 className="w-28 py-2 font-medium">name</h3>
+          <h3 className="w-28 py-2 text-xl font-medium">name</h3>
           <InputName value={name} onChange={(e) => setName(e.target.value)} />
         </div>
         <div className="flex flex-col items-start sm:flex-row sm:items-center">
-          <h3 className="w-28 py-2 font-medium">email</h3>
+          <h3 className="w-28 py-2 text-xl font-medium">email</h3>
           <InputEmail
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="flex flex-col sm:flex-row">
-          <h3 className="w-28 py-2 font-medium">message</h3>
+          <h3 className="w-28 py-2 text-xl font-medium">message</h3>
           <InputMessage
             value={message}
             onChange={(e) => {
@@ -82,7 +82,7 @@ const Form = () => {
           />
         </div>
         <StatusMessage status={status} />
-        <div className="text-center">
+        <div className="pt-8 text-center sm:pt-0">
           <SubmitButton inputStatus={inputStatus} />
         </div>
       </div>

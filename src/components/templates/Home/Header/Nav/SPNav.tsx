@@ -13,7 +13,7 @@ const SPNav = () => {
         <MenuIcon />
       </button>
       <SlideIn isShown={open} onHide={hide}>
-        <nav className="flex flex-col gap-4 p-8">
+        <nav className="flex flex-col gap-8 px-8 pt-16">
           <NavItem text="about" href="/#about" onClick={hide} />
           <NavItem text="projects" href="/#projects" onClick={hide} />
           <NavItem text="contact" href="/#contact" onClick={hide} />

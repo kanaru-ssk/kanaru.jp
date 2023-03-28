@@ -11,8 +11,8 @@ const Home = () => {
     <>
       <Head />
       <Header />
+      <HeroImage />
       <div className="mx-auto max-w-xl space-y-16 px-4 pb-32">
-        <HeroImage />
         <About />
         <Projects />
         <Contact />

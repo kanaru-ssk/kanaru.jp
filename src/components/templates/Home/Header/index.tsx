@@ -4,7 +4,7 @@ import Nav from "./Nav";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 z-10 flex h-12 w-full items-center justify-between px-2 sm:h-24 sm:px-8 md:h-36 md:px-16">
+    <header className="fixed top-0 z-10 flex h-12 w-full items-center justify-between px-2 sm:h-24 sm:px-8 md:px-16">
       <Link href="/" title="top">
         <Image
           src="/icon.svg"
