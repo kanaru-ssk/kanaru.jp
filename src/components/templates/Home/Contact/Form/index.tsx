@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Heading3 from "@/components/atoms/Heading3";
 import InputEmail from "./InputEmail";
 import InputMessage from "./InputMessage";
 import InputName from "./InputName";
@@ -62,18 +63,24 @@ const Form = () => {
     <form onSubmit={onSubmitHandler}>
       <div className="space-y-4 sm:space-y-8">
         <div className="flex flex-col items-start sm:flex-row sm:items-center">
-          <h3 className="w-28 py-2 text-xl font-medium">name</h3>
+          <div className="w-28 py-2">
+            <Heading3>name</Heading3>
+          </div>
           <InputName value={name} onChange={(e) => setName(e.target.value)} />
         </div>
         <div className="flex flex-col items-start sm:flex-row sm:items-center">
-          <h3 className="w-28 py-2 text-xl font-medium">email</h3>
+          <div className="w-28 py-2">
+            <Heading3>email</Heading3>
+          </div>
           <InputEmail
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="flex flex-col sm:flex-row">
-          <h3 className="w-28 py-2 text-xl font-medium">message</h3>
+          <div className="w-28 py-2">
+            <Heading3>message</Heading3>
+          </div>
           <InputMessage
             value={message}
             onChange={(e) => {
