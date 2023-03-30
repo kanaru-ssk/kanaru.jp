@@ -61,15 +61,15 @@ const Form = () => {
 
   return (
     <form onSubmit={onSubmitHandler}>
-      <div className="space-y-4 sm:space-y-8">
+      <div className="space-y-2 sm:space-y-8">
         <div className="flex flex-col items-start sm:flex-row sm:items-center">
-          <div className="w-28 py-2">
+          <div className="w-28 py-1">
             <Heading3>name</Heading3>
           </div>
           <InputName value={name} onChange={(e) => setName(e.target.value)} />
         </div>
         <div className="flex flex-col items-start sm:flex-row sm:items-center">
-          <div className="w-28 py-2">
+          <div className="w-28 py-1">
             <Heading3>email</Heading3>
           </div>
           <InputEmail
@@ -78,7 +78,7 @@ const Form = () => {
           />
         </div>
         <div className="flex flex-col sm:flex-row">
-          <div className="w-28 py-2">
+          <div className="w-28 py-1">
             <Heading3>message</Heading3>
           </div>
           <InputMessage
