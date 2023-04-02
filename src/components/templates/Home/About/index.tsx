@@ -7,7 +7,7 @@ import Skills from "./Skills";
 const About = () => {
   return (
     <section id="about">
-      <Heading2>about</Heading2>
+      <Heading2>About Me</Heading2>
       <div className="grid pt-8 sm:grid-cols-2">
         <Image
           src="/img/profile.webp"
