@@ -1,9 +1,9 @@
 const MenuIcon = () => {
   return (
-    <svg width="48" height="48" fill="#000">
-      <rect x="14" y="23" width="20" height="2" />
-      <rect x="14" y="17" width="20" height="2" />
-      <rect x="14" y="29" width="20" height="2" />
+    <svg width="32" height="32" fill="#000">
+      <rect x="6" y="15" width="20" height="2" />
+      <rect x="6" y="9" width="20" height="2" />
+      <rect x="6" y="21" width="20" height="2" />
     </svg>
   );
 };
