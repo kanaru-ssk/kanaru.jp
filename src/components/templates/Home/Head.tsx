@@ -22,7 +22,7 @@ const Head = () => {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name="theme-color" content="#fff" />
-      <link rel="icon" href="/icon.svg" />
+      <link rel="icon" href="/favicon.svg" />
       <link rel="apple-touch-icon" href="/icon-180.png" />
     </NextHead>
   );
