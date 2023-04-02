@@ -2,7 +2,7 @@ import ScrollIcon from "@/components/atoms/ScrollIcon";
 
 const HeroImage = () => {
   return (
-    <section className="relative h-screen">
+    <section className="relative h-screen font-serif">
       <div className="flex h-full items-center justify-center">
         <div className="pb-24">
           <p className="text-lg">I&apos;m</p>

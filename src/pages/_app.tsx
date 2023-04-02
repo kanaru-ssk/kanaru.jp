@@ -16,7 +16,7 @@ const helvetica = localFont({
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <main className={`${cormorant.variable} ${helvetica.variable} font-serif`}>
+    <main className={`${cormorant.variable} ${helvetica.variable} font-sans`}>
       <Component {...pageProps} />
     </main>
   );
