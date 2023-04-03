@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ScrollIcon from "@/components/atoms/ScrollIcon";
 
 const HeroImage = () => {
@@ -10,10 +11,15 @@ const HeroImage = () => {
           <p className="text-lg">Front-End Web Developer</p>
         </div>
       </div>
-      <div className="absolute bottom-24 left-1/2 flex -translate-x-1/2 animate-pulse flex-col items-center gap-4">
+
+      <Link
+        href="/#about"
+        scroll={false}
+        className="absolute bottom-24 left-1/2 flex -translate-x-1/2 animate-pulse flex-col items-center gap-4"
+      >
         <p className="text-lg">scroll</p>
         <ScrollIcon />
-      </div>
+      </Link>
     </section>
   );
 };
