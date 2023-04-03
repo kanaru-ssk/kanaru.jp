@@ -1,5 +1,5 @@
-import Heading2 from "@/components/atoms/Heading2";
-import Form from "./Form";
+import { Heading2 } from "@/components/atoms/Heading2";
+import { Form } from "./Form";
 
 export const Contact = () => {
   return (

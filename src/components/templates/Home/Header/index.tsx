@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Nav from "./Nav";
+import { Nav } from "./Nav";
 
 export const Header = () => {
   return (

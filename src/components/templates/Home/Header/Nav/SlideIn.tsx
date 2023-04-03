@@ -1,5 +1,5 @@
 import { ReactNode, useRef, useEffect } from "react";
-import CloseIcon from "@/components/atoms/CloseIcon";
+import { CloseIcon } from "@/components/atoms/CloseIcon";
 
 type Props = {
   children: ReactNode;

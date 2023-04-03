@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import Heading3 from "@/components/atoms/Heading3";
-import InputEmail from "./InputEmail";
-import InputMessage from "./InputMessage";
-import InputName from "./InputName";
-import StatusMessage from "./StatusMessage";
-import SubmitButton from "./SubmitButton";
+import { Heading3 } from "@/components/atoms/Heading3";
+import { InputEmail } from "./InputEmail";
+import { InputMessage } from "./InputMessage";
+import { InputName } from "./InputName";
+import { StatusMessage } from "./StatusMessage";
+import { SubmitButton } from "./SubmitButton";
 
 type InputStatus = "Entering" | "Ready" | "Sending";
 export type FormStatus = {

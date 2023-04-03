@@ -1,5 +1,5 @@
 import Link from "next/link";
-import LinkIcon from "@/components/atoms/LinkIcon";
+import { LinkIcon } from "@/components/atoms/LinkIcon";
 
 export const ResumeLink = () => {
   return (

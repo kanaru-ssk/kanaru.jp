@@ -1,6 +1,6 @@
 import { useWindowSize } from "@/hooks/useWindowSize";
-import PCNav from "./PCNav";
-import SPNav from "./SPNav";
+import { PCNav } from "./PCNav";
+import { SPNav } from "./SPNav";
 
 export const Nav = () => {
   const { width } = useWindowSize();

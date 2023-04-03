@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Heading2 from "@/components/atoms/Heading2";
-import Heading3 from "@/components/atoms/Heading3";
+import { Heading2 } from "@/components/atoms/Heading2";
+import { Heading3 } from "@/components/atoms/Heading3";
 import { skills } from "@/constants/skills";
-import Skills from "./Skills";
+import { Skills } from "./Skills";
 
 export const About = () => {
   return (

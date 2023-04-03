@@ -1,6 +1,6 @@
-import Heading2 from "@/components/atoms/Heading2";
+import { Heading2 } from "@/components/atoms/Heading2";
 import { projects } from "@/constants/projects";
-import ProjectCard from "./ProjectCard";
+import { ProjectCard } from "./ProjectCard";
 
 export const Projects = () => {
   return (

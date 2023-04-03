@@ -1,5 +1,5 @@
-import HmeTemplate from "@/components/templates/Home";
+import { Home as HomeTemplate } from "@/components/templates/Home";
 
-const Home = () => <HmeTemplate />;
+const Home = () => <HomeTemplate />;
 
 export default Home;

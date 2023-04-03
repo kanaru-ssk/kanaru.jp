@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ScrollIcon from "@/components/atoms/ScrollIcon";
+import { ScrollIcon } from "@/components/atoms/ScrollIcon";
 
 export const HeroImage = () => {
   return (

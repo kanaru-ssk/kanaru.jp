@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Heading3 from "@/components/atoms/Heading3";
+import { Heading3 } from "@/components/atoms/Heading3";
 
 type Props = {
   title: string;

@@ -1,5 +1,5 @@
-import NavItem from "./NavItem";
-import ResumeLink from "./ResumeLink";
+import { NavItem } from "./NavItem";
+import { ResumeLink } from "./ResumeLink";
 
 export const PCNav = () => {
   return (

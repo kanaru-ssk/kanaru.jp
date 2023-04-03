@@ -1,8 +1,8 @@
 import { useState } from "react";
-import MenuIcon from "@/components/atoms/MenuIcon";
-import NavItem from "./NavItem";
-import ResumeLink from "./ResumeLink";
-import SlideIn from "./SlideIn";
+import { MenuIcon } from "@/components/atoms/MenuIcon";
+import { NavItem } from "./NavItem";
+import { ResumeLink } from "./ResumeLink";
+import { SlideIn } from "./SlideIn";
 
 export const SPNav = () => {
   const [open, setOpen] = useState(false);
