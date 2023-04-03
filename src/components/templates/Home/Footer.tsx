@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { links } from "@/constants/links";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className="flex w-full flex-col items-center gap-12 bg-black py-16 text-white">
       <Link href="/" title="top">
@@ -26,5 +26,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;

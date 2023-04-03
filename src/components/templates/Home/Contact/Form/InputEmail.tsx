@@ -6,7 +6,7 @@ type Props = {
   onChange: ChangeEventHandler<HTMLInputElement>;
 };
 
-const InputEmail = ({ value, onChange }: Props) => {
+export const InputEmail = ({ value, onChange }: Props) => {
   return (
     <Input
       value={value}
@@ -17,5 +17,3 @@ const InputEmail = ({ value, onChange }: Props) => {
     />
   );
 };
-
-export default InputEmail;

@@ -4,7 +4,7 @@ import Heading3 from "@/components/atoms/Heading3";
 import { skills } from "@/constants/skills";
 import Skills from "./Skills";
 
-const About = () => {
+export const About = () => {
   return (
     <section id="about">
       <Heading2>About Me</Heading2>
@@ -38,5 +38,3 @@ const About = () => {
     </section>
   );
 };
-
-export default About;

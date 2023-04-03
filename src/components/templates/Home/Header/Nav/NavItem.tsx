@@ -6,7 +6,7 @@ type Props = {
   onClick?: () => void;
 };
 
-const NavItem = ({ text, href, onClick }: Props) => {
+export const NavItem = ({ text, href, onClick }: Props) => {
   return (
     <Link
       href={href}
@@ -18,5 +18,3 @@ const NavItem = ({ text, href, onClick }: Props) => {
     </Link>
   );
 };
-
-export default NavItem;

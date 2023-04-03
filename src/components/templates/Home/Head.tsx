@@ -1,6 +1,6 @@
 import NextHead from "next/head";
 
-const Head = () => {
+export const Head = () => {
   return (
     <NextHead>
       <title>Kanaru Sasaki</title>
@@ -27,5 +27,3 @@ const Head = () => {
     </NextHead>
   );
 };
-
-export default Head;

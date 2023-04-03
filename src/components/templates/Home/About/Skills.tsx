@@ -2,7 +2,7 @@ type Props = {
   skills: string[];
 };
 
-const Skills = ({ skills }: Props) => {
+export const Skills = ({ skills }: Props) => {
   return (
     <span className="flex flex-wrap gap-2">
       {skills.map((skill) => (
@@ -13,5 +13,3 @@ const Skills = ({ skills }: Props) => {
     </span>
   );
 };
-
-export default Skills;

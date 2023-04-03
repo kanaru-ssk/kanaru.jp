@@ -1,7 +1,7 @@
 import Heading2 from "@/components/atoms/Heading2";
 import Form from "./Form";
 
-const Contact = () => {
+export const Contact = () => {
   return (
     <section id="contact">
       <div className="space-y-4 sm:space-y-12">
@@ -11,5 +11,3 @@ const Contact = () => {
     </section>
   );
 };
-
-export default Contact;

@@ -6,7 +6,7 @@ type Props = {
   onChange: ChangeEventHandler<HTMLTextAreaElement>;
 };
 
-const InputMessage = ({ value, onChange }: Props) => {
+export const InputMessage = ({ value, onChange }: Props) => {
   return (
     <Textarea
       value={value}
@@ -16,5 +16,3 @@ const InputMessage = ({ value, onChange }: Props) => {
     ></Textarea>
   );
 };
-
-export default InputMessage;

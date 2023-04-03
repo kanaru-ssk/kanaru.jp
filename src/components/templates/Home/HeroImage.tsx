@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ScrollIcon from "@/components/atoms/ScrollIcon";
 
-const HeroImage = () => {
+export const HeroImage = () => {
   return (
     <section className="relative h-screen font-serif">
       <div className="flex h-full items-center justify-center">
@@ -23,5 +23,3 @@ const HeroImage = () => {
     </section>
   );
 };
-
-export default HeroImage;

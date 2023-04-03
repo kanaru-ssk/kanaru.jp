@@ -6,7 +6,7 @@ type Props = {
   inputStatus: InputStatus;
 };
 
-const SubmitButton = ({ inputStatus }: Props) => {
+export const SubmitButton = ({ inputStatus }: Props) => {
   return (
     <button
       type="submit"
@@ -21,5 +21,3 @@ const SubmitButton = ({ inputStatus }: Props) => {
     </button>
   );
 };
-
-export default SubmitButton;

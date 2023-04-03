@@ -1,7 +1,7 @@
 import NavItem from "./NavItem";
 import ResumeLink from "./ResumeLink";
 
-const PCNav = () => {
+export const PCNav = () => {
   return (
     <nav className="flex items-center gap-8 md:gap-16">
       <NavItem text="about" href="/#about" />
@@ -11,5 +11,3 @@ const PCNav = () => {
     </nav>
   );
 };
-
-export default PCNav;

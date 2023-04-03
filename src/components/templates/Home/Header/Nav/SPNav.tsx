@@ -4,7 +4,7 @@ import NavItem from "./NavItem";
 import ResumeLink from "./ResumeLink";
 import SlideIn from "./SlideIn";
 
-const SPNav = () => {
+export const SPNav = () => {
   const [open, setOpen] = useState(false);
   const hide = () => setOpen(false);
   return (
@@ -23,5 +23,3 @@ const SPNav = () => {
     </>
   );
 };
-
-export default SPNav;

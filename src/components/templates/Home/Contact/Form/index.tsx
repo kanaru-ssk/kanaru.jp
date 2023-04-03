@@ -12,7 +12,7 @@ export type FormStatus = {
   message: string;
 };
 
-const Form = () => {
+export const Form = () => {
   const [inputStatus, setInputStatus] = useState<InputStatus>("Entering");
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -96,5 +96,3 @@ const Form = () => {
     </form>
   );
 };
-
-export default Form;

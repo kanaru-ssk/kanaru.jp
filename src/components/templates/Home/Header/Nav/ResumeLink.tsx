@@ -1,7 +1,7 @@
 import Link from "next/link";
 import LinkIcon from "@/components/atoms/LinkIcon";
 
-const ResumeLink = () => {
+export const ResumeLink = () => {
   return (
     <Link
       href="/resume.pdf"
@@ -13,5 +13,3 @@ const ResumeLink = () => {
     </Link>
   );
 };
-
-export default ResumeLink;

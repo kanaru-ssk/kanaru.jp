@@ -1,4 +1,4 @@
-const LinkIcon = () => {
+export const LinkIcon = () => {
   return (
     <svg width="10" height="10" fill="#000">
       <rect x="2" width="8" height="8" />
@@ -6,5 +6,3 @@ const LinkIcon = () => {
     </svg>
   );
 };
-
-export default LinkIcon;

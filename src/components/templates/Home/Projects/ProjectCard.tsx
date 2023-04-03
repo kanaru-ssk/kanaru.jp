@@ -9,7 +9,7 @@ type Props = {
   skills: string[];
 };
 
-const ProjectCard = ({
+export const ProjectCard = ({
   title,
   description,
   demoUrl,
@@ -30,5 +30,3 @@ const ProjectCard = ({
     </div>
   );
 };
-
-export default ProjectCard;

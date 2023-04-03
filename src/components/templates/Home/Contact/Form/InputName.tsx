@@ -6,7 +6,7 @@ type Props = {
   onChange: ChangeEventHandler<HTMLInputElement>;
 };
 
-const InputName = ({ value, onChange }: Props) => {
+export const InputName = ({ value, onChange }: Props) => {
   return (
     <Input
       value={value}
@@ -17,5 +17,3 @@ const InputName = ({ value, onChange }: Props) => {
     />
   );
 };
-
-export default InputName;

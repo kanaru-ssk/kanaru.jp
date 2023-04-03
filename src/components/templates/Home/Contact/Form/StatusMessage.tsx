@@ -4,7 +4,7 @@ type Props = {
   status: FormStatus | undefined;
 };
 
-const StatusMessage = ({ status }: Props) => {
+export const StatusMessage = ({ status }: Props) => {
   if (!status) return null;
 
   return (
@@ -17,5 +17,3 @@ const StatusMessage = ({ status }: Props) => {
     </div>
   );
 };
-
-export default StatusMessage;

@@ -7,7 +7,7 @@ type Props = {
   onHide: () => void;
 };
 
-const SlideIn = ({ children, isShown, onHide }: Props) => {
+export const SlideIn = ({ children, isShown, onHide }: Props) => {
   const slideInRef = useRef<HTMLDivElement>(null);
   const handleClickOutside = (event: MouseEvent) => {
     if (
@@ -40,5 +40,3 @@ const SlideIn = ({ children, isShown, onHide }: Props) => {
     </div>
   );
 };
-
-export default SlideIn;

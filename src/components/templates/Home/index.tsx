@@ -6,7 +6,7 @@ import Header from "./Header";
 import HeroImage from "./HeroImage";
 import Projects from "./Projects";
 
-const Home = () => {
+export const Home = () => {
   return (
     <>
       <Head />
@@ -21,5 +21,3 @@ const Home = () => {
     </>
   );
 };
-
-export default Home;
