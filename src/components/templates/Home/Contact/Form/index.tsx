@@ -38,6 +38,9 @@ export const Form = () => {
         email,
         message,
       }),
+      headers: {
+        "Content-Type": "application/json",
+      },
       method: "POST",
     });
 
