@@ -12,7 +12,7 @@ export const Home = () => {
       <Head />
       <Header />
       <HeroImage />
-      <div className="mx-auto max-w-3xl space-y-16 px-4 pb-16">
+      <div className="mx-auto max-w-3xl space-y-32 px-4 pb-16">
         <About />
         <Projects />
         <Contact />
