@@ -1,13 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export const ResumeLink = () => {
   return (
-    <Link
-      href="/resume.pdf"
-      scroll={false}
-      className="flex w-fit items-center gap-4 border border-black py-2 px-6 font-serif font-medium sm:text-xl"
-    >
+    <div className="flex w-fit items-center gap-4 border border-black py-2 px-6">
       resume
       <Image
         src="/img/external-link-icon.svg"
@@ -16,6 +11,6 @@ export const ResumeLink = () => {
         height={10}
         className="mt-0.5"
       />
-    </Link>
+    </div>
   );
 };

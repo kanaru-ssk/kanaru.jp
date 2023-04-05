@@ -3,11 +3,13 @@ import { ResumeLink } from "./ResumeLink";
 
 export const PCNav = () => {
   return (
-    <nav className="flex items-center gap-8 md:gap-16">
-      <NavItem text="about" href="/#about" />
-      <NavItem text="projects" href="/#projects" />
-      <NavItem text="contact" href="/#contact" />
-      <ResumeLink />
+    <nav className="flex items-center gap-12">
+      <NavItem href="/#about">about</NavItem>
+      <NavItem href="/#projects">projects</NavItem>
+      <NavItem href="/#contact">contact</NavItem>
+      <NavItem href="/resume.pdf">
+        <ResumeLink />
+      </NavItem>
     </nav>
   );
 };

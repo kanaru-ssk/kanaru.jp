@@ -1,20 +1,21 @@
 import Link from "next/link";
+import { ReactNode } from "react";
 
 type Props = {
-  text: string;
+  children: ReactNode;
   href: string;
   onClick?: () => void;
 };
 
-export const NavItem = ({ text, href, onClick }: Props) => {
+export const NavItem = ({ children, href, onClick }: Props) => {
   return (
     <Link
       href={href}
       onClick={onClick}
       scroll={false}
-      className="pl-6 font-serif text-lg font-medium sm:pl-0 sm:text-xl"
+      className="font-serif text-xl font-medium"
     >
-      {text}
+      {children}
     </Link>
   );
 };
