@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-helvetica)", ...fontFamily.sans],
+        sans: ["Helvetica", '"Helvetica Neue"', ...fontFamily.sans],
         serif: ["var(--font-cormorant-garamond)", ...fontFamily.serif],
       },
     },
