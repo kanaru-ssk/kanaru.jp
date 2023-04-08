@@ -6,7 +6,7 @@ import { Skills } from "./Skills";
 
 export const About = () => {
   return (
-    <section id="about">
+    <section id="about" className="px-4">
       <Heading2>About Me</Heading2>
       <div className="grid pt-8 sm:grid-cols-2">
         <Image

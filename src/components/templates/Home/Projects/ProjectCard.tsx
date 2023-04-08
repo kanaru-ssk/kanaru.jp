@@ -20,7 +20,7 @@ export const ProjectCard = ({
         alt="project-image"
         className="mx-auto h-auto w-full"
       />
-      <div className="space-y-4">
+      <div className="space-y-4 px-4">
         <Heading3>{title}</Heading3>
         <p>{description}</p>
         <div className="flex items-center gap-8">
