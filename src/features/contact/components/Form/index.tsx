@@ -7,6 +7,7 @@ import { StatusMessage } from "./StatusMessage";
 import { SubmitButton } from "./SubmitButton";
 
 type InputStatus = "Entering" | "Ready" | "Sending";
+
 export type FormStatus = {
   isSuccess: boolean;
   message: string;

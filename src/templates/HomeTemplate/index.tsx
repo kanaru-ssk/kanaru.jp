@@ -4,9 +4,9 @@ import { Footer } from "./Footer";
 import { Head } from "./Head";
 import { Header } from "./Header";
 import { HeroImage } from "./HeroImage";
-import { Projects } from "./Projects";
+import { Projects } from "./Project";
 
-export const Home = () => {
+export const HomeTemplate = () => {
   return (
     <>
       <Head />
