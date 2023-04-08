@@ -1,13 +1,18 @@
 import { Heading2 } from "@/components/atoms/Heading2";
-import { ProjectCardContainer } from "./ProjectCardContainer";
+import { projects } from "@/constants/projects";
+import { ProjectCard } from "./ProjectCard";
 
-export const Projects = () => {
+export const Project = () => {
   return (
-    <section id="projects" className="space-y-8">
+    <section id="project" className="space-y-8">
       <div className="px-4">
-        <Heading2>Projects</Heading2>
+        <Heading2>Project</Heading2>
       </div>
-      <ProjectCardContainer />
+      <div className="space-y-16">
+        {projects.map((project) => {
+          return <ProjectCard key={project.title} {...project} />;
+        })}
+      </div>
     </section>
   );
 };

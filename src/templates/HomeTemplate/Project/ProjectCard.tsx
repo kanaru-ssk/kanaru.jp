@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Heading3 } from "@/components/atoms/Heading3";
+import { Skills } from "@/components/atoms/Skills";
 import { type Project } from "@/constants/projects";
 
 export const ProjectCard = ({
@@ -23,7 +24,7 @@ export const ProjectCard = ({
       <div className="space-y-4 px-4">
         <Heading3>{title}</Heading3>
         <p>{description}</p>
-        <div className="flex items-center gap-8">
+        <div className="ml-1 flex items-center gap-8">
           <Link href={demoUrl}>
             <Image
               src="/img/external-link-icon.svg"
@@ -42,11 +43,7 @@ export const ProjectCard = ({
           </Link>
         </div>
 
-        <div className="flex flex-wrap gap-2 font-sans text-sm text-gray-400">
-          {skills.map((skill) => {
-            return <span key={skill}># {skill}</span>;
-          })}
-        </div>
+        <Skills skills={skills} />
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ export const PCNav = () => {
   return (
     <nav className="flex items-center gap-12">
       <NavItem href="/#about">about</NavItem>
-      <NavItem href="/#projects">projects</NavItem>
+      <NavItem href="/#project">project</NavItem>
       <NavItem href="/#contact">contact</NavItem>
       <NavItem href="/resume.pdf">
         <ResumeLink />
