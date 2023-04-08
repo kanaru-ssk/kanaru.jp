@@ -1,0 +1,23 @@
+export const skills = {
+  recent: ["Next.js", "TypeScript", "TailwindCSS", "Cypress", "Docker"],
+  other: [
+    "React",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Node.js",
+    "Go",
+    "PHP",
+    "C++",
+    "SQL",
+    "Firebase",
+    "AWS EC2",
+    "Jest",
+    "GraphQL",
+    "Git",
+    "GitHub",
+    "GitHub Actions",
+    "Adobe illustrator",
+    "Adobe photoshop",
+  ],
+};
