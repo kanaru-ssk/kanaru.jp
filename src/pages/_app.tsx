@@ -1,24 +1,19 @@
-import { ApolloProvider } from "@apollo/client/react";
-
+import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import "styles/globals.css";
+import { Cormorant_Garamond } from "next/font/google";
 
-import Footer from "components/common/Footer";
-import Header from "components/common/Header";
-import { client } from "libs/wordpress";
+const garamond = Cormorant_Garamond({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-cormorant-garamond",
+});
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <>
-      <Header />
-
-      <ApolloProvider client={client}>
-        <Component {...pageProps} />
-      </ApolloProvider>
-
-      <Footer />
-    </>
+    <main className={`${garamond.variable} font-sans font-light`}>
+      <Component {...pageProps} />
+    </main>
   );
 };
 
-export default MyApp;
+export default App;
