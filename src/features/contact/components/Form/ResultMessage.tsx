@@ -1,19 +1,27 @@
-import { FormResult } from ".";
-
 type Props = {
-  status: FormResult | undefined;
+  rootState?: Record<
+    string,
+    Partial<{
+      type: string | number;
+      message: string;
+    }>
+  > &
+    Partial<{
+      type: string | number;
+      message: string;
+    }>;
 };
 
-export const ResultMessage = ({ status }: Props) => {
-  if (!status) return null;
+export const ResultMessage = ({ rootState }: Props) => {
+  if (!rootState) return null;
 
   return (
     <div
       className={`${
-        status.isSuccess ? "text-blue-600" : "text-red-600"
+        rootState.type === "success" ? "text-blue-600" : "text-red-600"
       } bg-gray-100 py-4 px-8`}
     >
-      {status.message}
+      {rootState.message}
     </div>
   );
 };

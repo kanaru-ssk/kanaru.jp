@@ -1,44 +1,22 @@
-import { useState, useEffect, FormEvent } from "react";
-import { Heading3 } from "@/components/Heading3";
-import { InputEmail } from "./InputEmail";
-import { InputMessage } from "./InputMessage";
-import { InputName } from "./InputName";
+import { useForm, type SubmitHandler } from "react-hook-form";
+import { Input } from "@/components/Input";
+import { Textarea } from "@/components/Textarea";
+import { FormLabel } from "./FormLabel";
 import { ResultMessage } from "./ResultMessage";
 import { SubmitButton } from "./SubmitButton";
 
-type InputStatus = "Entering" | "Ready" | "Sending";
-
-export type FormResult = {
-  isSuccess: boolean;
-  message: string;
+type IFormInput = {
+  name: string;
+  email: string;
+  message: number;
 };
 
 export const Form = () => {
-  const [inputStatus, setInputStatus] = useState<InputStatus>("Entering");
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
-  const [formResult, setFormResult] = useState<FormResult>();
-
-  useEffect(() => {
-    const emailFormat =
-      /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/;
-    if (name !== "" && emailFormat.test(email) && message !== "") {
-      setInputStatus("Ready");
-    } else {
-      setInputStatus("Entering");
-    }
-  }, [name, email, message]);
-
-  const onSubmitHandler = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setInputStatus("Sending");
+  const { register, formState, handleSubmit, setError, resetField } =
+    useForm<IFormInput>();
+  const onSubmit: SubmitHandler<IFormInput> = async (data) => {
     const res = await fetch("/api/contact", {
-      body: JSON.stringify({
-        name,
-        email,
-        message,
-      }),
+      body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json",
       },
@@ -47,54 +25,60 @@ export const Form = () => {
 
     const result = await res.json();
     if (result?.isSuccess) {
-      setFormResult({
-        isSuccess: true,
+      setError("root", {
+        type: "success",
         message:
           "Thank you for contacting me! Your message has been sent successfully. I will respond to you as soon as possible.",
       });
     } else {
-      setFormResult({
-        isSuccess: false,
+      setError("root", {
+        type: "error",
         message: result?.error?.message ?? "unknown error",
       });
     }
-    setName("");
-    setEmail("");
-    setMessage("");
+    resetField("name");
+    resetField("email");
+    resetField("message");
   };
 
   return (
-    <form onSubmit={onSubmitHandler}>
-      <div className="space-y-2 sm:space-y-8">
-        <div className="flex flex-col items-start sm:flex-row sm:items-center">
-          <div className="w-28 py-1">
-            <Heading3>name</Heading3>
-          </div>
-          <InputName value={name} onChange={(e) => setName(e.target.value)} />
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="space-y-8">
+        <div className="space-y-2 sm:space-y-8">
+          <FormLabel label="name">
+            <Input
+              type="text"
+              placeholder="your name"
+              required
+              {...register("name", { required: true })}
+            />
+          </FormLabel>
+          <FormLabel label="email">
+            <Input
+              type="email"
+              placeholder="example@example.com"
+              required
+              {...register("email", {
+                required: true,
+                pattern:
+                  /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/,
+              })}
+            />
+          </FormLabel>
+          <FormLabel label="message">
+            <Textarea
+              {...register("message", { required: true })}
+              placeholder="Hello"
+              required
+            />
+          </FormLabel>
         </div>
-        <div className="flex flex-col items-start sm:flex-row sm:items-center">
-          <div className="w-28 py-1">
-            <Heading3>email</Heading3>
-          </div>
-          <InputEmail
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+        <ResultMessage rootState={formState.errors.root} />
+        <div className="text-center">
+          <SubmitButton
+            isValid={formState.isValid}
+            isSubmitting={formState.isSubmitting}
           />
-        </div>
-        <div className="flex flex-col sm:flex-row">
-          <div className="w-28 py-1">
-            <Heading3>message</Heading3>
-          </div>
-          <InputMessage
-            value={message}
-            onChange={(e) => {
-              setMessage(e.target.value);
-            }}
-          />
-        </div>
-        <ResultMessage status={formResult} />
-        <div className="pt-8 text-center sm:pt-0">
-          <SubmitButton inputStatus={inputStatus} />
         </div>
       </div>
     </form>
