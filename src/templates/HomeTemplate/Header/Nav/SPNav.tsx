@@ -1,5 +1,5 @@
-import { ReactNode, useState } from "react";
-import { MenuIcon } from "@/components/atoms/MenuIcon";
+import Image from "next/image";
+import { useState } from "react";
 import { NavItem } from "./NavItem";
 import { ResumeLink } from "./ResumeLink";
 import { SlideIn } from "./SlideIn";
@@ -9,8 +9,13 @@ export const SPNav = () => {
   const hide = () => setOpen(false);
   return (
     <>
-      <button onClick={() => setOpen(true)}>
-        <MenuIcon />
+      <button onClick={() => setOpen(true)} className="py-3 px-4">
+        <Image
+          src="/img/menu-icon.svg"
+          alt="menu-icon"
+          width={20}
+          height={14}
+        />
       </button>
       <SlideIn isShown={open} onHide={hide}>
         <nav className="flex flex-col gap-8 pl-8 pt-14">

@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { ReactNode, useRef, useEffect } from "react";
-import { CloseIcon } from "@/components/atoms/CloseIcon";
 
 type Props = {
   children: ReactNode;
@@ -31,9 +31,14 @@ export const SlideIn = ({ children, isShown, onHide }: Props) => {
         !isShown && "translate-x-full"
       } absolute top-0 right-0 z-20 h-screen w-[60%] bg-white drop-shadow-2xl duration-300`}
     >
-      <header className="flex h-12 flex-row-reverse items-center border-b border-gray-100 pr-2">
-        <button onClick={onHide}>
-          <CloseIcon />
+      <header className="flex h-12 flex-row-reverse items-center border-b border-gray-100">
+        <button onClick={onHide} className="p-4">
+          <Image
+            src="/img/close-icon.svg"
+            alt="close-icon"
+            width={16}
+            height={16}
+          />
         </button>
       </header>
       {children}
