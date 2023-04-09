@@ -28,7 +28,7 @@ export const Form = () => {
       setError("root", {
         type: "success",
         message:
-          "Thank you for contacting me! Your message has been sent successfully. I will respond to you as soon as possible.",
+          "Thank you for reaching out. Your message has been successfully delivered, and I will make every effort to reply to you as promptly as possible.",
       });
     } else {
       setError("root", {

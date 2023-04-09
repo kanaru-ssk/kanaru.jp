@@ -18,14 +18,15 @@ export const About = () => {
         />
         <div className="space-y-2">
           <p>
-            Hello, my name is Kanaru Sasaki and I am a freelance front-end
-            engineer. Although I am currently based in Japan, I am excited to
-            expand my horizons and work on projects from around the world
+            Good day, sir. I am Kanaru Sasaki, a freelance front-end engineer.
+            Though I presently reside in Japan, I am keen to broaden my horizons
+            and undertake projects from all corners of the globe.
           </p>
           <p>
-            On my days off, I enjoy taking walks along the serene riverside near
-            my home, and going into city and browsing through antique shops and
-            vintage clothing stores.
+            During my leisure hours, I derive pleasure from strolling along the
+            placid riverside in proximity to my abode, as well as venturing into
+            the city to peruse through antiquarian emporia and establishments
+            specializing in vintage clothing.
           </p>
           <Heading3>skills i work with recently</Heading3>
           <div>
