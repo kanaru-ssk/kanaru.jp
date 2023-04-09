@@ -14,7 +14,7 @@ export const SubmitButton = ({ isValid, isSubmitting }: Props) => {
           ? "bg-black text-white"
           : "border border-gray-400 bg-white text-gray-400"
       } py-3 px-16`}
-      aria-disabled={isValid}
+      aria-disabled={!isValid}
     >
       {isSubmitting ? <LoadingIcon /> : "send"}
     </button>
