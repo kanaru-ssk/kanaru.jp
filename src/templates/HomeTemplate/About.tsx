@@ -16,7 +16,7 @@ export const About = () => {
           height={240}
           className="h-60 w-60"
         />
-        <div className="space-y-4">
+        <div className="space-y-2">
           <p>
             Hello, my name is Kanaru Sasaki and I am a freelance front-end
             engineer. Although I am currently based in Japan, I am excited to
@@ -27,14 +27,12 @@ export const About = () => {
             my home, and going into city and browsing through antique shops and
             vintage clothing stores.
           </p>
+          <Heading3>skills i work with recently</Heading3>
           <div>
-            <div className="py-2">
-              <Heading3>skills i work with recently</Heading3>
-            </div>
             <Skills skills={skills.recent} />
             <details>
               <summary className="w-32 cursor-pointer py-2 text-gray-600">
-                <Heading3>other skills</Heading3>
+                <span>other skills</span>
               </summary>
               <Skills skills={skills.other} />
             </details>
