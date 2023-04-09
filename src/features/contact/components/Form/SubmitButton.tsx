@@ -15,6 +15,7 @@ export const SubmitButton = ({ inputStatus }: Props) => {
           ? "bg-black text-white"
           : "border border-gray-400 bg-white text-gray-400"
       } py-3 px-16 focus:border-black focus:outline-black`}
+      aria-disabled={inputStatus !== "Ready"}
     >
       {inputStatus !== "Sending" && "send"}
       {inputStatus === "Sending" && <LoadingIcon />}

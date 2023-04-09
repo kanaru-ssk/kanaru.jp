@@ -15,7 +15,7 @@ export const HeroImage = () => {
       <Link
         href="/#about"
         scroll={false}
-        className="absolute bottom-24 left-1/2 flex -translate-x-1/2 animate-pulse flex-col items-center gap-4"
+        className="absolute bottom-24 left-1/2 flex -translate-x-1/2 flex-col items-center gap-4"
       >
         <p className="text-lg">scroll</p>
         <Image

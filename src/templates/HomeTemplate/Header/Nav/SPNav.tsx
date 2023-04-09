@@ -13,6 +13,7 @@ export const SPNav = () => {
         <Image
           src="/img/menu-icon.svg"
           alt="menu-icon"
+          aria-label="menu"
           width={20}
           height={14}
         />
