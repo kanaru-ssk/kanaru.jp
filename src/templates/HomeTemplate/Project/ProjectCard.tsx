@@ -27,8 +27,8 @@ export const ProjectCard = ({
           <p>{description}</p>
         </div>
         <Skills skills={skills} />
-        <div className="flex items-center gap-8">
-          <Link href={demoUrl} className="flex items-center gap-4 underline">
+        <div className="flex flex-wrap items-center gap-6">
+          <Link href={demoUrl} className="flex items-center gap-2 underline">
             <Image
               src="/img/external-link-icon.svg"
               alt="demo-link"
@@ -37,7 +37,7 @@ export const ProjectCard = ({
             />
             product page
           </Link>
-          <Link href={sourceUrl} className="flex items-center gap-4 underline">
+          <Link href={sourceUrl} className="flex items-center gap-2 underline">
             <Image
               src="/img/github-icon-black.svg"
               alt="source-code-link"
