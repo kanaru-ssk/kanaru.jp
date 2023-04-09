@@ -1,5 +1,5 @@
 import { ChangeEventHandler } from "react";
-import { Textarea } from "@/components/atoms/Textarea";
+import { Textarea } from "@/components/Textarea";
 
 type Props = {
   value: string;

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Heading3 } from "@/components/atoms/Heading3";
-import { Skills } from "@/components/atoms/Skills";
+import { Heading3 } from "@/components/Heading3";
+import { Skills } from "@/components/Skills";
 import { type Project } from "@/constants/projects";
 
 export const ProjectCard = ({

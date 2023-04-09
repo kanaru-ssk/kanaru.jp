@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Heading3 } from "@/components/atoms/Heading3";
+import { Heading3 } from "@/components/Heading3";
 import { InputEmail } from "./InputEmail";
 import { InputMessage } from "./InputMessage";
 import { InputName } from "./InputName";

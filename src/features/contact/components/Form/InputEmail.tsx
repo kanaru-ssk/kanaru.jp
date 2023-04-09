@@ -1,5 +1,5 @@
 import { ChangeEventHandler } from "react";
-import { Input } from "@/components/atoms/Input";
+import { Input } from "@/components/Input";
 
 type Props = {
   value: string;
