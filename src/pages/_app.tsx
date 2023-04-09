@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import type { AppProps } from "next/app";
+import { type AppProps } from "next/app";
 import { Cormorant_Garamond } from "next/font/google";
 
 const garamond = Cormorant_Garamond({

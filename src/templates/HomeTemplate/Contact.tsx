@@ -1,4 +1,4 @@
-import { Heading2 } from "@/components/atoms/Heading2";
+import { Heading2 } from "@/components/Heading2";
 import { Form } from "@/features/contact/components/Form";
 
 export const Contact = () => {
