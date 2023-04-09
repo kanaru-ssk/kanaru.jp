@@ -16,7 +16,7 @@ export const Head = () => {
       <meta property="og:url" content={process.env.NEXT_PUBLIC_URL} />
       <meta
         property="og:image"
-        content={`${process.env.NEXT_PUBLIC_URL}/ogp.webp`}
+        content={`${process.env.NEXT_PUBLIC_URL}/ogp.png`}
       />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
