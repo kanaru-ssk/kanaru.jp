@@ -1,10 +1,10 @@
-import { FormStatus } from "./";
+import { FormResult } from ".";
 
 type Props = {
-  status: FormStatus | undefined;
+  status: FormResult | undefined;
 };
 
-export const StatusMessage = ({ status }: Props) => {
+export const ResultMessage = ({ status }: Props) => {
   if (!status) return null;
 
   return (

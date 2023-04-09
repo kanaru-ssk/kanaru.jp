@@ -3,12 +3,12 @@ import { Heading3 } from "@/components/Heading3";
 import { InputEmail } from "./InputEmail";
 import { InputMessage } from "./InputMessage";
 import { InputName } from "./InputName";
-import { StatusMessage } from "./StatusMessage";
+import { ResultMessage } from "./ResultMessage";
 import { SubmitButton } from "./SubmitButton";
 
 type InputStatus = "Entering" | "Ready" | "Sending";
 
-export type FormStatus = {
+export type FormResult = {
   isSuccess: boolean;
   message: string;
 };
@@ -18,7 +18,7 @@ export const Form = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
-  const [status, setStatus] = useState<FormStatus>();
+  const [formResult, setFormResult] = useState<FormResult>();
 
   useEffect(() => {
     const emailFormat =
@@ -47,13 +47,13 @@ export const Form = () => {
 
     const result = await res.json();
     if (result?.isSuccess) {
-      setStatus({
+      setFormResult({
         isSuccess: true,
         message:
           "Thank you for contacting me! Your message has been sent successfully. I will respond to you as soon as possible.",
       });
     } else {
-      setStatus({
+      setFormResult({
         isSuccess: false,
         message: result?.error?.message ?? "unknown error",
       });
@@ -92,7 +92,7 @@ export const Form = () => {
             }}
           />
         </div>
-        <StatusMessage status={status} />
+        <ResultMessage status={formResult} />
         <div className="pt-8 text-center sm:pt-0">
           <SubmitButton inputStatus={inputStatus} />
         </div>
