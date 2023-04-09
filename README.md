@@ -1,6 +1,6 @@
 # Kanaru Sasaki HomePage
 
-![screenshot](public/img/screenshot.webp)
+![screenshot](public/img/screenshot.png)
 
 ## URL
 
