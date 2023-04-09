@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { type ReactNode } from "react";
 import { Heading3 } from "@/components/Heading3";
 
 type Props = {

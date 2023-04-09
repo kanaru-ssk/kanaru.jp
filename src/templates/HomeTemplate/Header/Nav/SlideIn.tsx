@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ReactNode, useRef, useEffect } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
