@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-import { ScrollIcon } from "@/components/atoms/ScrollIcon";
 
 export const HeroImage = () => {
   return (
@@ -15,10 +15,15 @@ export const HeroImage = () => {
       <Link
         href="/#about"
         scroll={false}
-        className="absolute bottom-24 left-1/2 flex -translate-x-1/2 animate-pulse flex-col items-center gap-4"
+        className="absolute bottom-24 left-1/2 flex -translate-x-1/2 flex-col items-center gap-4"
       >
         <p className="text-lg">scroll</p>
-        <ScrollIcon />
+        <Image
+          src="/img/scroll-icon.svg"
+          alt="scroll-icon"
+          width={8}
+          height={64}
+        />
       </Link>
     </section>
   );

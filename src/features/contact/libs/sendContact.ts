@@ -1,6 +1,6 @@
 import { STATUS_CODES } from "http";
 import sgMail from "@sendgrid/mail";
-import type { NextApiRequest, NextApiResponse } from "next";
+import { type NextApiRequest, type NextApiResponse } from "next";
 import { makeEmailData } from "./makeEmailData";
 
 type Response =

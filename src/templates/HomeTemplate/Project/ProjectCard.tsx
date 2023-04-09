@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Heading3 } from "@/components/atoms/Heading3";
-import { Skills } from "@/components/atoms/Skills";
+import { Heading3 } from "@/components/Heading3";
+import { Skills } from "@/components/Skills";
 import { type Project } from "@/constants/projects";
 
 export const ProjectCard = ({
@@ -13,7 +13,7 @@ export const ProjectCard = ({
   skills,
 }: Project) => {
   return (
-    <div className="grid gap-4 sm:grid-cols-2">
+    <div className="grid gap-2 sm:grid-cols-2">
       <Image
         src={imageSrc}
         width={340}
@@ -22,28 +22,31 @@ export const ProjectCard = ({
         className="mx-auto h-auto w-full"
       />
       <div className="space-y-4 px-4">
-        <Heading3>{title}</Heading3>
-        <p>{description}</p>
-        <div className="ml-1 flex items-center gap-8">
-          <Link href={demoUrl}>
+        <div>
+          <Heading3>{title}</Heading3>
+          <p>{description}</p>
+        </div>
+        <Skills skills={skills} />
+        <div className="flex flex-wrap items-center gap-6">
+          <Link href={demoUrl} className="flex items-center gap-2 underline">
             <Image
               src="/img/external-link-icon.svg"
               alt="demo-link"
               width={18}
               height={18}
             />
+            product page
           </Link>
-          <Link href={sourceUrl}>
+          <Link href={sourceUrl} className="flex items-center gap-2 underline">
             <Image
               src="/img/github-icon-black.svg"
               alt="source-code-link"
               width={21}
               height={21}
             />
+            source code
           </Link>
         </div>
-
-        <Skills skills={skills} />
       </div>
     </div>
   );

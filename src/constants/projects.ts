@@ -11,7 +11,7 @@ export const projects: Project[] = [
   {
     title: "Pay History",
     description:
-      "This is a simple household app built with Firebase, Next.js, TypeScript and Tailwind CSS. It uses Firebase for the backend and implements login authentication and real-time listening.",
+      "This is a modest household application constructed utilizing Firebase, Next.js, TypeScript and Tailwind CSS. The backend employs Firebase, and it incorporates login authentication and real-time listening.",
     imageSrc: "/img/prj-pay-history.png",
     demoUrl: "https://pay-history.kanaru.jp",
     sourceUrl: "https://github.com/kanaru-ssk/pay-history",
@@ -20,7 +20,7 @@ export const projects: Project[] = [
   {
     title: "Notion Blog",
     description:
-      "This is a simple blog application built with Next.js, TypeScript, Notion API, and Tailwind CSS. The application fetches data from a Notion database using the Notion API and displays the data on the frontend.",
+      "This is a basic blogging application constructed using Next.js, TypeScript, Notion API, and Tailwind CSS. The application retrieves information from a Notion database via the Notion API and showcases the data on the frontend.",
     imageSrc: "/img/prj-notion-blog.png",
     demoUrl: "https://notion-blog.kanaru.jp",
     sourceUrl: "https://github.com/kanaru-ssk/notion-blog",

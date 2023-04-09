@@ -1,23 +1,22 @@
-import { LoadingIcon } from "@/components/atoms/LoadingIcon";
-
-type InputStatus = "Entering" | "Ready" | "Sending";
+import { LoadingIcon } from "@/components/LoadingIcon";
 
 type Props = {
-  inputStatus: InputStatus;
+  isValid: boolean;
+  isSubmitting: boolean;
 };
 
-export const SubmitButton = ({ inputStatus }: Props) => {
+export const SubmitButton = ({ isValid, isSubmitting }: Props) => {
   return (
     <button
       type="submit"
       className={`${
-        inputStatus === "Ready"
+        isValid
           ? "bg-black text-white"
           : "border border-gray-400 bg-white text-gray-400"
-      } py-3 px-16 focus:border-black focus:outline-black`}
+      } py-3 px-16`}
+      aria-disabled={isValid}
     >
-      {inputStatus !== "Sending" && "send"}
-      {inputStatus === "Sending" && <LoadingIcon />}
+      {isSubmitting ? <LoadingIcon /> : "send"}
     </button>
   );
 };
