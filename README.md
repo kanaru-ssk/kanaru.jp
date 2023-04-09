@@ -8,7 +8,7 @@
 
 ## Description
 
-This is Kanaru Sasaki's HomePage. I created it using NextJS, TypeScript and TailwindCSS. The contact form sends an email via SendGrid.
+This is Kanaru Sasaki's homepage. I fashioned it utilizing NextJS, TypeScript, and TailwindCSS. The contact form facilitates the transmission of electronic mail via SendGrid.
 
 ## Technology used
 
