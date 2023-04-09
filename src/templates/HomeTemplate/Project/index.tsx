@@ -8,7 +8,7 @@ export const Project = () => {
       <div className="px-4">
         <Heading2>Project</Heading2>
       </div>
-      <div className="space-y-16">
+      <div className="space-y-16 sm:px-4">
         {projects.map((project) => {
           return <ProjectCard key={project.title} {...project} />;
         })}
