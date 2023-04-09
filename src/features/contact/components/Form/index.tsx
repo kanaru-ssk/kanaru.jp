@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, FormEvent } from "react";
 import { Heading3 } from "@/components/Heading3";
 import { InputEmail } from "./InputEmail";
 import { InputMessage } from "./InputMessage";
@@ -30,7 +30,7 @@ export const Form = () => {
     }
   }, [name, email, message]);
 
-  const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmitHandler = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setInputStatus("Sending");
     const res = await fetch("/api/contact", {
