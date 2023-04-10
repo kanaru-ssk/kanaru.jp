@@ -50,7 +50,7 @@ export const makeEmailData = async ({
     // create mail to owner
     const toOwnerTemplate = Handlebars.compile(toOwnerHbs);
     const toOwnerEmail: MailDataRequired = {
-      to: process.env.OWNER_EMAIL,
+      to: ownerEmail,
       from: formEmail,
       subject: "New Contact Form Submission",
       html: toOwnerTemplate({
