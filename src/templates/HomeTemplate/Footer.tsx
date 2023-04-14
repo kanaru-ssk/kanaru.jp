@@ -8,7 +8,7 @@ export const Footer = () => {
       <Link href="/" title="top">
         <Image src="/logo.svg" alt="logo" width={104} height={48} />
       </Link>
-      <div className="flex gap-16">
+      <div className="flex gap-12 sm:gap-16">
         {links.map((link) => {
           const {
             href,
