@@ -29,7 +29,7 @@ export const SPNav = () => {
           <div onClick={hide} className="ml-6">
             <NavItem href="/#contact">contact</NavItem>
           </div>
-          <NavItem href="/resume.pdf">
+          <NavItem href="/resume_v4.pdf">
             <ResumeLink />
           </NavItem>
         </nav>
