@@ -6,7 +6,7 @@ export const links = [
       src: "/img/github-icon.svg",
       alt: "github-icon",
       width: 21,
-      height: 21,
+      height: 20,
     },
   },
   {
