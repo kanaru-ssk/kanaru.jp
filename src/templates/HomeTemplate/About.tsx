@@ -18,17 +18,22 @@ export const About = () => {
         />
         <div className="space-y-2">
           <p>
-            Good day, sir. I am Kanaru Sasaki, a freelance front-end engineer.
-            Though I presently reside in Japan, I am keen to broaden my horizons
-            and undertake projects from all corners of the globe.
+            Hello, I&apos;m Kanaru Sasaki. I work as a freelance web developer
+            in Japan, and I&apos;m currently primarily focusing on TypeScript
+            and Next.JS. Let me introduce my personal project in the section
+            below.
           </p>
-          <p>
-            During my leisure hours, I derive pleasure from strolling along the
-            placid riverside in proximity to my abode, as well as venturing into
-            the city to peruse through antiquarian emporia and establishments
-            specializing in vintage clothing.
-          </p>
-          <Heading3>skills i work with recently</Heading3>
+          <dl className="grid grid-cols-[auto_1fr] gap-x-2">
+            <dt>- 2000 :</dt>
+            <dd>Born in Miyagi, Japan.</dd>
+            <dt>- 2018 :</dt>
+            <p>Enrolled at Miyagi University.</p>
+            <dt>- 2021 :</dt>
+            <dd>Started working as a part-time web developer.</dd>
+            <dt>- 2022 :</dt>
+            <dd>Started working as a freelance web developer.</dd>
+          </dl>
+          <Heading3>skills i work with currently</Heading3>
           <div>
             <Skills skills={skills.recent} />
             <details>

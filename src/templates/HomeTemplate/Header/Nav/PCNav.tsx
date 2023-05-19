@@ -7,7 +7,7 @@ export const PCNav = () => {
       <NavItem href="/#about">about</NavItem>
       <NavItem href="/#project">project</NavItem>
       <NavItem href="/#contact">contact</NavItem>
-      <NavItem href="/resume_v4.pdf">
+      <NavItem href="/resume_v5.pdf">
         <ResumeLink />
       </NavItem>
     </nav>

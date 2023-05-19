@@ -6,12 +6,12 @@ export const Head = () => {
       <title>Kanaru Sasaki</title>
       <meta
         name="description"
-        content="Kanaru Sasaki is a software engineer who specializes in building exceptional digital experiences."
+        content="This is web front end developer Kanaru Sasaki's personal site."
       />
       <meta property="og:title" content="Kanaru Sasaki" />
       <meta
         property="og:description"
-        content="Kanaru Sasaki is a software engineer who specializes in building exceptional digital experiences."
+        content="This is web front end developer Kanaru Sasaki's personal site."
       />
       <meta property="og:url" content={process.env.NEXT_PUBLIC_URL} />
       <meta
