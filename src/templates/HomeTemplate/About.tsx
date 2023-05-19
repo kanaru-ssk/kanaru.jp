@@ -18,9 +18,10 @@ export const About = () => {
         />
         <div className="space-y-2">
           <p>
-            Hello, I&apos;m Kanaru Sasaki. I work as a freelance web engineer in
-            Japan, and I&apos;m currently primarily focusing on TypeScript and
-            Next.JS. Let me introduce my personal project in the section below.
+            Hello, I&apos;m Kanaru Sasaki. I work as a freelance web developer
+            in Japan, and I&apos;m currently primarily focusing on TypeScript
+            and Next.JS. Let me introduce my personal project in the section
+            below.
           </p>
           <dl className="grid grid-cols-[auto_1fr] gap-x-2">
             <dt>- 2000 :</dt>
@@ -28,9 +29,9 @@ export const About = () => {
             <dt>- 2018 :</dt>
             <p>Enrolled at Miyagi University.</p>
             <dt>- 2021 :</dt>
-            <dd>Started working as a part-time web engineer.</dd>
+            <dd>Started working as a part-time web developer.</dd>
             <dt>- 2022 :</dt>
-            <dd>Started working as a freelance web engineer.</dd>
+            <dd>Started working as a freelance web developer.</dd>
           </dl>
           <Heading3>skills i work with currently</Heading3>
           <div>
