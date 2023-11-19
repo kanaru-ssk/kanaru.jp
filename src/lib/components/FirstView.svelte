@@ -1,9 +1,9 @@
 <script lang="ts">
-  import AnimationLogo from "$lib/components/AnimationLogo.svelte";
+  import Logo from "$lib/components/Logo.svelte";
 </script>
 
 <section>
-  <AnimationLogo />
+  <Logo />
   <p>coming soon . . .</p>
 </section>
 

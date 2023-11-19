@@ -1,39 +1,5 @@
-<script lang="ts">
-  import { draw } from "svelte/transition";
-  import { quintOut } from "svelte/easing";
-  import { onMount } from "svelte";
-
-  let show = false;
-  let fillOpacity = 0;
-  let drawDuration = 1000;
-  let translate = { x: 127, y: 48 };
-  let scale = 2;
-
-  onMount(() => {
-    show = true;
-    setTimeout(() => {
-      fillOpacity = 1;
-      translate = { x: 0, y: 0 };
-      scale = 1;
-    }, drawDuration);
-  });
-</script>
-
-<svg
-  width="211"
-  height="98"
-  viewBox="0 0 211 98"
-  fill="#000"
-  fill-opacity={fillOpacity}
-  style:transition="1s"
-  style:transform="translate({translate.x}px, {translate.y}px) scale({scale})"
->
-  {#if show}
-    <path
-      d="M2 49L10 25L82 1L74 25L2 49Z"
-      transition:draw={{ duration: drawDuration, easing: quintOut }}
-      stroke="#000"
-    />{/if}
+<svg width="211" height="98" viewBox="0 0 211 98" fill="#000">
+  <path d="M2 49L10 25L82 1L74 25L2 49Z" />
   <path
     d="M209.42 92.8601L199.9 97.4201C199.26 97.7401 197.82 96.9401 197.66 91.4201C193.9 95.9001 186.78 100.22 180.78 94.8601C179.18 93.4201 178.62 91.0201 178.62 88.2201V77.3401C178.62 74.0601 177.98 71.0201 174.3 72.9401C173.82 73.1801 173.58 72.2201 173.9 72.0601L183.18 67.7401C183.9 67.4201 184.46 68.3001 184.46 68.4601V84.9401C184.62 92.4601 188.46 93.0201 190.46 93.0201C193.98 93.0201 196.62 90.7801 197.66 89.7401V77.2601C197.5 74.9401 197.66 70.7801 193.34 72.8601C192.94 73.0201 192.54 72.1401 192.94 71.9801L202.14 67.6601C202.86 67.3401 203.5 68.2201 203.5 68.3801V88.0601C203.26 94.6201 207.02 92.3801 208.94 91.7401C209.66 91.5001 209.58 92.4601 209.42 92.5401V92.8601Z"
   />
