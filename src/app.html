@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+  <head>
+    <title>Kanaru | Portfolio</title>
+    <meta
+      name="description"
+      content="佐々木哉瑠(かなる)のポートフォリオサイト"
+    />
+
+    <meta property="og:title" content="Kanaru | Portfolio" />
+    <meta
+      property="og:description"
+      content="佐々木哉瑠(かなる)のポートフォリオサイト"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kanaru.jp" />
+    <meta property="og:image" content="https://kanaru.jp/ogp.png" />
+    <meta property="og:site_name" content="kanaru.jp" />
+    <meta name="twitter:card" content="summary" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.svg" />
+    %sveltekit.head%
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">%sveltekit.body%</div>
+  </body>
 </html>
