@@ -1,0 +1,3 @@
+{
+  "buildCommand": "bash install-wasm-pack.sh && pnpm build"
+}

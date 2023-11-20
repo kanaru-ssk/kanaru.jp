@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "vite dev",
-    "build-wasm": "wasm-pack build ./src/lib/wasm --target web",
-    "build": "pnpm build-wasm && vite build",
+    "build": "build:wasm build:js",
+    "build:wasm": "wasm-pack build ./src/lib/wasm --target web --release",
+    "build:js": "vite build",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -26,8 +27,7 @@
     "svelte-check": "^3.4.3",
     "tslib": "^2.4.1",
     "typescript": "^5.0.0",
-    "vite": "^4.4.2",
-    "wasm-pack": "^0.12.1"
+    "vite": "^4.4.2"
   },
   "type": "module"
 }

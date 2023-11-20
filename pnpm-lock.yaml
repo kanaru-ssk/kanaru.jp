@@ -47,9 +47,6 @@ devDependencies:
   vite:
     specifier: ^4.4.2
     version: 4.4.2
-  wasm-pack:
-    specifier: ^0.12.1
-    version: 0.12.1
 
 packages:
 
@@ -735,14 +732,6 @@ packages:
     resolution: {integrity: sha512-tLRNUXati5MFePdAk8dw7Qt7DpxPB60ofAgn8WRhW6a2rcimZnYBP9oxHiv0OHy+Wz7kPMG+t4LGdt31+4EmGg==}
     dev: true
 
-  /axios@0.26.1:
-    resolution: {integrity: sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==}
-    dependencies:
-      follow-redirects: 1.15.3
-    transitivePeerDependencies:
-      - debug
-    dev: true
-
   /axobject-query@3.2.1:
     resolution: {integrity: sha512-jsyHu61e6N4Vbz/v18DHwWYKK0bSWLqn47eeDSKPB7m8tqMHF9YJ+mhIk2lVteyZrY8tnSj/jHOv4YiTCuCJgg==}
     dependencies:
@@ -756,17 +745,6 @@ packages:
   /binary-extensions@2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
     engines: {node: '>=8'}
-    dev: true
-
-  /binary-install@1.1.0:
-    resolution: {integrity: sha512-rkwNGW+3aQVSZoD0/o3mfPN6Yxh3Id0R/xzTVBVVpGNlVz8EGwusksxRlbk/A5iKTZt9zkMn3qIqmAt3vpfbzg==}
-    engines: {node: '>=10'}
-    dependencies:
-      axios: 0.26.1
-      rimraf: 3.0.2
-      tar: 6.2.0
-    transitivePeerDependencies:
-      - debug
     dev: true
 
   /bindings@1.5.0:
@@ -1227,16 +1205,6 @@ packages:
 
   /flatted@3.2.9:
     resolution: {integrity: sha512-36yxDn5H7OFZQla0/jFJmbIKTdZAQHngCedGxiMmpNfEZM0sdEeT+WczLQrjK6D7o2aiyLYDnkw0R3JK0Qv1RQ==}
-    dev: true
-
-  /follow-redirects@1.15.3:
-    resolution: {integrity: sha512-1VzOtuEM8pC9SFU1E+8KfTjZyMztRsgEfwQl44z8A25uy13jSzTj6dyK2Df52iV0vgHCfBwLhDWevLn95w5v6Q==}
-    engines: {node: '>=4.0'}
-    peerDependencies:
-      debug: '*'
-    peerDependenciesMeta:
-      debug:
-        optional: true
     dev: true
 
   /fs-minipass@2.1.0:
@@ -2243,16 +2211,6 @@ packages:
         optional: true
     dependencies:
       vite: 4.4.2
-    dev: true
-
-  /wasm-pack@0.12.1:
-    resolution: {integrity: sha512-dIyKWUumPFsGohdndZjDXRFaokUT/kQS+SavbbiXVAvA/eN4riX5QNdB6AhXQx37zNxluxQkuixZUgJ8adKjOg==}
-    hasBin: true
-    requiresBuild: true
-    dependencies:
-      binary-install: 1.1.0
-    transitivePeerDependencies:
-      - debug
     dev: true
 
   /webidl-conversions@3.0.1:
