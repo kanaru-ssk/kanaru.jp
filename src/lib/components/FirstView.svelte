@@ -9,7 +9,7 @@
 
 <style>
   section {
-    height: 100vh;
+    height: 100svh;
     display: flex;
     align-items: center;
     justify-content: center;
