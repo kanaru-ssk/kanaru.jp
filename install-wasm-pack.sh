@@ -2,6 +2,7 @@ echo "Installing rustup..."
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 echo "Setup rustup..."
+echo "$HOME"
 source "$HOME/.cargo/env"
 
 echo "Installing wasm-pack..."
