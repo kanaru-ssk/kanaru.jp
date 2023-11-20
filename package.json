@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite dev",
-    "build": "build:wasm build:js",
+    "build": "pnpm build:wasm && pnpm build:js",
     "build:wasm": "wasm-pack build ./src/lib/wasm --target web --release",
     "build:js": "vite build",
     "preview": "vite preview",
