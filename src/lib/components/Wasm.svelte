@@ -5,10 +5,10 @@
   onMount(() => run());
 </script>
 
-<canvas />
+<div id="wasm-container" />
 
 <style>
-  canvas {
+  div {
     position: fixed;
     top: 0;
     left: 0;
