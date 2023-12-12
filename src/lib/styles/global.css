@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
   @font-face {
     font-family: "HelveticaNeue";
     src: local("HelveticaNeue"), url("/HelveticaNeue.ttc");
     font-display: swap;
   }
-}
+} */
+
+/* body {
+  background-color: #000;
+} */

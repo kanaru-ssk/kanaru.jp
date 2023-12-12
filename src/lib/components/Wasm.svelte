@@ -2,18 +2,7 @@
   import run from "$lib/wasm/pkg";
   import { onMount } from "svelte";
 
-  onMount(() => run());
+  onMount(run);
 </script>
 
-<div id="wasm-container" />
-
-<style>
-  div {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100svw;
-    height: 100svh;
-    z-index: -10;
-  }
-</style>
+<div id="wasm-container" class="w-svw fixed left-0 top-0 -z-10 h-svh" />
