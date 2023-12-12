@@ -2,8 +2,6 @@
   import { page } from "$app/stores";
   import MenuItem from "./menu-item.svelte";
 
-  console.log($page.url.pathname);
-
   const items = [
     { href: "/about", name: "about" },
     { href: "https://github.com/kanaru-ssk", name: "github" },
