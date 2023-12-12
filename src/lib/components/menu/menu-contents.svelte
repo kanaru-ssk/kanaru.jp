@@ -1,11 +1,21 @@
+<script lang="ts">
+  import { page } from "$app/stores";
+  import MenuItem from "./menu-item.svelte";
+
+  console.log($page.url.pathname);
+
+  const items = [
+    { href: "/about", name: "about" },
+    { href: "https://github.com/kanaru-ssk", name: "github" },
+    { href: "/contact", name: "contact" },
+  ];
+</script>
+
 <nav>
   <ul class="space-y-4 text-right text-base md:text-lg">
-    <li><a href="./about" class="p-4 hover:text-neutral-400">about</a></li>
-    <li>
-      <a href="https://github.com/kanaru-ssk" class="p-4 hover:text-neutral-400"
-        >github</a
-      >
-    </li>
-    <li><a href="./contact" class="p-4 hover:text-neutral-400">contact</a></li>
+    {#each items as { href, name }}
+      {@const disabled = href === $page.url.pathname}
+      <MenuItem {href} {name} {disabled} />
+    {/each}
   </ul>
 </nav>
