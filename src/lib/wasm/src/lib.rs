@@ -41,23 +41,23 @@ impl Vertex {
 const VERTICES: &[Vertex] = &[
     Vertex {
         position: [-0.0868241, 0.49240386, 0.0],
-        color: [0.5, 0.0, 0.5],
+        color: [0.0, 0.0, 0.0],
     },
     Vertex {
         position: [-0.49513406, 0.06958647, 0.0],
-        color: [0.5, 0.0, 0.5],
+        color: [0.0, 0.0, 0.0],
     },
     Vertex {
         position: [-0.21918549, -0.44939706, 0.0],
-        color: [0.5, 0.0, 0.5],
+        color: [0.0, 0.0, 0.0],
     },
     Vertex {
         position: [0.35966998, -0.3473291, 0.0],
-        color: [0.5, 0.0, 0.5],
+        color: [0.0, 0.0, 0.0],
     },
     Vertex {
         position: [0.44147372, 0.2347359, 0.0],
-        color: [0.5, 0.0, 0.5],
+        color: [0.0, 0.0, 0.0],
     },
 ];
 
@@ -245,9 +245,9 @@ impl State {
                     resolve_target: None,
                     ops: wgpu::Operations {
                         load: wgpu::LoadOp::Clear(wgpu::Color {
-                            r: 0.1,
-                            g: 0.2,
-                            b: 0.3,
+                            r: 0.0,
+                            g: 0.0,
+                            b: 0.0,
                             a: 1.0,
                         }),
                         store: wgpu::StoreOp::Store,
@@ -288,14 +288,18 @@ pub async fn run() {
     #[cfg(target_arch = "wasm32")]
     {
         use winit::dpi::PhysicalSize;
-        window.set_inner_size(PhysicalSize::new(450, 400));
+        window.set_inner_size(PhysicalSize::new(2560, 1600));
 
         use winit::platform::web::WindowExtWebSys;
         web_sys::window()
             .and_then(|win| win.document())
             .and_then(|doc| {
                 let dst = doc.get_element_by_id("wasm-container")?;
-                let canvas = web_sys::Element::from(window.canvas());
+                let canvas = window.canvas();
+                let style = &canvas.style();
+                style.set_property("width", "100%").unwrap();
+                style.set_property("height", "100%").unwrap();
+                let canvas = web_sys::Element::from(canvas);
                 dst.append_child(&canvas).ok()?;
                 Some(())
             })
