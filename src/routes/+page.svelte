@@ -1,5 +1,9 @@
 <script lang="ts">
-  import Home from "$lib/components/Home.svelte";
+  import { Logo } from "$lib/components";
 </script>
 
-<Home />
+<section class="h-svh">
+  <div class="flex h-full items-center justify-center">
+    <Logo />
+  </div>
+</section>

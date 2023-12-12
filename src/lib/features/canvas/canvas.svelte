@@ -1,5 +1,5 @@
 <script lang="ts">
-  import run from "$lib/wasm/pkg";
+  import run from "./wasm/pkg/wasm";
   import { onMount } from "svelte";
 
   onMount(run);

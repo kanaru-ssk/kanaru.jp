@@ -1,5 +1,5 @@
 <script lang="ts">
-  import MenuContents from "$lib/components/menu/menu-contents.svelte";
+  import MenuContents from "./menu-contents.svelte";
 </script>
 
 <label class="relative block h-16 w-16 cursor-pointer">

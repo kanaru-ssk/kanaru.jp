@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from "$app/stores";
-  import HeaderLogo from "$lib/components/HeaderLogo.svelte";
-  import { Menu } from "$lib/components/menu";
+  import { HeaderLogo } from "$lib/components";
+  import { Menu } from "$lib/features/menu";
   import "$lib/styles/global.css";
 </script>
 
