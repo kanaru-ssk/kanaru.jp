@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Logo from "$lib/components/Logo.svelte";
+  import Logo from "./logo.svelte";
 </script>
 
 <header class="flex h-16 items-center justify-start px-4">
