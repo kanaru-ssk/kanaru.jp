@@ -1,9 +1,8 @@
 <script lang="ts">
   import type { HTMLButtonAttributes } from "svelte/elements";
 
-  let color: "white" | "gray" = "white";
-  let type: HTMLButtonAttributes["type"];
-  export { color, type };
+  export let color: "white" | "gray" = "white";
+  export let type: HTMLButtonAttributes["type"];
 </script>
 
 <button
