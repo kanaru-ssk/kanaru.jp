@@ -44,7 +44,7 @@
     {#if form && !form.success && form.errors.message}
       <ErrorMessage errors={form.errors.message} />
     {/if}
-    <div class="p-4">message</div>
+    <div class="p-4 font-bold text-neutral-400">message</div>
     <textarea
       name="message"
       placeholder="お問い合わせ内容を入力して下さい"

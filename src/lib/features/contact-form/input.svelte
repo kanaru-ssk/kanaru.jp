@@ -8,7 +8,7 @@
 </script>
 
 <div class="flex items-center border-b border-neutral-400 px-4">
-  <span class="w-20">{name}</span>
+  <span class="w-20 font-bold text-neutral-400">{name}</span>
   <input
     {name}
     {type}
