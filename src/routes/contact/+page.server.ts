@@ -7,16 +7,23 @@ export const load = ({ cookies }) => {
 };
 
 export const actions: Actions = {
-  default: async ({ cookies, request }) => {
+  confirm: async ({ cookies, request }) => {
     const formData = await request.formData();
-
     setCookie(cookies, formData);
+    const validated = validation(formData);
 
-    const result = validation(formData);
-    if (result.success) {
-      throw redirect(301, "/contact/confirm");
-    } else {
-      return { ...result };
-    }
+    if (!validated.success) return { ...validated };
+
+    throw redirect(301, "/contact/confirm");
+  },
+
+  send: async ({ cookies, request }) => {
+    const formData = await request.formData();
+    setCookie(cookies, formData);
+    const validated = validation(formData);
+
+    if (!validated.success) return { ...validated };
+
+    throw redirect(301, "/contact/complete");
   },
 };

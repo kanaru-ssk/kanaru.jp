@@ -7,6 +7,8 @@ const FormSchema = z.object({
   message: z.string().nullish(),
 });
 
+const path = "/contact";
+
 export function setCookie(cookies: Cookies, formData: FormData) {
   const validatedFields = FormSchema.safeParse({
     name: formData.get("name"),
@@ -15,18 +17,9 @@ export function setCookie(cookies: Cookies, formData: FormData) {
   });
 
   if (validatedFields.success) {
-    cookies.set("name", validatedFields.data.name || "", {
-      path: "/contact",
-      httpOnly: true,
-    });
-    cookies.set("email", validatedFields.data.email || "", {
-      path: "/contact",
-      httpOnly: true,
-    });
-    cookies.set("message", validatedFields.data.message || "s", {
-      path: "/contact",
-      httpOnly: true,
-    });
+    cookies.set("name", validatedFields.data.name || "", { path });
+    cookies.set("email", validatedFields.data.email || "", { path });
+    cookies.set("message", validatedFields.data.message || "", { path });
   }
 }
 
@@ -35,9 +28,11 @@ export function getCookie(cookies: Cookies) {
   const email = cookies.get("email") || "";
   const message = cookies.get("message") || "";
 
-  return {
-    name,
-    email,
-    message,
-  };
+  return { name, email, message };
+}
+
+export function clearCookie(cookies: Cookies) {
+  cookies.delete("name", { path });
+  cookies.delete("email", { path });
+  cookies.delete("message", { path });
 }

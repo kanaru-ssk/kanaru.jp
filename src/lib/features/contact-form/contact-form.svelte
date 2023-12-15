@@ -11,7 +11,7 @@
 
 <form
   method="post"
-  action="/contact"
+  action="/contact?/confirm"
   use:enhance={() =>
     ({ update }) =>
       update({ reset: false })}
