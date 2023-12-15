@@ -12,7 +12,7 @@
   />
 
   <div
-    class="pointer-events-none absolute bottom-0 right-4 w-max translate-y-1/2 scale-y-50 opacity-0 duration-500 peer-checked:pointer-events-auto peer-checked:translate-y-full peer-checked:scale-y-100 peer-checked:opacity-100"
+    class="pointer-events-none absolute bottom-0 right-4 w-max translate-y-1/2 scale-y-50 cursor-default opacity-0 duration-500 peer-checked:pointer-events-auto peer-checked:translate-y-full peer-checked:scale-y-100 peer-checked:opacity-100"
   >
     <MenuContents />
   </div>
