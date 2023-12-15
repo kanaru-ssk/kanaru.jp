@@ -48,7 +48,7 @@
     <textarea
       name="message"
       placeholder="お問い合わせ内容を入力して下さい"
-      class="h-40 w-full border-y border-neutral-400 bg-transparent p-4 text-sm placeholder:text-neutral-500 focus:outline-none"
+      class="h-40 w-full border-y border-neutral-400 bg-transparent p-4 text-base placeholder:text-neutral-500 focus:outline-none"
       required>{formData.message}</textarea
     >
   </div>

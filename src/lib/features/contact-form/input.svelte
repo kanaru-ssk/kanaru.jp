@@ -14,7 +14,7 @@
     {type}
     {placeholder}
     {value}
-    class="w-full bg-transparent p-4 text-sm placeholder:text-neutral-500 focus:outline-none"
+    class="w-full bg-transparent p-4 text-base placeholder:text-neutral-500 focus:outline-none"
     required
     autocomplete="off"
   />
