@@ -4,15 +4,15 @@
 
   export let name: string;
   export let href: string;
-  export let disabled: boolean;
   export let target: HTMLAttributeAnchorTarget | undefined;
+  export let disabled: boolean;
 </script>
 
 <a
   {href}
   class={`${
-    disabled ? "cursor-default text-neutral-700" : "hover:text-neutral-400"
-  } flex justify-end px-4 py-1 pl-0`}
+    disabled ? "cursor-default opacity-25" : "hover:opacity-50"
+  } flex justify-end p-1`}
   aria-disabled={disabled}
   {target}
   rel={target === "_blank" ? "noopener noreferrer" : ""}

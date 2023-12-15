@@ -3,19 +3,23 @@
   import MenuItem from "./menu-item.svelte";
 
   const items = [
-    { href: "/", name: "home" },
-    { href: "/about", name: "about" },
-    { href: "/contact", name: "contact" },
-    { href: "https://github.com/kanaru-ssk", name: "github", target: "_blank" },
+    { name: "home", href: "/" },
+    { name: "about", href: "/about" },
+    { name: "contact", href: "/contact" },
+    { name: "github", href: "https://github.com/kanaru-ssk", target: "_blank" },
   ];
 </script>
 
 <nav>
-  <ul class="space-y-4 text-right text-base lg:text-lg">
+  <ul class="space-y-4 text-base lg:text-lg">
     {#each items as { href, name, target }}
-      {@const disabled = href === $page.url.pathname}
       <li>
-        <MenuItem {href} {name} {disabled} {target} />
+        <MenuItem
+          {name}
+          {href}
+          {target}
+          disabled={href === $page.url.pathname}
+        />
       </li>
     {/each}
   </ul>
