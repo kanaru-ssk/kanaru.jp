@@ -52,9 +52,6 @@ devDependencies:
   svelte-check:
     specifier: ^3.6.2
     version: 3.6.2(postcss@8.4.32)(svelte@4.2.8)
-  svelte-preprocess-delegate-events:
-    specifier: ^0.4.3
-    version: 0.4.3(svelte@4.2.8)
   tailwindcss:
     specifier: ^3.3.6
     version: 3.3.6
@@ -2318,25 +2315,6 @@ packages:
       svelte: ^3.19.0 || ^4.0.0
     dependencies:
       svelte: 4.2.8
-    dev: true
-
-  /svelte-parse-markup@0.1.2(svelte@4.2.8):
-    resolution: {integrity: sha512-DycY7DJr7VqofiJ63ut1/NEG92HrWWL56VWITn/cJCu+LlZhMoBkBXT4opUitPEEwbq1nMQbv4vTKUfbOqIW1g==}
-    peerDependencies:
-      svelte: ^3.0.0 || ^4.0.0
-    dependencies:
-      svelte: 4.2.8
-    dev: true
-
-  /svelte-preprocess-delegate-events@0.4.3(svelte@4.2.8):
-    resolution: {integrity: sha512-bl3ue4YbDYySNAQ5XOhOJxBspq1zeOLmaKGAzhU7eiPON54sN3LL4Sf7K1QdTzPtN6hpzurZoZ/BeCbd5YwRTQ==}
-    engines: {node: '>=16.0.0'}
-    peerDependencies:
-      svelte: '>=3 <5'
-    dependencies:
-      magic-string: 0.30.5
-      svelte: 4.2.8
-      svelte-parse-markup: 0.1.2(svelte@4.2.8)
     dev: true
 
   /svelte-preprocess@5.1.1(postcss@8.4.32)(svelte@4.2.8)(typescript@5.3.3):
