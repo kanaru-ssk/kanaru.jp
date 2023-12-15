@@ -1,12 +1,13 @@
 <script lang="ts">
-  import { Heading1 } from "$lib/components";
+  import { MainTemplate } from "$lib/components";
   import { ConfirmForm, ResultTable } from "$lib/features/contact-form";
 
   export let data;
 </script>
 
-<main class="mx-auto max-w-2xl space-y-10 py-12">
-  <Heading1>confirm</Heading1>
-  <ResultTable formData={data.formData} />
-  <ConfirmForm formData={data.formData} />
-</main>
+<MainTemplate title="confirm">
+  <div class="space-y-12">
+    <ResultTable formData={data.formData} />
+    <ConfirmForm formData={data.formData} />
+  </div>
+</MainTemplate>

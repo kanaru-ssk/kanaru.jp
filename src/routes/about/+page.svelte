@@ -1,7 +1,5 @@
 <script lang="ts">
-  import { Heading1 } from "$lib/components";
+  import { MainTemplate } from "$lib/components";
 </script>
 
-<main>
-  <Heading1>about</Heading1>
-</main>
+<MainTemplate title="about"></MainTemplate>
