@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { FormSchema } from "./validation";
+  import type { FormSchema } from "./types";
 
   export let formData: FormSchema;
 </script>

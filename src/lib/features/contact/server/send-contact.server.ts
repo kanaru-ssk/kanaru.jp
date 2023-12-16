@@ -1,6 +1,6 @@
 import sgMail from "@sendgrid/mail";
 import { SENDGRID_API_KEY, OWNER_EMAIL, FORM_EMAIL } from "$env/static/private";
-import type { FormSchema } from "./validation";
+import type { FormSchema } from "../types";
 
 type Mail = {
   to: string;

@@ -2,7 +2,7 @@
   import { enhance } from "$app/forms";
   import { goto } from "$app/navigation";
   import { Button } from "$lib/components";
-  import type { FormSchema } from "./validation";
+  import type { FormSchema } from "./types";
 
   export let formData: FormSchema;
 </script>

@@ -2,7 +2,7 @@
   import { enhance } from "$app/forms";
   import { Button } from "$lib/components";
   import InputField from "./input-field.svelte";
-  import type { FormResponse, FormSchema } from "./validation";
+  import type { FormResponse, FormSchema } from "./types";
 
   export let form: FormResponse | null;
   export let formData: FormSchema;
