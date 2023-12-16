@@ -7,8 +7,6 @@ const FormSchema = z.object({
   message: z.string().nullish(),
 });
 
-type FormSchema = z.infer<typeof FormSchema>;
-
 const option = {
   path: "/contact",
   maxAge: 60 * 60 * 24,
