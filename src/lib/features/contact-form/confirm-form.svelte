@@ -7,7 +7,16 @@
   export let formData: FormSchema;
 </script>
 
-<form method="post" action="/contact?/send" use:enhance>
+<form
+  method="post"
+  action="/contact?/send"
+  use:enhance={() => {
+    return async ({ update }) => {
+      await goto("/contact");
+      update();
+    };
+  }}
+>
   <input name="name" type="hidden" value={formData.name} />
   <input name="email" type="hidden" value={formData.email} />
   <input name="message" type="hidden" value={formData.message} />

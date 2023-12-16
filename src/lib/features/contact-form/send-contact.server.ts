@@ -27,7 +27,6 @@ export async function sendContact(data: FormSchema) {
   };
 
   try {
-    console.log(toCustomer, toOwner);
     await send([toCustomer, toOwner]);
     return { success: true };
   } catch {
