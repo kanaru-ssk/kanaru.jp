@@ -1,8 +1,13 @@
 <script>
   import { goto } from "$app/navigation";
   import { page } from "$app/stores";
-  import { Button, Title } from "$lib/components";
+  import { Button, Meta, Title } from "$lib/components";
 </script>
+
+<Meta
+  title="Kanaru | Portfolio"
+  description="佐々木哉瑠(かなる)のポートフォリオサイト"
+/>
 
 <Title title="send error" />
 <div class="space-y-14 px-4">

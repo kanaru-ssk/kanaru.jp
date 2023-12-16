@@ -1,10 +1,15 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
-  import { Button, Title } from "$lib/components";
+  import { Button, Meta, Title } from "$lib/components";
   import { ResultTable } from "$lib/features/contact";
 
   export let data;
 </script>
+
+<Meta
+  title="Complete Contact | Kanaru"
+  description="佐々木哉瑠(かなる)のポートフォリオサイト"
+/>
 
 <Title title="complete" />
 <div class="space-y-14">
