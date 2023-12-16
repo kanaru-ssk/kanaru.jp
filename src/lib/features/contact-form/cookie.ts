@@ -7,7 +7,12 @@ const FormSchema = z.object({
   message: z.string().nullish(),
 });
 
-const path = "/contact";
+type FormSchema = z.infer<typeof FormSchema>;
+
+const option = {
+  path: "/contact",
+  maxAge: 60 * 60 * 24,
+};
 
 export function setCookie(cookies: Cookies, formData: FormData) {
   const validatedFields = FormSchema.safeParse({
@@ -17,9 +22,9 @@ export function setCookie(cookies: Cookies, formData: FormData) {
   });
 
   if (validatedFields.success) {
-    cookies.set("name", validatedFields.data.name || "", { path });
-    cookies.set("email", validatedFields.data.email || "", { path });
-    cookies.set("message", validatedFields.data.message || "", { path });
+    cookies.set("name", validatedFields.data.name || "", option);
+    cookies.set("email", validatedFields.data.email || "", option);
+    cookies.set("message", validatedFields.data.message || "", option);
   }
 }
 
@@ -32,7 +37,7 @@ export function getCookie(cookies: Cookies) {
 }
 
 export function clearCookie(cookies: Cookies) {
-  cookies.delete("name", { path });
-  cookies.delete("email", { path });
-  cookies.delete("message", { path });
+  cookies.delete("name", option);
+  cookies.delete("email", option);
+  cookies.delete("message", option);
 }
