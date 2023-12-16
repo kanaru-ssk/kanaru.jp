@@ -9,7 +9,7 @@
   {type}
   class={`${
     color === "white" ? "bg-white text-black" : "bg-neutral-800 text-white"
-  } h-10 w-36 rounded-full px-8 text-sm hover:opacity-75 active:opacity-50`}
+  } h-10 w-36 rounded-full text-sm hover:opacity-75 active:opacity-50`}
   on:click
 >
   <slot />

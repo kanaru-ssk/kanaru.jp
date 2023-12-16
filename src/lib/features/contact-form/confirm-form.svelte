@@ -11,7 +11,7 @@
   <input name="name" type="hidden" value={formData.name} />
   <input name="email" type="hidden" value={formData.email} />
   <input name="message" type="hidden" value={formData.message} />
-  <div class="flex justify-center space-x-16">
+  <div class="space-x-8 text-center lg:space-x-16">
     <Button type="button" on:click={() => goto("/contact")} color="gray">
       戻る
     </Button>

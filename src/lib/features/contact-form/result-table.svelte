@@ -2,29 +2,17 @@
   import type { FormSchema } from "./validation";
 
   export let formData: FormSchema;
-
-  const trStyle = "border-b border-neutral-400";
 </script>
 
-<table class="w-full table-fixed whitespace-pre-wrap break-words">
-  <tbody>
-    <tr class={trStyle}>
-      <th class="w-32 font-bold text-neutral-400">name</th>
-      <td class="p-4">
-        {formData.name}
-      </td>
-    </tr>
-    <tr class={trStyle}>
-      <th class="w-32 font-bold text-neutral-400">email</th>
-      <td class="p-4">
-        {formData.email}
-      </td>
-    </tr>
-    <tr class={trStyle}>
-      <th class="w-32 font-bold text-neutral-400">message</th>
-      <td class="p-4">
-        {formData.message}
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="w-full whitespace-pre-wrap break-words px-4">
+  {#each Object.entries(formData) as [head, body]}
+    <div
+      class="flex flex-col space-y-3 border-b border-neutral-400 p-6 first:border-t lg:flex-row lg:items-center lg:space-x-10 lg:space-y-0"
+    >
+      <span class="shink-0 w-28 font-bold lg:text-right">
+        {head}
+      </span>
+      <span class="w-full">{body}</span>
+    </div>
+  {/each}
+</div>

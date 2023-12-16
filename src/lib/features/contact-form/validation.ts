@@ -1,8 +1,8 @@
 import { z } from "zod";
 
 const FormSchema = z.object({
-  name: z.string().max(50),
-  email: z.string().email(),
+  name: z.string().max(50, "お名前は50文字以内で入力して下さい。"),
+  email: z.string().email("メールアドレス形式が正しくありません。"),
   message: z.string(),
 });
 
