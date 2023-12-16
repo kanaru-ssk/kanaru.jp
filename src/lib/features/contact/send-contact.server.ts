@@ -1,4 +1,4 @@
-import { setApiKey, send } from "@sendgrid/mail";
+import sgMail from "@sendgrid/mail";
 import { SENDGRID_API_KEY, OWNER_EMAIL, FORM_EMAIL } from "$env/static/private";
 import type { FormSchema } from "./validation";
 
@@ -10,7 +10,7 @@ type Mail = {
 };
 
 export async function sendContact(data: FormSchema) {
-  setApiKey(SENDGRID_API_KEY);
+  sgMail.setApiKey(SENDGRID_API_KEY);
 
   const toCustomer: Mail = {
     to: data.email,
@@ -27,7 +27,7 @@ export async function sendContact(data: FormSchema) {
   };
 
   try {
-    await send([toCustomer, toOwner]);
+    await sgMail.send([toCustomer, toOwner]);
     return { success: true };
   } catch {
     return { success: false };
