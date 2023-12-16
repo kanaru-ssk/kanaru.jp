@@ -1,6 +1,6 @@
 import { redirect, error, type Actions } from "@sveltejs/kit";
-import { validation, setCookie, getCookie } from "$lib/features/contact-form";
-import { sendContact } from "$lib/features/contact-form/send-contact.server";
+import { validation, setCookie, getCookie } from "$lib/features/contact";
+import { sendContact } from "$lib/features/contact/send-contact.server";
 
 export const load = ({ cookies }) => {
   const formData = getCookie(cookies);

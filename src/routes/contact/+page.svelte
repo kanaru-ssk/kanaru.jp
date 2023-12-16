@@ -1,7 +1,6 @@
 <script lang="ts">
   import { MainTemplate } from "$lib/components";
-  import { ContactForm } from "$lib/features/contact-form";
-  import type { FormResponse } from "$lib/features/contact-form";
+  import { ContactForm, type FormResponse } from "$lib/features/contact";
 
   export let form: FormResponse | null;
   export let data;

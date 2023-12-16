@@ -1,6 +1,6 @@
 <script lang="ts">
   import { MainTemplate } from "$lib/components";
-  import { ConfirmForm, ResultTable } from "$lib/features/contact-form";
+  import { ConfirmForm, ResultTable } from "$lib/features/contact";
 
   export let data;
 </script>

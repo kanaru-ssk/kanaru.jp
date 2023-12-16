@@ -1,7 +1,7 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
   import { Button, MainTemplate } from "$lib/components";
-  import { ResultTable } from "$lib/features/contact-form";
+  import { ResultTable } from "$lib/features/contact";
 
   export let data;
 </script>

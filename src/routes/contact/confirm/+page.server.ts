@@ -1,4 +1,4 @@
-import { getCookie } from "$lib/features/contact-form";
+import { getCookie } from "$lib/features/contact";
 import { redirect } from "@sveltejs/kit";
 
 export const load = ({ cookies }) => {
