@@ -11,7 +11,7 @@
 </script>
 
 <nav>
-  <ul class="space-y-4">
+  <ul class="space-y-2">
     {#each items as { href, name, target }}
       <li>
         <MenuItem

@@ -12,7 +12,7 @@
   {href}
   class={`${
     disabled ? "cursor-default opacity-25" : "hover:opacity-50"
-  } flex justify-end p-1`}
+  } flex justify-end p-2`}
   aria-disabled={disabled}
   {target}
   rel={target === "_blank" ? "noopener noreferrer" : ""}
