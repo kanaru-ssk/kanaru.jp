@@ -14,7 +14,7 @@
   </main>
 
   <footer
-    class="absolute bottom-0 flex h-16 w-full items-center justify-center text-xs lg:h-24"
+    class="absolute bottom-0 flex h-24 w-full items-center justify-center text-xs"
   >
     <p>&copy; Kanaru</p>
   </footer>
