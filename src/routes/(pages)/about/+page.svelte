@@ -8,4 +8,6 @@
 />
 
 <Title title="about" />
-<div class="pt-8 text-center">coming soon...</div>
+<div>
+  <p>コンテンツ準備中です。</p>
+</div>
