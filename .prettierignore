@@ -1,13 +1,6 @@
-.DS_Store
 node_modules
 /build
+/.vercel
 /.svelte-kit
-/package
-.env
-.env.*
-!.env.example
-
-# Ignore files for PNPM, NPM and YARN
+**/wasm
 pnpm-lock.yaml
-package-lock.json
-yarn.lock

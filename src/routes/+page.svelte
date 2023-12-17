@@ -1,5 +1,14 @@
 <script lang="ts">
-  import FirstView from "$lib/components/FirstView.svelte";
+  import { Logo, Meta } from "$lib/components";
 </script>
 
-<FirstView />
+<Meta
+  title="Kanaru | Portfolio"
+  description="佐々木哉瑠(かなる)のポートフォリオサイト"
+/>
+
+<section class="h-svh">
+  <div class="flex h-full items-center justify-center">
+    <Logo />
+  </div>
+</section>
