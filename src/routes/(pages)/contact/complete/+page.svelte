@@ -23,7 +23,7 @@
     </p>
   </div>
 
-  <ResultTable formData={data.formData} />
+  <ResultTable formRequest={data.formRequest} />
 
   <div class="text-center">
     <Button type="button" on:click={() => goto("/")} color="gray">

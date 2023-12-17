@@ -12,4 +12,4 @@
 />
 
 <Title title="contact" />
-<ContactForm {form} formData={data.formData} />
+<ContactForm {form} formRequest={data.formRequest} />

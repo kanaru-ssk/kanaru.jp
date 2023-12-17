@@ -2,9 +2,9 @@
   import { enhance } from "$app/forms";
   import { goto } from "$app/navigation";
   import { Button } from "$lib/components";
-  import type { FormSchema } from "./types";
+  import type { FormRequest } from "./types";
 
-  export let formData: FormSchema;
+  export let formRequest: FormRequest;
 </script>
 
 <form
@@ -17,9 +17,9 @@
     };
   }}
 >
-  <input name="name" type="hidden" value={formData.name} />
-  <input name="email" type="hidden" value={formData.email} />
-  <input name="message" type="hidden" value={formData.message} />
+  <input name="name" type="hidden" value={formRequest.name} />
+  <input name="email" type="hidden" value={formRequest.email} />
+  <input name="message" type="hidden" value={formRequest.message} />
   <div class="space-x-8 text-center lg:space-x-16">
     <Button type="button" on:click={() => goto("/contact")} color="gray">
       戻る

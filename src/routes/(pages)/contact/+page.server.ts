@@ -4,8 +4,8 @@ import { sendContact } from "$lib/features/contact/server";
 import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = ({ cookies }) => {
-  const formData = getCookie(cookies);
-  return { formData };
+  const formRequest = getCookie(cookies);
+  return { formRequest };
 };
 
 export const actions: Actions = {

@@ -1,4 +1,4 @@
-export type FormSchema = {
+export type FormRequest = {
   name: string;
   email: string;
   message: string;
@@ -7,7 +7,7 @@ export type FormSchema = {
 export type FormResponse =
   | {
       success: true;
-      data: FormSchema;
+      data: FormRequest;
     }
   | {
       success: false;

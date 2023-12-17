@@ -12,6 +12,6 @@
 
 <Title title="confirm" />
 <div class="space-y-12">
-  <ResultTable formData={data.formData} />
-  <ConfirmForm formData={data.formData} />
+  <ResultTable formRequest={data.formRequest} />
+  <ConfirmForm formRequest={data.formRequest} />
 </div>

@@ -1,7 +1,7 @@
 import type { Cookies } from "@sveltejs/kit";
 import { z } from "zod";
 
-const FormSchema = z.object({
+const FormRequest = z.object({
   name: z.string().nullish(),
   email: z.string().nullish(),
   message: z.string().nullish(),
@@ -13,7 +13,7 @@ const option = {
 };
 
 export function setCookie(cookies: Cookies, formData: FormData) {
-  const validatedFields = FormSchema.safeParse({
+  const validatedFields = FormRequest.safeParse({
     name: formData.get("name"),
     email: formData.get("email"),
     message: formData.get("message"),

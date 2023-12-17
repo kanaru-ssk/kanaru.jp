@@ -1,6 +1,6 @@
 import sgMail from "@sendgrid/mail";
 import { SENDGRID_API_KEY, OWNER_EMAIL, FORM_EMAIL } from "$env/static/private";
-import type { FormSchema } from "../types";
+import type { FormRequest } from "../types";
 
 type Mail = {
   to: string;
@@ -9,7 +9,7 @@ type Mail = {
   text: string;
 };
 
-export async function sendContact(data: FormSchema) {
+export async function sendContact(data: FormRequest) {
   sgMail.setApiKey(SENDGRID_API_KEY);
 
   const toCustomer: Mail = {
@@ -34,7 +34,7 @@ export async function sendContact(data: FormSchema) {
   }
 }
 
-const makeToCustomerText = (data: FormSchema) => `
+const makeToCustomerText = (data: FormRequest) => `
 ${data.name} 様
 
 お問い合わせ頂きありがとうございます。佐々木哉瑠です。
@@ -49,7 +49,7 @@ mail : ${OWNER_EMAIL}
 ------------------------------
 `;
 
-const makeToOwnerText = (data: FormSchema, toCustomer: Mail) => `
+const makeToOwnerText = (data: FormRequest, toCustomer: Mail) => `
 kanaru.jpのお問い合わせフォームから、以下の内容でお問い合わせがありました。
 
 ------------------------------

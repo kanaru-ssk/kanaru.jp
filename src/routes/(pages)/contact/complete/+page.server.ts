@@ -3,11 +3,11 @@ import { redirect } from "@sveltejs/kit";
 import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = ({ cookies }) => {
-  const formData = getCookie(cookies);
+  const formRequest = getCookie(cookies);
 
-  if (!formData.name || !formData.email || !formData.message)
+  if (!formRequest.name || !formRequest.email || !formRequest.message)
     throw redirect(301, "/contact");
 
   clearCookie(cookies);
-  return { formData };
+  return { formRequest };
 };
