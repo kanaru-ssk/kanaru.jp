@@ -12,10 +12,11 @@
 <Title title="send error" />
 <div class="space-y-14 px-4">
   <div class="space-y-4 text-sm leading-6 lg:text-center">
-    <h1 class="text-lg text-red-700">
-      {$page.status}: {$page.error?.message || "unknown error"}
+    <h1 class="text-3xl font-bold">
+      {$page.status}
+      {$page.error?.message || "unknown error"}
     </h1>
-    <p>お問い合わせフォームの送信に失敗しました。</p>
+    <p class="text-red-800">お問い合わせフォームの送信に失敗しました。</p>
     <p>現在、システム障害が発生している可能性がございます。</p>
     <p>
       ご迷惑をお掛けして申し訳ありません。恐れ入りますが、時間をおいて再度お試し下さい。

@@ -8,6 +8,7 @@ export default {
         self: ["serif"],
       },
       height: { svh: "100svh" },
+      minHeight: { svh: "100svh" },
     },
   },
   plugins: [],

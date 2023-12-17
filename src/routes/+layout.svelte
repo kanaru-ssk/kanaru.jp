@@ -1,7 +1,10 @@
 <script lang="ts">
-  import { Menu } from "$lib/features/menu";
+  import { Menu } from "$lib/components";
   import "$lib/styles/global.css";
 </script>
 
-<Menu />
+<header class="fixed right-0 top-0 z-20">
+  <Menu />
+</header>
+
 <slot />

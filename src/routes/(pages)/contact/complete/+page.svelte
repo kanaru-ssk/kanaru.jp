@@ -13,7 +13,7 @@
 
 <Title title="complete" />
 <div class="space-y-14">
-  <div class="space-y-4 px-4 text-sm lg:text-center">
+  <div class="space-y-4 text-sm lg:text-center">
     <p>お問い合わせ頂きありがとうございます。以下の内容で承りました。</p>
     <p>
       ご入力頂いたメールアドレス宛に、自動送信メールをお送りしておりますのでご確認ください。

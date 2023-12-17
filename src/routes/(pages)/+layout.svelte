@@ -1,11 +1,7 @@
 <script lang="ts">
-  import { Footer, Header } from "$lib/components";
+  import { Template } from "$lib/components";
 </script>
 
-<Header />
-
-<main class="mx-auto max-w-3xl">
+<Template>
   <slot />
-</main>
-
-<Footer />
+</Template>
