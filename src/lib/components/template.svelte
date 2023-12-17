@@ -5,7 +5,7 @@
 <div class="relative min-h-svh">
   <header class="fixed left-0 top-0 z-10">
     <a href="/" title="go to home" class="block p-5 lg:px-12 lg:py-7">
-      <Logo class="h-6 w-fit lg:h-10" />
+      <Logo class="h-6 w-auto lg:h-10" />
     </a>
   </header>
 
