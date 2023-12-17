@@ -1,6 +1,6 @@
 import { redirect, error, type Actions } from "@sveltejs/kit";
 import { getCookie, setCookie, validation } from "$lib/features/contact/server";
-import { sendContact } from "$lib/features/contact/server";
+import { sendMail } from "$lib/features/contact/server";
 import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = ({ cookies }) => {
@@ -26,7 +26,7 @@ export const actions: Actions = {
 
     if (!validated.success) return { ...validated };
 
-    const result = await sendContact(validated.data);
+    const result = await sendMail(validated.data);
     if (!result.success) throw error(500, "internal server error");
 
     throw redirect(301, "/contact/complete");

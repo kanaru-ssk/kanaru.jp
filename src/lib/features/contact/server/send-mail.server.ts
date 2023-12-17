@@ -9,7 +9,7 @@ type Mail = {
   text: string;
 };
 
-export async function sendContact(data: FormRequest) {
+export async function sendMail(data: FormRequest) {
   sgMail.setApiKey(SENDGRID_API_KEY);
 
   const toCustomer: Mail = {
