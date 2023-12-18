@@ -18,7 +18,7 @@
         {value}
         {placeholder}
         required
-        class="h-40 w-full bg-neutral-900 p-4 text-base placeholder:text-neutral-500 focus:outline-none"
+        class="h-40 w-full rounded-sm bg-neutral-900 p-4 text-base placeholder:text-neutral-500 focus:outline-none"
       />
     {:else}
       <input
@@ -27,7 +27,7 @@
         {value}
         {placeholder}
         required
-        class="w-full bg-neutral-900 p-4 text-base placeholder:text-neutral-500 focus:outline-none"
+        class="w-full rounded-sm bg-neutral-900 p-4 text-base placeholder:text-neutral-500 focus:outline-none"
       />
     {/if}
 
