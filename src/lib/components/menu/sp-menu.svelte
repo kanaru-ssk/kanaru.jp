@@ -1,9 +1,13 @@
 <script lang="ts">
+  import { navigating } from "$app/stores";
   import MenuContents from "./menu-contents.svelte";
+
+  let open = false;
+  $: if ($navigating) open = false;
 </script>
 
 <label class="relative block h-16 w-16 cursor-pointer">
-  <input type="checkbox" name="menu" class="peer hidden" />
+  <input type="checkbox" name="menu" class="peer hidden" bind:checked={open} />
   <div
     class="pointer-events-none fixed left-0 top-0 h-svh w-screen cursor-default bg-black/75 opacity-0 duration-500 peer-checked:pointer-events-auto peer-checked:opacity-100"
   />
