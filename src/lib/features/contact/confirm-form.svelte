@@ -20,10 +20,12 @@
   <input name="name" type="hidden" value={formRequest.name} />
   <input name="email" type="hidden" value={formRequest.email} />
   <input name="message" type="hidden" value={formRequest.message} />
-  <div class="space-x-8 text-center lg:space-x-16">
+  <div
+    class="flex flex-col items-center justify-center space-y-4 lg:flex-row-reverse lg:space-x-16 lg:space-y-0 lg:space-x-reverse"
+  >
+    <Button type="submit">送信</Button>
     <Button type="button" on:click={() => goto("/contact")} color="gray">
       戻る
     </Button>
-    <Button type="submit">送信</Button>
   </div>
 </form>
