@@ -19,11 +19,11 @@
   />
   <label
     for="menu-button"
-    class="pointer-events-none fixed left-0 top-0 h-screen w-full opacity-0 duration-500 peer-checked:pointer-events-auto peer-checked:bg-black/75 peer-checked:opacity-100"
+    class="pointer-events-none fixed left-0 top-0 h-screen w-full opacity-0 duration-500 peer-checked:pointer-events-auto peer-checked:bg-black/75 peer-checked:opacity-100 lg:hidden"
   />
 
   <ul
-    class="fixed right-0 top-16 -translate-y-1/2 scale-y-0 px-5 text-right text-base opacity-0 duration-500 peer-checked:translate-y-1 peer-checked:scale-y-100 peer-checked:opacity-100 lg:text-lg"
+    class="fixed right-0 top-16 -translate-y-1/2 scale-y-0 px-5 text-right text-base opacity-0 duration-500 peer-checked:translate-y-1 peer-checked:scale-y-100 peer-checked:opacity-100 lg:top-24 lg:translate-y-1 lg:scale-y-100 lg:px-12 lg:text-lg lg:opacity-100"
   >
     {#each items as { href, name, target }}
       {@const disabled = href === $page.url.pathname}
