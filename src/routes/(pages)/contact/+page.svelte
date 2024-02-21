@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Meta, Title } from "$lib/components";
+  import { Meta } from "$lib/components";
   import { ContactForm, type FormResponse } from "$lib/features/contact";
 
   export let form: FormResponse | null;
@@ -11,5 +11,5 @@
   description="佐々木哉瑠(かなる)のポートフォリオサイト"
 />
 
-<Title title="contact" />
+<h1>contact</h1>
 <ContactForm {form} formRequest={data.formRequest} />

@@ -1,7 +1,7 @@
 <script>
   import { goto } from "$app/navigation";
   import { page } from "$app/stores";
-  import { Button, Meta, Template, Title } from "$lib/components";
+  import { Button, Meta, Template } from "$lib/components";
 </script>
 
 <Meta
@@ -10,7 +10,7 @@
 />
 
 <Template>
-  <Title title={`${$page.status} ${$page.error?.message || "unknown error"}`} />
+  <h1>{$page.status} {$page.error?.message || "unknown error"}</h1>
   <div class="space-y-14">
     <div class="space-y-4 text-sm leading-6 lg:text-center">
       <p class="text-red-800">お問い合わせフォームの送信に失敗しました。</p>

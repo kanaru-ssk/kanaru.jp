@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from "$app/stores";
-  import { Template, Title, Meta } from "$lib/components";
+  import { Template, Meta } from "$lib/components";
 </script>
 
 <Meta
@@ -9,5 +9,5 @@
 />
 
 <Template>
-  <Title title={`${$page.status} ${$page.error?.message || "unknown error"}`} />
+  <h1>{$page.status} {$page.error?.message || "unknown error"}</h1>
 </Template>
