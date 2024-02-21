@@ -7,7 +7,7 @@
     { name: "contact", href: "/contact" },
     { name: "github", href: "https://github.com/kanaru-ssk", target: "_blank" },
   ];
-  let open = true;
+  let open = false;
 </script>
 
 <nav class="fixed right-0 top-0 z-20">
