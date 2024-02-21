@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Menu } from "$lib/components";
-  import "$lib/styles/global.css";
+  import "../app.css";
 </script>
 
 <Menu />
