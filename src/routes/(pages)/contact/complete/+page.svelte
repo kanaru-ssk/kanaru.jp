@@ -1,6 +1,6 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
-  import { Button, Meta, Title } from "$lib/components";
+  import { Button, Meta } from "$lib/components";
   import { ResultTable } from "$lib/features/contact";
 
   export let data;
@@ -11,7 +11,7 @@
   description="佐々木哉瑠(かなる)のポートフォリオサイト"
 />
 
-<Title title="complete" />
+<h1>complete</h1>
 <div class="space-y-14">
   <div class="space-y-4 text-sm lg:text-center">
     <p>お問い合わせ頂きありがとうございます。以下の内容で承りました。</p>
