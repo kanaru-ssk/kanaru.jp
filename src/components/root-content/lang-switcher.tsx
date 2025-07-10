@@ -6,14 +6,17 @@ type LangSwitcherProps = {
 };
 
 export function LangSwitcher({ currentLang }: LangSwitcherProps) {
-	return LANGS.map((lang) => (
-		<Link
-			key={lang}
-			href={lang}
-			aria-disabled={lang === currentLang}
-			className="p-2"
-		>
-			{lang}
-		</Link>
-	));
+	return (
+		<div className="space-x-2">
+			{LANGS.map((lang) => (
+				<Link
+					key={lang}
+					href={lang}
+					className={lang === currentLang ? "underline" : ""}
+				>
+					{lang}
+				</Link>
+			))}
+		</div>
+	);
 }
