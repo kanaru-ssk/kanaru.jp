@@ -1,5 +1,5 @@
 import { RootContent } from "@/components/root-content";
-import { LANGS, type Lang } from "@/constants/lang";
+import { LANGS, type Lang } from "@/dictionaries";
 
 export async function generateStaticParams() {
 	return LANGS.map((lang) => ({ lang }));

@@ -2,8 +2,7 @@ import "../globals.css";
 
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import type { Lang } from "@/constants/lang";
-import { getDictionary } from "@/dictionaries";
+import { getDictionary, type Lang } from "@/dictionaries";
 
 export async function generateMetadata({
 	params,

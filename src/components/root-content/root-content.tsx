@@ -1,5 +1,4 @@
-import type { Lang } from "@/constants/lang";
-import { getDictionary } from "@/dictionaries";
+import { getDictionary, type Lang } from "@/dictionaries";
 import { LangSwitcher } from "./lang-switcher";
 
 type RootContentProps = {
