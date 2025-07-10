@@ -1,8 +1,8 @@
-import "../globals.css";
+import "./globals.css";
 
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { getDictionary, type Lang } from "@/dictionaries";
+import { getDictionary, type Lang } from "@/libs/lang";
 
 export async function generateMetadata({
 	params,

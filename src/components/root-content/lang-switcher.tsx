@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LANGS, type Lang } from "@/dictionaries";
+import { LANGS, type Lang } from "@/libs/lang";
 
 type LangSwitcherProps = {
 	currentLang: Lang;
