@@ -3,9 +3,8 @@
 	"version": "1.0.0",
 	"scripts": {
 		"dev": "next dev --turbopack",
-		"build": "next build && npm run copy-en-to-root",
+		"build": "next build",
 		"start": "serve ./out/",
-		"copy-en-to-root": "cp ./out/en.html ./out/index.html && cp ./out/en.txt ./out/index.txt",
 		"biome:ci": "biome ci",
 		"biome:fix": "biome check --write --unsafe"
 	},

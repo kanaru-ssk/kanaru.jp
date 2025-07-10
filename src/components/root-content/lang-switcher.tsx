@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LANGS, type Lang } from "@/libs/lang";
+import { DEFAULT_LANG, LANGS, type Lang } from "@/libs/lang";
 
 type LangSwitcherProps = {
 	currentLang: Lang;
@@ -11,7 +11,7 @@ export function LangSwitcher({ currentLang }: LangSwitcherProps) {
 			{LANGS.map((lang) => (
 				<Link
 					key={lang}
-					href={lang}
+					href={lang === DEFAULT_LANG ? "/" : lang}
 					className={lang === currentLang ? "underline" : ""}
 				>
 					{lang}

@@ -1,4 +1,4 @@
-import "./globals.css";
+import "../globals.css";
 
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
@@ -9,7 +9,7 @@ export async function generateMetadata({
 }: {
 	params: Promise<{ lang: Lang }>;
 }): Promise<Metadata> {
-	const lang = (await params).lang;
+	const { lang } = await params;
 	const dictionary = await getDictionary(lang);
 
 	return {
@@ -33,15 +33,16 @@ export async function generateMetadata({
 	};
 }
 
-export default async function RootLayout({
+export default async function Layout({
 	children,
 	params,
 }: {
 	children: ReactNode;
 	params: Promise<{ lang: Lang }>;
 }) {
+	const { lang } = await params;
 	return (
-		<html lang={(await params).lang}>
+		<html lang={lang}>
 			<body className="bg-black text-white">{children}</body>
 		</html>
 	);

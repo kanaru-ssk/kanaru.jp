@@ -2,12 +2,12 @@ import Image from "next/image";
 import ProfileImg from "@/assets/profile.png";
 import { getDictionary, type Lang } from "@/libs/lang";
 import { LangSwitcher } from "./lang-switcher";
+import { Skills } from "./skills";
+import { SocialLinks } from "./social-links";
 
 type RootContentProps = {
 	lang: Lang;
 };
-
-const EMAIL = "kanaru.ssk@gmail.com";
 
 export async function RootContent({ lang }: RootContentProps) {
 	const dictionary = await getDictionary(lang);
@@ -19,24 +19,14 @@ export async function RootContent({ lang }: RootContentProps) {
 			<Image
 				src={ProfileImg}
 				alt="profile"
+				priority
 				width={256}
 				height={256}
 				className="rounded-full my-8"
 			/>
 			<p>{dictionary.description}</p>
-			<div className="space-x-4">
-				<a
-					href="https://github.com/kanaru-ssk"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="underline"
-				>
-					GitHub
-				</a>
-				<a href={`mailto:${EMAIL}`} className="underline">
-					{EMAIL}
-				</a>
-			</div>
+			<SocialLinks />
+			<Skills />
 		</div>
 	);
 }
