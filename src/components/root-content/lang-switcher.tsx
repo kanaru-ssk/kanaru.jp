@@ -12,6 +12,7 @@ export function LangSwitcher({ currentLang }: LangSwitcherProps) {
 				<Link
 					key={lang}
 					href={lang === DEFAULT_LANG ? "/" : lang}
+					prefetch
 					className={`p-2 ${lang === currentLang ? "cursor-default" : "text-neutral-300 underline"}`}
 				>
 					{lang}

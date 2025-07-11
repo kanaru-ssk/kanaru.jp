@@ -18,6 +18,7 @@ export async function RootContent({ lang }: RootContentProps) {
 				<Image src={LogoImg} alt="logo" priority width={104} height={48} />
 				<LangSwitcher currentLang={lang} />
 			</header>
+
 			<main className="flex-1 p-5 space-y-4">
 				<Image
 					src={ProfileImg}
@@ -31,7 +32,8 @@ export async function RootContent({ lang }: RootContentProps) {
 				<p className="whitespace-pre-wrap">{dictionary.description}</p>
 				<SocialLinks />
 			</main>
-			<footer className="text-sm p-5 text-center">
+
+			<footer className="text-sm p-8 text-center">
 				&copy; 2025 {dictionary.title}
 			</footer>
 		</div>
