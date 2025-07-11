@@ -7,12 +7,12 @@ type LangSwitcherProps = {
 
 export function LangSwitcher({ currentLang }: LangSwitcherProps) {
 	return (
-		<div className="space-x-2">
+		<div>
 			{LANGS.map((lang) => (
 				<Link
 					key={lang}
 					href={lang === DEFAULT_LANG ? "/" : lang}
-					className={lang === currentLang ? "underline" : ""}
+					className={`p-2 ${lang === currentLang ? "cursor-default" : "text-neutral-300 underline"}`}
 				>
 					{lang}
 				</Link>
