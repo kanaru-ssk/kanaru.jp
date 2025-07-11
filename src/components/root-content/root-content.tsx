@@ -3,7 +3,6 @@ import LogoImg from "@/assets/logo.svg";
 import ProfileImg from "@/assets/profile.png";
 import { getDictionary, type Lang } from "@/libs/lang";
 import { LangSwitcher } from "./lang-switcher";
-import { Skills } from "./skills";
 import { SocialLinks } from "./social-links";
 
 type RootContentProps = {
@@ -28,9 +27,8 @@ export async function RootContent({ lang }: RootContentProps) {
 				className="rounded-full my-12"
 			/>
 			<h1 className="font-bold text-3xl">{dictionary.title}</h1>
-			<p>{dictionary.description}</p>
+			<p className="whitespace-pre-wrap">{dictionary.description}</p>
 			<SocialLinks />
-			<Skills />
 		</div>
 	);
 }
