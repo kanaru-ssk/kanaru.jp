@@ -1,4 +1,4 @@
-const EMAIL = "kanaru.ssk@gmail.com";
+import { EMAIL } from "@/constants/email";
 
 export function SocialLinks() {
 	return (

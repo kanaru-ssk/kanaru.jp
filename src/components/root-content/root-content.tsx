@@ -15,7 +15,13 @@ export async function RootContent({ lang }: RootContentProps) {
 	return (
 		<div className="min-h-svh flex flex-col max-w-3xl mx-auto">
 			<header className="flex justify-between items-center p-5">
-				<Image src={LogoImg} alt="logo" priority width={104} height={48} />
+				<Image
+					src={`${process.env.NEXT_PUBLIC_BASE_URL}/logo.svg`}
+					alt="logo"
+					priority
+					width={104}
+					height={48}
+				/>
 				<LangSwitcher currentLang={lang} />
 			</header>
 
