@@ -1,5 +1,4 @@
 import Image from "next/image";
-import LogoImg from "@/assets/logo.svg";
 import ProfileImg from "@/assets/profile.png";
 import { getDictionary, type Lang } from "@/libs/lang";
 import { LangSwitcher } from "./lang-switcher";
