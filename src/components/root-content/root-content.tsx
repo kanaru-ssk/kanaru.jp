@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ProfileImg from "@/assets/profile.png";
+import ProfileImg from "@/assets/profile.webp";
 import { getDictionary, type Lang } from "@/libs/lang";
 import { LangSwitcher } from "./lang-switcher";
 import { SocialLinks } from "./social-links";
