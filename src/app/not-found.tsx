@@ -13,6 +13,7 @@ export default function NotFound() {
 							src={`${process.env.NEXT_PUBLIC_BASE_URL}/logo.svg`}
 							alt="logo"
 							priority
+							fetchPriority="high"
 							width={104}
 							height={48}
 						/>
@@ -23,6 +24,7 @@ export default function NotFound() {
 							src={SadImg}
 							alt="sad"
 							priority
+							fetchPriority="high"
 							width={256}
 							height={256}
 							className="rounded-full my-12"

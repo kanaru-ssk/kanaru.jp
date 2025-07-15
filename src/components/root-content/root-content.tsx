@@ -18,6 +18,7 @@ export async function RootContent({ lang }: RootContentProps) {
 					src={`${process.env.NEXT_PUBLIC_BASE_URL}/logo.svg`}
 					alt="logo"
 					priority
+					fetchPriority="high"
 					width={104}
 					height={48}
 				/>
@@ -29,6 +30,7 @@ export async function RootContent({ lang }: RootContentProps) {
 					src={ProfileImg}
 					alt="profile"
 					priority
+					fetchPriority="high"
 					width={256}
 					height={256}
 					className="rounded-full my-12"
