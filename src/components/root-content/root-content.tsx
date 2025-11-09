@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ProfileImg from "@/assets/profile.webp";
 import { getDictionary, type Lang } from "@/libs/lang";
+import { Description } from "./description";
 import { LangSwitcher } from "./lang-switcher";
 import { SocialLinks } from "./social-links";
 
@@ -36,7 +37,10 @@ export async function RootContent({ lang }: RootContentProps) {
 					className="rounded-full my-12"
 				/>
 				<h1 className="font-bold text-3xl">{dictionary.title}</h1>
-				<p className="whitespace-pre-wrap">{dictionary.description}</p>
+				<Description
+					descriptionBefore={dictionary.descriptionBefore}
+					descriptionAfter={dictionary.descriptionAfter}
+				/>
 				<SocialLinks />
 			</main>
 

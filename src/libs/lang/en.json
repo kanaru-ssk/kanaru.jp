@@ -1,4 +1,5 @@
 {
 	"title": "Kanaru Sasaki",
-	"description": "I'm a freelance software engineer based in Japan (remote).\nWith $YEARS_OF_EXPERIENCE years of professional experience, I mainly work with Google Cloud, Go, TypeScript, and Next.js.\nI'm also an adjunct professor at Miyagi University."
+	"descriptionBefore": "I'm a freelance software engineer based in Japan (remote).\nWith",
+	"descriptionAfter": "years of professional experience, I mainly work with Google Cloud, Go, TypeScript, and Next.js.\nI'm also an adjunct professor at Miyagi University."
 }
