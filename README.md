@@ -18,9 +18,9 @@ My personal web site
 To run this project locally:
 
 ```sh
-git clone https://github.com/kanaru-ssk/kanaru.jp.git
+git clone https://github.com/kanaru-ssk/kanaru-jp.git
 
-cd kanaru.jp
+cd kanaru-jp
 
 npm i
 
