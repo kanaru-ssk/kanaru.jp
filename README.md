@@ -8,7 +8,7 @@ My personal web site
 
 ## Built With
 
-- [Next.js v15](https://nextjs.org/) (static export)
+- [Next.js v16](https://nextjs.org/) (static export)
 - [TypeScript v5](https://www.typescriptlang.org/)
 - [Tailwind CSS v4](https://tailwindcss.com/)
 - [GitHub](https://github.com/) (Actions and Pages)
@@ -22,7 +22,7 @@ git clone https://github.com/kanaru-ssk/kanaru-jp.git
 
 cd kanaru-jp
 
-npm i
+npm ci
 
 npm run dev
 ```
