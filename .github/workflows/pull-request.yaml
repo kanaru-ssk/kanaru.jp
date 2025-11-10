@@ -1,5 +1,4 @@
-# see: https://biomejs.dev/recipes/continuous-integration/#github-actions
-name: Code quality
+name: Test on Pull Request
 
 on:
   pull_request:
@@ -10,9 +9,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Biome
-        uses: biomejs/setup-biome@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v4
         with:
-          version: latest
-      - name: Run Biome
-        run: biome ci .
+          node-version: 24
+      - name: Cache npm directory
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-npm-
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: biome
+        run: npm run biome:ci
