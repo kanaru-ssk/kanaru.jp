@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ProfileImg from "@/assets/profile.webp";
+import { env } from "@/env";
 import { getDictionary, type Lang } from "@/libs/lang";
 import { Description } from "./description";
 import { LangSwitcher } from "./lang-switcher";
@@ -16,7 +17,7 @@ export async function RootContent({ lang }: RootContentProps) {
 		<div className="min-h-svh flex flex-col max-w-3xl mx-auto">
 			<header className="flex justify-between items-center p-5">
 				<Image
-					src={`${process.env.NEXT_PUBLIC_BASE_URL}/logo.svg`}
+					src={`${env.NEXT_PUBLIC_BASE_URL}/logo.svg`}
 					alt="logo"
 					priority
 					fetchPriority="high"

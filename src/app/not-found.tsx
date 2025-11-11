@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import SadImg from "@/assets/sad.webp";
+import { env } from "@/env";
 import { DEFAULT_LANG } from "@/libs/lang";
 
 export default function NotFound() {
@@ -10,7 +11,7 @@ export default function NotFound() {
 				<div className="bg-black text-white min-h-svh flex flex-col max-w-3xl mx-auto">
 					<header className="flex justify-between items-center p-5">
 						<Image
-							src={`${process.env.NEXT_PUBLIC_BASE_URL}/logo.svg`}
+							src={`${env.NEXT_PUBLIC_BASE_URL}/logo.svg`}
 							alt="logo"
 							priority
 							fetchPriority="high"
