@@ -1,4 +1,5 @@
 import { EMAIL } from "@/constants/email";
+import { env } from "@/env";
 
 type JsonLdProps = {
 	title: string;
@@ -12,7 +13,7 @@ export function JsonLd({ title, description }: JsonLdProps) {
 		name: title,
 		description: description,
 		email: EMAIL,
-		logo: `${process.env.NEXT_PUBLIC_BASE_URL}/logo.svg`,
+		logo: `${env.NEXT_PUBLIC_BASE_URL}/logo.svg`,
 	};
 
 	return (

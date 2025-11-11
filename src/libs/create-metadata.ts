@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { env } from "@/env";
 import { LANGS } from "@/libs/lang";
 
 export function createMetadata(
@@ -6,7 +7,7 @@ export function createMetadata(
 	description: string,
 	pathname: string = "",
 ): Metadata {
-	const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+	const baseUrl = env.NEXT_PUBLIC_BASE_URL;
 	const url = `${baseUrl}${pathname}`;
 	const languages = Object.fromEntries(
 		LANGS.map((lang) => [lang, `${baseUrl}/${lang}`]),
