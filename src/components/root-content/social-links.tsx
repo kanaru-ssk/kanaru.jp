@@ -11,6 +11,14 @@ export function SocialLinks() {
 			>
 				GitHub
 			</a>
+			<a
+				href="https://note.com/kanaru_ssk"
+				target="_blank"
+				rel="noopener noreferrer"
+				className="underline"
+			>
+				note
+			</a>
 			<a href={`mailto:${EMAIL}`} className="underline">
 				{EMAIL}
 			</a>
