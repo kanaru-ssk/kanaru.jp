@@ -7,8 +7,8 @@ import { DEFAULT_LANG } from "@/libs/lang";
 export default function NotFound() {
   return (
     <html lang={DEFAULT_LANG}>
-      <body className="bg-black text-white">
-        <div className="mx-auto flex min-h-svh max-w-3xl flex-col bg-black text-white">
+      <body className="bg-neutral-900 text-white">
+        <div className="mx-auto flex min-h-svh max-w-3xl flex-col">
           <header className="flex items-center justify-between p-5">
             <Image
               src={`${env.NEXT_PUBLIC_BASE_URL}/logo.svg`}

@@ -44,7 +44,7 @@ export default async function Page({
         <GoogleTagManager gtmId={env.NEXT_PUBLIC_GTM_ID} />
         <JsonLd title={dictionary.title} description={description} />
       </head>
-      <body className="bg-black text-white">
+      <body className="bg-neutral-900 text-white">
         <RootContent lang={lang} />
       </body>
     </html>

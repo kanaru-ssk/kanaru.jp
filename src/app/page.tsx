@@ -31,7 +31,7 @@ export default async function Page() {
         <JsonLd title={dictionary.title} description={description} />
       </head>
 
-      <body className="bg-black text-white">
+      <body className="bg-neutral-900 text-white">
         <RootContent lang={DEFAULT_LANG} />
       </body>
     </html>
