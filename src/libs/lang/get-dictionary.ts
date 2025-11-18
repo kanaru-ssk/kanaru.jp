@@ -2,10 +2,10 @@
 import "server-only";
 
 const dictionaries = {
-	en: () => import("./en.json").then((module) => module.default),
-	ja: () => import("./ja.json").then((module) => module.default),
+  en: () => import("./en.json").then((module) => module.default),
+  ja: () => import("./ja.json").then((module) => module.default),
 };
 
 export async function getDictionary(lang: "en" | "ja") {
-	return await dictionaries[lang]();
+  return await dictionaries[lang]();
 }

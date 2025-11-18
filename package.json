@@ -1,30 +1,30 @@
 {
-	"name": "kanaru-jp",
-	"version": "1.0.0",
-	"scripts": {
-		"dev": "next dev --turbopack",
-		"build": "next build",
-		"start": "serve ./out/",
-		"biome:ci": "biome ci",
-		"biome:fix": "biome check --write --unsafe"
-	},
-	"dependencies": {
-		"@next/third-parties": "^16.0.1",
-		"@t3-oss/env-nextjs": "^0.13.8",
-		"next": "^16.0.1",
-		"react": "^19.2.0",
-		"react-dom": "^19.2.0",
-		"zod": "^4.1.12"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^2.3.4",
-		"@tailwindcss/postcss": "^4.1.17",
-		"@types/node": "^24.10.0",
-		"@types/react": "^19.2.2",
-		"@types/react-dom": "^19.2.2",
-		"postcss": "^8.5.6",
-		"serve": "^14.2.5",
-		"tailwindcss": "^4.1.17",
-		"typescript": "^5.9.3"
-	}
+  "name": "kanaru-jp",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "serve ./out/",
+    "biome:ci": "biome ci",
+    "biome:fix": "biome check --write --unsafe"
+  },
+  "dependencies": {
+    "@next/third-parties": "^16.0.1",
+    "@t3-oss/env-nextjs": "^0.13.8",
+    "next": "^16.0.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.6",
+    "@tailwindcss/postcss": "^4.1.17",
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "postcss": "^8.5.6",
+    "serve": "^14.2.5",
+    "tailwindcss": "^4.1.17",
+    "typescript": "^5.9.3"
+  }
 }

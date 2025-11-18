@@ -7,47 +7,47 @@ import { LangSwitcher } from "./lang-switcher";
 import { SocialLinks } from "./social-links";
 
 type RootContentProps = {
-	lang: Lang;
+  lang: Lang;
 };
 
 export async function RootContent({ lang }: RootContentProps) {
-	const dictionary = await getDictionary(lang);
+  const dictionary = await getDictionary(lang);
 
-	return (
-		<div className="min-h-svh flex flex-col max-w-3xl mx-auto">
-			<header className="flex justify-between items-center p-5">
-				<Image
-					src={`${env.NEXT_PUBLIC_BASE_URL}/logo.svg`}
-					alt="logo"
-					priority
-					fetchPriority="high"
-					width={104}
-					height={48}
-				/>
-				<LangSwitcher currentLang={lang} />
-			</header>
+  return (
+    <div className="mx-auto flex min-h-svh max-w-3xl flex-col">
+      <header className="flex items-center justify-between p-5">
+        <Image
+          src={`${env.NEXT_PUBLIC_BASE_URL}/logo.svg`}
+          alt="logo"
+          priority
+          fetchPriority="high"
+          width={104}
+          height={48}
+        />
+        <LangSwitcher currentLang={lang} />
+      </header>
 
-			<main className="flex-1 p-5 space-y-4">
-				<Image
-					src={ProfileImg}
-					alt="profile"
-					priority
-					fetchPriority="high"
-					width={256}
-					height={256}
-					className="rounded-full my-12"
-				/>
-				<h1 className="font-bold text-3xl">{dictionary.title}</h1>
-				<Description
-					descriptionBefore={dictionary.descriptionBefore}
-					descriptionAfter={dictionary.descriptionAfter}
-				/>
-				<SocialLinks />
-			</main>
+      <main className="flex-1 space-y-4 p-5">
+        <Image
+          src={ProfileImg}
+          alt="profile"
+          priority
+          fetchPriority="high"
+          width={256}
+          height={256}
+          className="my-12 rounded-full"
+        />
+        <h1 className="font-bold text-3xl">{dictionary.title}</h1>
+        <Description
+          descriptionBefore={dictionary.descriptionBefore}
+          descriptionAfter={dictionary.descriptionAfter}
+        />
+        <SocialLinks />
+      </main>
 
-			<footer className="text-sm p-8 text-center">
-				&copy; 2025 {dictionary.title}
-			</footer>
-		</div>
-	);
+      <footer className="p-8 text-center text-sm">
+        &copy; 2025 {dictionary.title}
+      </footer>
+    </div>
+  );
 }

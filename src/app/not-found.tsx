@@ -5,47 +5,47 @@ import { env } from "@/env";
 import { DEFAULT_LANG } from "@/libs/lang";
 
 export default function NotFound() {
-	return (
-		<html lang={DEFAULT_LANG}>
-			<body className="bg-black text-white">
-				<div className="bg-black text-white min-h-svh flex flex-col max-w-3xl mx-auto">
-					<header className="flex justify-between items-center p-5">
-						<Image
-							src={`${env.NEXT_PUBLIC_BASE_URL}/logo.svg`}
-							alt="logo"
-							priority
-							fetchPriority="high"
-							width={104}
-							height={48}
-						/>
-					</header>
+  return (
+    <html lang={DEFAULT_LANG}>
+      <body className="bg-black text-white">
+        <div className="mx-auto flex min-h-svh max-w-3xl flex-col bg-black text-white">
+          <header className="flex items-center justify-between p-5">
+            <Image
+              src={`${env.NEXT_PUBLIC_BASE_URL}/logo.svg`}
+              alt="logo"
+              priority
+              fetchPriority="high"
+              width={104}
+              height={48}
+            />
+          </header>
 
-					<main className="flex-1 p-5 space-y-4">
-						<Image
-							src={SadImg}
-							alt="sad"
-							priority
-							fetchPriority="high"
-							width={256}
-							height={256}
-							className="rounded-full my-12"
-						/>
-						<h1 className="font-bold text-3xl">404 Not Found</h1>
-						<p>
-							Sorry, we couldn’t find the page you were looking for.
-							<br />
-							It might have been moved or deleted.
-						</p>
-						<Link href="/" className="underline mt-8 block">
-							Return Home
-						</Link>
-					</main>
+          <main className="flex-1 space-y-4 p-5">
+            <Image
+              src={SadImg}
+              alt="sad"
+              priority
+              fetchPriority="high"
+              width={256}
+              height={256}
+              className="my-12 rounded-full"
+            />
+            <h1 className="font-bold text-3xl">404 Not Found</h1>
+            <p>
+              Sorry, we couldn’t find the page you were looking for.
+              <br />
+              It might have been moved or deleted.
+            </p>
+            <Link href="/" className="mt-8 block underline">
+              Return Home
+            </Link>
+          </main>
 
-					<footer className="text-sm p-8 text-center">
-						&copy; 2025 Kanaru Sasaki
-					</footer>
-				</div>
-			</body>
-		</html>
-	);
+          <footer className="p-8 text-center text-sm">
+            &copy; 2025 Kanaru Sasaki
+          </footer>
+        </div>
+      </body>
+    </html>
+  );
 }
