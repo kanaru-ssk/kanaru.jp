@@ -16,6 +16,7 @@ export function createMetadata(
   return {
     title: title,
     description: description,
+    icons: `${baseUrl}/favicon.svg`,
     openGraph: {
       type: "website",
       url: baseUrl,
