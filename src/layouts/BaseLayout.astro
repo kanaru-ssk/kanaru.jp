@@ -1,5 +1,5 @@
 ---
-import { baseUrl, email, gtmId } from "@/lib/constant";
+import { baseUrl, email } from "@/lib/constant";
 
 type Props = {
   lang: string;
@@ -56,20 +56,6 @@ const jsonLd = {
       type="application/ld+json"
       set:html={JSON.stringify(jsonLd).replace(/</g, "\\u003c")}
     />
-
-    <script
-      is:inline
-      type="text/partytown"
-      async
-      src={`https://www.googletagmanager.com/gtag/js?id=${gtmId}`}></script>
-    <script is:inline type="text/partytown">
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", gtmId);
-    </script>
   </head>
 
   <body>
