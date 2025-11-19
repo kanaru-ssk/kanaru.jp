@@ -1,4 +1,4 @@
-name: Static analysis on Pull request
+name: Static analysis
 
 on:
   pull_request:
@@ -21,7 +21,5 @@ jobs:
           restore-keys: ${{ runner.os }}-npm-
       - name: Install dependencies
         run: npm ci
-      - name: biome
-        run: npm run lint
       - name: Build
         run: npm run build

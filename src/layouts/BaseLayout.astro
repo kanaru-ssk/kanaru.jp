@@ -1,0 +1,125 @@
+---
+import { baseUrl, email, gtmId } from "@/lib/constant";
+
+type Props = {
+  lang: string;
+  title: string;
+  descriptions: string[];
+};
+
+const { lang, title, descriptions } = Astro.props;
+const description = descriptions.join();
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: title,
+  description: description,
+  email,
+  logo: `${baseUrl}/logo.svg`,
+};
+---
+
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="generator" content={Astro.generator} />
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="favicon.svg" type="image/x-icon" />
+
+    <link rel="canonical" href={`${baseUrl}/ja`} />
+    <link rel="alternate" hreflang="en" href={`${baseUrl}/en`} />
+    <link rel="alternate" hreflang="ja" href={`${baseUrl}/ja`} />
+    <link rel="alternate" hreflang="x-default" href={baseUrl} />
+
+    <title>{title}</title>
+    <meta name="og:title" content={title} />
+    <meta name="og:site_name" content={title} />
+    <meta name="twitter:title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="og:description" content={description} />
+    <meta name="twitter:description" content={description} />
+    <meta name="og:image" content={`${baseUrl}/ogp.png`} />
+    <meta name="twitter:image" content={`${baseUrl}/ogp.png`} />
+    <meta name="og:url" content={baseUrl} />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(jsonLd).replace(/</g, "\\u003c")}
+    />
+
+    <script
+      is:inline
+      type="text/partytown"
+      async
+      src={`https://www.googletagmanager.com/gtag/js?id=${gtmId}`}></script>
+    <script is:inline type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", gtmId);
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <img src="logo.svg" alt="logo" width="104px" height="48px" />
+      <nav>
+        <a href="/" hreflang="en">en</a>
+        <a href="/ja" hreflang="ja">ja</a>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>&copy; 2025 {title}</footer>
+  </body>
+</html>
+
+<style>
+  body {
+    background-color: #222;
+    color: #fff;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 768px;
+    min-height: 100svh;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  main {
+    flex: 1;
+    padding: 20px;
+  }
+
+  footer {
+    padding: 32px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  a {
+    text-decoration: underline;
+    color: #fff;
+    margin-right: 16px;
+  }
+</style>
