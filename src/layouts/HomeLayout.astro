@@ -34,17 +34,7 @@ const links = [
     height="256px"
   />
   <h1>{title}</h1>
-  <p>
-    {
-      descriptions.map((description, i) => (
-        <>
-          {i !== 0 && <br />}
-          {description}
-        </>
-      ))
-    }
-  </p>
-  <p>
+  <p class="links">
     {
       links.map((link) =>
         // 不要なスペースがbuildに含まれるのを防ぐ
@@ -55,5 +45,15 @@ const links = [
     <a href={`mailto:${EMAIL}`}>
       {EMAIL}
     </a>
+  </p>
+  <p>
+    {
+      descriptions.map((description, i) => (
+        <>
+          {i !== 0 && <br />}
+          {description}
+        </>
+      ))
+    }
   </p>
 </>

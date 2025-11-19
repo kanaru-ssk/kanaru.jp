@@ -2,8 +2,8 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import HomeLayout from "@/layouts/HomeLayout.astro";
 import { getDiffYear } from "@/lib/date";
+import { DEFAULT_LANG } from "@/lib/lang";
 
-const lang = "en";
 const title = "Kanaru Sasaki";
 const yearOfExperience = getDiffYear(new Date("2021-02"), new Date());
 const descriptions = [
@@ -13,6 +13,6 @@ const descriptions = [
 ];
 ---
 
-<BaseLayout lang={lang} title={title} descriptions={descriptions}>
+<BaseLayout lang={DEFAULT_LANG} title={title} descriptions={descriptions}>
   <HomeLayout title={title} descriptions={descriptions} />
 </BaseLayout>

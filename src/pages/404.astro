@@ -1,13 +1,9 @@
 ---
-export function getStaticPaths() {
-  return [{ params: { lang: "en" } }, { params: { lang: "ja" } }];
-}
-
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import NotFoundLayout from "@/layouts/NotFoundLayout.astro";
 import { getDiffYear } from "@/lib/date";
+import { DEFAULT_LANG } from "@/lib/lang";
 
-const { lang } = Astro.params;
 const title = "佐々木 哉瑠";
 const yearOfExperience = getDiffYear(new Date("2021-02"), new Date());
 const descriptions = [
@@ -17,6 +13,6 @@ const descriptions = [
 ];
 ---
 
-<BaseLayout lang={lang} title={title} descriptions={descriptions}>
+<BaseLayout lang={DEFAULT_LANG} title={title} descriptions={descriptions}>
   <NotFoundLayout />
 </BaseLayout>

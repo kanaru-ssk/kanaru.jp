@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import { BASE_URL, EMAIL } from "@/lib/constant";
+import { LANGS, DEFAULT_LANG } from "@/lib/lang";
 
 type Props = {
   lang: string;
@@ -10,7 +11,7 @@ type Props = {
 
 const { lang, title, descriptions } = Astro.props;
 const description = descriptions.join();
-const canonicalUrl = `${BASE_URL}${lang === "en" ? "" : "/lang"}`;
+const canonicalUrl = `${BASE_URL}${lang === DEFAULT_LANG ? "" : `/${lang}`}`;
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -68,10 +69,19 @@ const jsonLd = {
         width="104px"
         height="48px"
       />
-      <nav>
-        <a href="/" hreflang="en">en</a>
-        <a href="/ja" hreflang="ja">ja</a>
-      </nav>
+      <div class="links">
+        {
+          LANGS.map((l) =>
+            lang === l ? (
+              <span>{l}</span>
+            ) : (
+              // 不要なスペースがbuildに含まれるのを防ぐ
+              // prettier-ignore
+              <a hreflang={l} href={l === DEFAULT_LANG ? "/" : l}>{l}</a>
+            )
+          )
+        }
+      </div>
     </header>
 
     <main>

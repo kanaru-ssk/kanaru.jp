@@ -1,11 +1,12 @@
 ---
-export function getStaticPaths() {
-  return [{ params: { lang: "en" } }, { params: { lang: "ja" } }];
-}
-
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import HomeLayout from "@/layouts/HomeLayout.astro";
 import { getDiffYear } from "@/lib/date";
+import { LANGS } from "@/lib/lang";
+
+export function getStaticPaths() {
+  return LANGS.map((lang) => ({ params: { lang } }));
+}
 
 const { lang } = Astro.params;
 const title = "佐々木 哉瑠";

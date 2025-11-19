@@ -6,7 +6,7 @@ body {
   margin: 0 auto;
   background-color: #222;
   color: #fff;
-  font: 16px sans-serif;
+  font: 16px system-ui, sans-serif;
   line-height: 28px;
 }
 
@@ -34,13 +34,17 @@ h1 {
 }
 
 a {
-  margin-right: 16px;
   color: #fff;
   text-decoration: underline;
 }
 
 a:hover {
   color: #aaa;
+}
+
+.links {
+  display: flex;
+  gap: 16px;
 }
 
 .avatar {
