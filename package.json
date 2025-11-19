@@ -5,8 +5,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "serve ./out/",
-    "biome:ci": "biome ci",
-    "biome:fix": "biome check --write --unsafe"
+    "lint": "biome ci",
+    "format": "biome check --write --unsafe"
   },
   "dependencies": {
     "@next/third-parties": "^16.0.1",

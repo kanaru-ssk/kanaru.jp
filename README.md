@@ -1,4 +1,4 @@
-# kanaru.jp
+# kanaru-jp
 
 My personal web site
 
