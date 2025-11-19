@@ -1,8 +1,6 @@
-import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
-import { JsonLd } from "@/components/json-ld";
+import { BaseLayout } from "@/components/base-layout";
 import { RootContent } from "@/components/root-content";
-import { env } from "@/env";
 import { createDescription } from "@/libs/create-description";
 import { createMetadata } from "@/libs/create-metadata";
 import { getDictionary, LANGS } from "@/libs/lang";
@@ -34,14 +32,8 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
   );
 
   return (
-    <html lang={lang}>
-      <head>
-        <GoogleTagManager gtmId={env.NEXT_PUBLIC_GTM_ID} />
-        <JsonLd title={dictionary.title} description={description} />
-      </head>
-      <body className="bg-neutral-900 text-white">
-        <RootContent lang={lang} />
-      </body>
-    </html>
+    <BaseLayout lang={lang} title={dictionary.title} description={description}>
+      <RootContent title={dictionary.title} description={description} />
+    </BaseLayout>
   );
 }
