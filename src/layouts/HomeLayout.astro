@@ -36,11 +36,11 @@ const links = [
   <h1>{title}</h1>
   <p class="links">
     {
-      links.map((link) =>
-        // 不要なスペースがbuildに含まれるのを防ぐ
-        // prettier-ignore
-        <a href={link.url} target="_blank" rel="noopener noreferrer">{link.label}</a>
-      )
+      links.map((link) => (
+        <a href={link.url} target="_blank" rel="noopener noreferrer">
+          {link.label}
+        </a>
+      ))
     }
     <a href={`mailto:${EMAIL}`}>
       {EMAIL}
