@@ -25,6 +25,8 @@ export default defineConfig({
 /**
  * dist 以下の .html を再帰的に走査して
  * `>\s+<` を `><` に置き換える integration
+ * 公式で提供されていないので自前で実装
+ * 参考: https://github.com/withastro/astro/issues/6011
  */
 function stripTagWhitespace(): AstroIntegration {
   return {
