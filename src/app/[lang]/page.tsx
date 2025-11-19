@@ -5,14 +5,13 @@ import { RootContent } from "@/components/root-content";
 import { env } from "@/env";
 import { createDescription } from "@/libs/create-description";
 import { createMetadata } from "@/libs/create-metadata";
-import { getDictionary, LANGS, type Lang } from "@/libs/lang";
+import { getDictionary, LANGS } from "@/libs/lang";
+import { toLang } from "@/libs/lang/to-lang";
 
 export async function generateMetadata({
   params,
-}: {
-  params: Promise<{ lang: Lang }>;
-}): Promise<Metadata> {
-  const { lang } = await params;
+}: PageProps<"/[lang]">): Promise<Metadata> {
+  const lang = toLang((await params).lang);
   const dictionary = await getDictionary(lang);
 
   const description = createDescription(
@@ -26,12 +25,8 @@ export async function generateStaticParams() {
   return LANGS.map((lang) => ({ lang }));
 }
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ lang: Lang }>;
-}) {
-  const { lang } = await params;
+export default async function Page({ params }: PageProps<"/[lang]">) {
+  const lang = toLang((await params).lang);
   const dictionary = await getDictionary(lang);
   const description = createDescription(
     dictionary.descriptionBefore,
