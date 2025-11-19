@@ -1,0 +1,72 @@
+---
+import { email } from "@/lib/constant";
+
+type Props = {
+  title: string;
+  descriptions: string[];
+};
+
+const { title, descriptions } = Astro.props;
+
+const links = [
+  {
+    label: "GitHub",
+    url: "https://github.com/kanaru-ssk",
+  },
+  {
+    label: "X",
+    url: "https://x.com/kanaru_ssk",
+  },
+  {
+    label: "note",
+    url: "https://note.com/kanaru_ssk",
+  },
+];
+---
+
+<>
+  <img
+    class="avatar"
+    src="avatar.webp"
+    alt="avatar"
+    width="256px"
+    height="256px"
+  />
+  <h1>{title}</h1>
+  <p>
+    {
+      descriptions.map((description, i) => (
+        <>
+          {i !== 0 && <br />}
+          {description}
+        </>
+      ))
+    }
+  </p>
+  <p>
+    {
+      links.map((link) =>
+        // 不要なスペースがbuildに含まれるのを防ぐ
+        // prettier-ignore
+        <a href={link.url} target="_blank" rel="noopener noreferrer">{link.label}</a>
+      )
+    }
+    <a href={`mailto:${email}`}>
+      {email}
+    </a>
+  </p>
+</>
+
+<style>
+  a {
+    text-decoration: underline;
+    color: #fff;
+    margin-right: 16px;
+  }
+
+  .avatar {
+    width: 256px;
+    height: 256px;
+    border-radius: 50%;
+  }
+</style>

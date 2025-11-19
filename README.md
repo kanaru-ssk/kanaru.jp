@@ -8,9 +8,7 @@ My personal web site
 
 ## Built With
 
-- [Next.js v16](https://nextjs.org/) (static export)
-- [TypeScript v5](https://www.typescriptlang.org/)
-- [Tailwind CSS v4](https://tailwindcss.com/)
+- [Astro v5](https://astro.build/)
 - [GitHub](https://github.com/) (Actions and Pages)
 
 ## Getting Started
@@ -27,4 +25,4 @@ npm ci
 npm run dev
 ```
 
-Then open http://localhost:3000 in your browser.
+Then open http://localhost:4321 in your browser.
