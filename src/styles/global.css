@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  flex-direction: column;
+  max-width: 768px;
+  min-height: 100svh;
+  margin: 0 auto;
+  background-color: #222;
+  color: #fff;
+  font: 16px sans-serif;
+  line-height: 28px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+footer {
+  padding: 32px;
+  text-align: center;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 48px;
+}
+
+a {
+  margin-right: 16px;
+  color: #fff;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #aaa;
+}
+
+.avatar {
+  border-radius: 50%;
+}

@@ -1,5 +1,6 @@
 ---
-import { baseUrl, email } from "@/lib/constant";
+import "../styles/global.css";
+import { BASE_URL, EMAIL } from "@/lib/constant";
 
 type Props = {
   lang: string;
@@ -9,15 +10,15 @@ type Props = {
 
 const { lang, title, descriptions } = Astro.props;
 const description = descriptions.join();
-const canonicalUrl = `${baseUrl}${lang === "en" ? "" : "/lang"}`;
+const canonicalUrl = `${BASE_URL}${lang === "en" ? "" : "/lang"}`;
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: title,
   description: description,
-  email,
-  logo: `${baseUrl}/logo.svg`,
+  EMAIL,
+  logo: `${BASE_URL}/logo.svg`,
 };
 ---
 
@@ -32,9 +33,9 @@ const jsonLd = {
     <link rel="icon" href="/favicon.svg" type="image/x-icon" />
 
     <link rel="canonical" href={canonicalUrl} />
-    <link rel="alternate" hreflang="en" href={`${baseUrl}`} />
-    <link rel="alternate" hreflang="ja" href={`${baseUrl}/ja`} />
-    <link rel="alternate" hreflang="x-default" href={baseUrl} />
+    <link rel="alternate" hreflang="en" href={`${BASE_URL}`} />
+    <link rel="alternate" hreflang="ja" href={`${BASE_URL}/ja`} />
+    <link rel="alternate" hreflang="x-default" href={BASE_URL} />
 
     <title>{title}</title>
     <meta name="og:title" content={title} />
@@ -43,9 +44,9 @@ const jsonLd = {
     <meta name="description" content={description} />
     <meta name="og:description" content={description} />
     <meta name="twitter:description" content={description} />
-    <meta name="og:image" content={`${baseUrl}/ogp.png`} />
-    <meta name="twitter:image" content={`${baseUrl}/ogp.png`} />
-    <meta name="og:url" content={baseUrl} />
+    <meta name="og:image" content={`${BASE_URL}/ogp.png`} />
+    <meta name="twitter:image" content={`${BASE_URL}/ogp.png`} />
+    <meta name="og:url" content={BASE_URL} />
     <meta name="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
 
@@ -80,39 +81,3 @@ const jsonLd = {
     <footer>&copy; 2025 {title}</footer>
   </body>
 </html>
-
-<style>
-  body {
-    background-color: #222;
-    color: #fff;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    max-width: 768px;
-    min-height: 100svh;
-  }
-
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-  }
-
-  main {
-    flex: 1;
-    padding: 20px;
-  }
-
-  footer {
-    padding: 32px;
-    text-align: center;
-    font-size: 14px;
-  }
-
-  a {
-    text-decoration: underline;
-    color: #fff;
-    margin-right: 16px;
-  }
-</style>

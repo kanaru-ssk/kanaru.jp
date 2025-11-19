@@ -1,5 +1,5 @@
 ---
-import { email } from "@/lib/constant";
+import { EMAIL } from "@/lib/constant";
 
 type Props = {
   title: string;
@@ -52,22 +52,8 @@ const links = [
         <a href={link.url} target="_blank" rel="noopener noreferrer">{link.label}</a>
       )
     }
-    <a href={`mailto:${email}`}>
-      {email}
+    <a href={`mailto:${EMAIL}`}>
+      {EMAIL}
     </a>
   </p>
 </>
-
-<style>
-  a {
-    text-decoration: underline;
-    color: #fff;
-    margin-right: 16px;
-  }
-
-  .avatar {
-    width: 256px;
-    height: 256px;
-    border-radius: 50%;
-  }
-</style>
