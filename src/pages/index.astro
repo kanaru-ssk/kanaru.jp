@@ -2,15 +2,10 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import HomeLayout from "@/layouts/HomeLayout.astro";
 import { getDiffYear } from "@/lib/date";
-import { DEFAULT_LANG } from "@/lib/lang";
+import { DEFAULT_LANG, getDictionary } from "@/lib/lang";
 
-const title = "Kanaru Sasaki";
 const yearOfExperience = getDiffYear(new Date("2021-02"), new Date());
-const descriptions = [
-  "I'm a freelance software engineer based in Japan (remote).",
-  `With ${yearOfExperience} years of professional experience, I mainly work with Google Cloud, Go, TypeScript, and Next.js.`,
-  "I'm also an assistant professor at Miyagi University.",
-];
+const { title, descriptions } = getDictionary(DEFAULT_LANG, yearOfExperience);
 ---
 
 <BaseLayout lang={DEFAULT_LANG} title={title} descriptions={descriptions}>

@@ -2,17 +2,16 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import NotFoundLayout from "@/layouts/NotFoundLayout.astro";
 import { getDiffYear } from "@/lib/date";
-import { DEFAULT_LANG } from "@/lib/lang";
+import { DEFAULT_LANG, getDictionary } from "@/lib/lang";
 
-const title = "佐々木 哉瑠";
 const yearOfExperience = getDiffYear(new Date("2021-02"), new Date());
-const descriptions = [
-  "フリーランスのソフトウェアエンジニアです。",
-  `実務経験 ${yearOfExperience} 年目で、主にGoogleCloud, Go, TypeScript, Next.jsを使用しています。`,
-  "宮城大学の特任助教もしています。",
-];
+const { title, descriptions } = getDictionary(DEFAULT_LANG, yearOfExperience);
 ---
 
-<BaseLayout lang={DEFAULT_LANG} title={title} descriptions={descriptions}>
+<BaseLayout
+  lang={DEFAULT_LANG}
+  title={`404 Not Found | ${title}`}
+  descriptions={descriptions}
+>
   <NotFoundLayout />
 </BaseLayout>

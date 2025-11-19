@@ -2,20 +2,15 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import HomeLayout from "@/layouts/HomeLayout.astro";
 import { getDiffYear } from "@/lib/date";
-import { LANGS } from "@/lib/lang";
+import { getDictionary, LANGS } from "@/lib/lang";
 
 export function getStaticPaths() {
   return LANGS.map((lang) => ({ params: { lang } }));
 }
 
 const { lang } = Astro.params;
-const title = "佐々木 哉瑠";
 const yearOfExperience = getDiffYear(new Date("2021-02"), new Date());
-const descriptions = [
-  "フリーランスのソフトウェアエンジニアです。",
-  `実務経験 ${yearOfExperience} 年目で、主にGoogleCloud, Go, TypeScript, Next.jsを使用しています。`,
-  "宮城大学の特任助教もしています。",
-];
+const { title, descriptions } = getDictionary(lang, yearOfExperience);
 ---
 
 <BaseLayout lang={lang} title={title} descriptions={descriptions}>
