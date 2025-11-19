@@ -1,7 +1,6 @@
 import "./globals.css";
 
-import type { ReactNode } from "react";
-
-export default async function Layout({ children }: { children: ReactNode }) {
+// htmlタグのlang属性を動的に切り替えるため、htmlタグはpage.tsxで設定する
+export default async function Layout({ children }: LayoutProps<"/">) {
   return <>{children}</>;
 }
