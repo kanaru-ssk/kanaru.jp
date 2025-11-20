@@ -14,6 +14,7 @@ export function getDictionary(lang: Lang, yearOfExperience: number) {
         "フリーランスのソフトウェアエンジニアです。",
         `実務経験 ${yearOfExperience} 年目で、主にGoogleCloud, Go, TypeScript, Next.jsを使用しています。`,
         "宮城大学の特任助教もしています。",
+        "何かあればお気軽に上記のメールアドレスに連絡してください。",
       ],
     };
   }
@@ -24,6 +25,7 @@ export function getDictionary(lang: Lang, yearOfExperience: number) {
       "I'm a freelance software engineer based in Japan (remote).",
       `With ${yearOfExperience} years of professional experience, I mainly work with Google Cloud, Go, TypeScript, and Next.js.`,
       "I'm also an assistant professor at Miyagi University.",
+      "If you have any questions, feel free to contact me at the email address above.",
     ],
   };
 }
