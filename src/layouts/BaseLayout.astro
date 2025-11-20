@@ -10,7 +10,7 @@ type Props = {
 };
 
 const { lang, title, descriptions } = Astro.props;
-const description = descriptions.join();
+const description = descriptions.join(" ");
 const canonicalUrl = `${BASE_URL}${lang === DEFAULT_LANG ? "" : `/${lang}`}`;
 
 const jsonLd = {
