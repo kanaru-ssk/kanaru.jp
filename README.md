@@ -26,3 +26,7 @@ npm run dev
 ```
 
 Then open http://localhost:4321 in your browser.
+
+## Contributing
+
+- ガイドライン: [AGENTS.md](AGENTS.md)
