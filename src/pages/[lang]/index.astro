@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import HomeLayout from "@/layouts/HomeLayout.astro";
+import { CAREER_START_DATE } from "@/lib/constant";
 import { getDiffYear } from "@/lib/date";
 import { getDictionary, LANGS } from "@/lib/lang";
 
@@ -9,7 +10,7 @@ export function getStaticPaths() {
 }
 
 const { lang } = Astro.params;
-const yearOfExperience = getDiffYear(new Date("2021-02"), new Date());
+const yearOfExperience = getDiffYear(CAREER_START_DATE, new Date());
 const { title, descriptions } = getDictionary(lang, yearOfExperience);
 ---
 
