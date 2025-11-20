@@ -7,7 +7,7 @@ export const DEFAULT_LANG = LANG.ENGLISH;
 export type Lang = (typeof LANGS)[number];
 
 export function getDictionary(lang: Lang, yearOfExperience: number) {
-  if (lang === "ja") {
+  if (lang === LANG.JAPANESE) {
     return {
       title: "佐々木 哉瑠",
       descriptions: [
