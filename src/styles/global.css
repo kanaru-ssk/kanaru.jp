@@ -6,7 +6,9 @@ body {
   margin: 0 auto;
   background-color: #222;
   color: #fff;
-  font: 16px system-ui, sans-serif;
+  font:
+    16px system-ui,
+    sans-serif;
   line-height: 28px;
 }
 
