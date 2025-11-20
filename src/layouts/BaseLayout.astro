@@ -12,6 +12,7 @@ type Props = {
 const { lang, title, descriptions } = Astro.props;
 const description = descriptions.join(" ");
 const canonicalUrl = `${BASE_URL}${lang === DEFAULT_LANG ? "" : `/${lang}`}`;
+const currentYear = new Date().getFullYear();
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -96,6 +97,6 @@ const jsonLd = {
       <slot />
     </main>
 
-    <footer>&copy; 2025 {title}</footer>
+    <footer>&copy; {currentYear} {title}</footer>
   </body>
 </html>
