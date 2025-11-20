@@ -8,10 +8,7 @@ export default defineConfig({
       lastmod: new Date(),
       i18n: {
         defaultLocale: "en",
-        locales: {
-          en: "en-US",
-          ja: "ja-JP",
-        },
+        locales: { en: "en-US", ja: "ja-JP" },
       },
     }),
   ],
