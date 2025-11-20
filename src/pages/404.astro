@@ -9,9 +9,9 @@ const { title, descriptions } = getDictionary(DEFAULT_LANG, yearOfExperience);
 ---
 
 <BaseLayout
+  descriptions={descriptions}
   lang={DEFAULT_LANG}
   title={`404 Not Found | ${title}`}
-  descriptions={descriptions}
 >
   <NotFoundLayout />
 </BaseLayout>

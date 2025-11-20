@@ -8,6 +8,6 @@ const yearOfExperience = getDiffYear(new Date("2021-02"), new Date());
 const { title, descriptions } = getDictionary(DEFAULT_LANG, yearOfExperience);
 ---
 
-<BaseLayout lang={DEFAULT_LANG} title={title} descriptions={descriptions}>
-  <HomeLayout title={title} descriptions={descriptions} />
+<BaseLayout descriptions={descriptions} lang={DEFAULT_LANG} title={title}>
+  <HomeLayout descriptions={descriptions} title={title} />
 </BaseLayout>
