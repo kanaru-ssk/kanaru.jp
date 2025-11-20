@@ -7,6 +7,9 @@
     "lint": "prettier . --check && eslint",
     "format": "prettier . --write && eslint --fix"
   },
+  "engines": {
+    "node": "24.x"
+  },
   "devDependencies": {
     "@astrojs/sitemap": "^3.6.0",
     "@astrojs/ts-plugin": "^1.10.5",

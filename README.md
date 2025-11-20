@@ -11,6 +11,10 @@ My personal web site
 - [Astro v5](https://astro.build/)
 - [GitHub](https://github.com/) (Actions and Pages)
 
+## Requirements
+
+- Node.js 24.x (LTS)
+
 ## Getting Started
 
 To run this project locally:
