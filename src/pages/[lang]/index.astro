@@ -13,6 +13,6 @@ const yearOfExperience = getDiffYear(new Date("2021-02"), new Date());
 const { title, descriptions } = getDictionary(lang, yearOfExperience);
 ---
 
-<BaseLayout lang={lang} title={title} descriptions={descriptions}>
-  <HomeLayout title={title} descriptions={descriptions} />
+<BaseLayout descriptions={descriptions} lang={lang} title={title}>
+  <HomeLayout descriptions={descriptions} title={title} />
 </BaseLayout>
