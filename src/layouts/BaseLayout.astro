@@ -15,11 +15,17 @@ const canonicalUrl = `${BASE_URL}${lang === DEFAULT_LANG ? "" : `/${lang}`}`;
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "Person",
   name: title,
-  description: description,
-  EMAIL,
-  logo: `${BASE_URL}/logo.svg`,
+  description,
+  email: EMAIL,
+  url: canonicalUrl,
+  image: `${BASE_URL}/avatar.webp`,
+  sameAs: [
+    "https://github.com/kanaru-ssk",
+    "https://x.com/kanaru_ssk",
+    "https://note.com/kanaru_ssk",
+  ],
 };
 ---
 
