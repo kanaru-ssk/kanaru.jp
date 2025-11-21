@@ -25,7 +25,8 @@ Astroで静的サイトを出力し、GitHub Actions / Pagesでホスティン�
 │       ├── deploy.yaml          # CD
 │       └── static-analysis.yaml # CI
 ├── src/
-│   ├── layouts/                 # ページで再利用するラッパーやHTMLテンプレート。
+│   ├── assets/                  # 画像などのアセット
+│   ├── layouts/                 # ページで再利用するラッパーやHTMLテンプレート
 │   ├── lib/                     # ヘルパーやクライアントスクリプトなどの共有ユーティリティ。
 │   ├── pages/                   # ページルート
 │   └── styles/global.css        # グローバルスタイル

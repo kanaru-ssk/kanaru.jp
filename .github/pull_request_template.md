@@ -4,7 +4,7 @@
 
 ## 動作確認
 
-- [ ] Lint
+- [ ] npm run format
 
 <details>
 
@@ -16,7 +16,7 @@
 
 </details>
 
-- [ ] Build
+- [ ] npm run build
 
 <details>
 
