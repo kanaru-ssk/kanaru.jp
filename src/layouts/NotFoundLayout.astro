@@ -1,17 +1,18 @@
 ---
 import { Image } from "astro:assets";
-import SadImage from "@/assets/sad.webp";
+import AvatarImage from "@/assets/sad.webp";
 ---
 
 <>
   <Image
-    alt="sad avatar"
+    alt="avatar"
     class="avatar"
-    decoding="async"
+    decoding="sync"
+    fetchpriority="high"
     height={256}
-    loading="lazy"
+    loading="eager"
     sizes="256px"
-    src={SadImage}
+    src={AvatarImage}
     width={256}
     widths={[256, 512]}
   />
