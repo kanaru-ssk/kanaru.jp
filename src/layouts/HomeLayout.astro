@@ -1,5 +1,7 @@
 ---
 import { EMAIL } from "@/lib/constant";
+import { Image } from "astro:assets";
+import AvatarImage from "@/assets/avatar.webp";
 
 type Props = {
   title: string;
@@ -25,13 +27,17 @@ const links = [
 ---
 
 <>
-  <img
+  <Image
     alt="avatar"
     class="avatar"
+    decoding="sync"
     fetchpriority="high"
-    height="256px"
-    src="/avatar.webp"
-    width="256px"
+    height={256}
+    loading="eager"
+    sizes="256px"
+    src={AvatarImage}
+    width={256}
+    widths={[256, 512]}
   />
   <h1>{title}</h1>
   <p class="links">

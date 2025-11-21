@@ -1,11 +1,20 @@
+---
+import { Image } from "astro:assets";
+import AvatarSadImage from "@/assets/avatar-sad.webp";
+---
+
 <>
-  <img
+  <Image
     alt="avatar"
     class="avatar"
+    decoding="sync"
     fetchpriority="high"
-    height="256px"
-    src="/sad.webp"
-    width="256px"
+    height={256}
+    loading="eager"
+    sizes="256px"
+    src={AvatarSadImage}
+    width={256}
+    widths={[256, 512]}
   />
   <h1>404 Not Found</h1>
   <p>
