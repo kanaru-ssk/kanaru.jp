@@ -3,6 +3,7 @@ import "@/styles/global.css";
 import { LANGS, DEFAULT_LANG } from "@/lib/lang";
 import { EMAIL, BASE_URL } from "@/lib/constant";
 import Logo from "@/assets/logo.svg";
+import AvatarImage from "@/assets/avatar.webp";
 
 type Props = {
   lang: string;
@@ -15,6 +16,8 @@ const description = descriptions.join(" ");
 const canonicalUrl = `${BASE_URL}${lang === DEFAULT_LANG ? "" : `/${lang}`}`;
 const currentYear = new Date().getFullYear();
 
+const avatarUrl = `${BASE_URL}${AvatarImage.src}`;
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -22,7 +25,7 @@ const jsonLd = {
   description,
   email: EMAIL,
   url: canonicalUrl,
-  image: `${BASE_URL}/avatar.webp`,
+  image: avatarUrl,
   sameAs: [
     "https://github.com/kanaru-ssk",
     "https://x.com/kanaru_ssk",
