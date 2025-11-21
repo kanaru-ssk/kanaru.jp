@@ -1,7 +1,8 @@
 ---
-import "../styles/global.css";
+import "@/styles/global.css";
 import { LANGS, DEFAULT_LANG } from "@/lib/lang";
 import { EMAIL, BASE_URL } from "@/lib/constant";
+import Logo from "@/assets/logo.svg";
 
 type Props = {
   lang: string;
@@ -71,13 +72,7 @@ const jsonLd = {
 
   <body>
     <header>
-      <img
-        alt="logo"
-        fetchpriority="high"
-        height="48px"
-        src="/logo.svg"
-        width="104px"
-      />
+      <Logo height={48} width={104} />
       <div class="links">
         {
           LANGS.map((l) =>
