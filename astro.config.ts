@@ -3,6 +3,7 @@ import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   site: "https://kanaru.jp",
+  prefetch: true,
   integrations: [
     sitemap({
       lastmod: new Date(),
