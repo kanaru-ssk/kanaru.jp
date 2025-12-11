@@ -82,7 +82,11 @@ const jsonLd = {
             lang === l ? (
               <span>{l}</span>
             ) : (
-              <a href={l === DEFAULT_LANG ? "/" : `/${l}`} hreflang={l}>
+              <a
+                data-astro-prefetch="load"
+                href={l === DEFAULT_LANG ? "/" : `/${l}`}
+                hreflang={l}
+              >
                 {l}
               </a>
             ),
