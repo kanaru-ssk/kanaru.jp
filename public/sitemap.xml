@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://kanaru.jp/</loc>
+        <lastmod>2025-12-19T00:00:00.000Z</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://kanaru.jp/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://kanaru.jp/ja/"/>
+    </url>
+    <url>
+        <loc>https://kanaru.jp/ja/</loc>
+        <lastmod>2025-12-19T00:00:00.000Z</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://kanaru.jp/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://kanaru.jp/ja/"/>
+    </url>
+</urlset>
