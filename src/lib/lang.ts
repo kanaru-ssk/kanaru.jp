@@ -11,10 +11,9 @@ export function getDictionary(lang: Lang, yearOfExperience: number) {
     return {
       title: "佐々木 哉瑠",
       descriptions: [
-        "フリーランスのソフトウェアエンジニアです。",
-        `実務経験 ${yearOfExperience} 年目で、主にGoogleCloud, Go, TypeScript, Next.jsを使用しています。`,
-        "宮城大学の特任助教もしています。",
-        "何かあればお気軽に上記のメールアドレスに連絡してください。",
+        "フリーランスのソフトウェアエンジニアと、宮城大学の特任助教をしています。",
+        `実務経験 ${yearOfExperience} 年目で、主にGo、TypeScript、Next.js、GoogleCloudを使用しています。`,
+        "開発の相談や技術的な質問など、お気軽に上記の LinkedIn またはメールアドレスに連絡してください。",
       ],
     };
   }
@@ -22,10 +21,9 @@ export function getDictionary(lang: Lang, yearOfExperience: number) {
   return {
     title: "Kanaru Sasaki",
     descriptions: [
-      "I'm a freelance software engineer based in Japan (remote).",
-      `With ${yearOfExperience} years of professional experience, I mainly work with Google Cloud, Go, TypeScript, and Next.js.`,
-      "I'm also an assistant professor at Miyagi University.",
-      "If you have any questions, feel free to contact me at the email address above.",
+      "I'm a freelance software engineer and an assistant professor at Miyagi University.",
+      `I have ${yearOfExperience} years of professional experience and primarily work with Go, TypeScript, Next.js, and Google Cloud.`,
+      "For development inquiries or technical questions, feel free to contact me via LinkedIn or the email address above.",
     ],
   };
 }
