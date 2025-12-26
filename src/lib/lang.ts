@@ -21,7 +21,7 @@ export function getDictionary(lang: Lang, yearOfExperience: number) {
   return {
     title: "Kanaru Sasaki",
     descriptions: [
-      "I'm a freelance software engineer and an assistant professor at Miyagi University.",
+      "I'm a freelance software engineer in Japan (remote) and an assistant professor at Miyagi University.",
       `I have ${yearOfExperience} years of professional experience and primarily work with Go, TypeScript, Next.js, and Google Cloud.`,
       "For development inquiries or technical questions, feel free to contact me via LinkedIn or the email address above.",
     ],
