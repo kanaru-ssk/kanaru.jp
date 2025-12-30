@@ -3,6 +3,5 @@
   "editor.formatOnSave": true,
   "biome.enabled": false,
   "eslint.enable": true,
-  "eslint.format.enable": true,
-  "cSpell.words": ["kanaru"]
+  "eslint.format.enable": true
 }
