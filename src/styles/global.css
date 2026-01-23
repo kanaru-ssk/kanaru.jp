@@ -1,11 +1,19 @@
+:root {
+  --bg: oklch(14.5% 0 0);
+  --bg-light: oklch(26.9% 0 0);
+  --gradient: linear-gradient(var(--bg-light), var(--bg));
+  --text: oklch(92.2% 0 0);
+  --text-muted: oklch(70.8% 0 0);
+}
+
 body {
   display: flex;
   flex-direction: column;
   max-width: 768px;
   min-height: 100svh;
   margin: 0 auto;
-  background-color: oklch(20.5% 0 0);
-  color: oklch(92.2% 0 0);
+  background: var(--gradient);
+  color: var(--text);
   font:
     16px system-ui,
     sans-serif;
@@ -35,12 +43,12 @@ h1 {
 }
 
 a {
-  color: oklch(92.2% 0 0);
+  color: var(--text);
   text-decoration: underline;
 }
 
 a:hover {
-  color: oklch(70.8% 0 0);
+  color: var(--text-muted);
 }
 
 .links {
