@@ -22,40 +22,40 @@ const links = [
 ];
 ---
 
-<>
+<div class="profile">
   <Image
+    src={AvatarImage}
     alt="avatar"
     class="avatar"
     decoding="sync"
     fetchpriority="high"
+    width={256}
     height={256}
     loading="eager"
-    sizes="256px"
-    src={AvatarImage}
-    width={256}
-    widths={[256, 512]}
   />
   <h1>{title}</h1>
-  <p class="links">
-    {
-      links.map((link) => (
-        <a href={link.url} rel="noopener noreferrer" target="_blank">
-          {link.label}
-        </a>
-      ))
-    }
-    <a href={`mailto:${EMAIL}`}>
-      {EMAIL}
-    </a>
-  </p>
-  <p>
-    {
-      descriptions.map((description, i) => (
-        <>
-          {i !== 0 && <br />}
-          {description}
-        </>
-      ))
-    }
-  </p>
-</>
+</div>
+
+<p class="links">
+  {
+    links.map((link) => (
+      <a href={link.url} rel="noopener noreferrer" target="_blank">
+        {link.label}
+      </a>
+    ))
+  }
+  <a href={`mailto:${EMAIL}`}>
+    {EMAIL}
+  </a>
+</p>
+
+<p>
+  {
+    descriptions.map((description, i) => (
+      <>
+        {i !== 0 && <br />}
+        {description}
+      </>
+    ))
+  }
+</p>

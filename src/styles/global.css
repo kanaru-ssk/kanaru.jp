@@ -4,8 +4,8 @@ body {
   max-width: 768px;
   min-height: 100svh;
   margin: 0 auto;
-  background-color: #222;
-  color: #fff;
+  background-color: oklch(20.5% 0 0);
+  color: oklch(92.2% 0 0);
   font:
     16px system-ui,
     sans-serif;
@@ -31,17 +31,16 @@ footer {
 }
 
 h1 {
-  font-size: 32px;
-  line-height: 48px;
+  font-size: 24px;
 }
 
 a {
-  color: #fff;
+  color: oklch(92.2% 0 0);
   text-decoration: underline;
 }
 
 a:hover {
-  color: #aaa;
+  color: oklch(70.8% 0 0);
 }
 
 .links {
@@ -49,6 +48,37 @@ a:hover {
   gap: 16px;
 }
 
+.profile {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
 .avatar {
+  width: 128px;
+  height: 128px;
   border-radius: 50%;
+}
+
+@media (width >= 40rem) {
+  .avatar {
+    width: 172px;
+    height: 172px;
+  }
+}
+
+@media (width >= 48rem) {
+  h1 {
+    font-size: 32px;
+  }
+
+  .profile {
+    gap: 48px;
+  }
+
+  .avatar {
+    width: 256px;
+    height: 256px;
+  }
 }
