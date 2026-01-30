@@ -4,7 +4,6 @@
   --bg-gradient: linear-gradient(var(--bg-light), var(--bg));
   --text: oklch(90% 0 0);
   --text-muted: oklch(70% 0 0);
-  --text-gradient: linear-gradient(var(--text), var(--text-muted));
 }
 
 body {
@@ -41,7 +40,7 @@ footer {
 
 h1 {
   font-size: 24px;
-  background: var(--text-gradient);
+  background: var(--text);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
