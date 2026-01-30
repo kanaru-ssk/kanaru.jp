@@ -1,5 +1,5 @@
 :root {
-  --bg: oklch(20% 0 0);
+  --bg: oklch(15% 0 0);
   --bg-light: oklch(25% 0 0);
   --bg-gradient: linear-gradient(var(--bg-light), var(--bg));
   --text: oklch(90% 0 0);
